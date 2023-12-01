@@ -1,5 +1,5 @@
 enabled: true
-id: "portfolio"
+id: "features"
 
 content:
   - image: "images/portfolio-ecommerce.png"

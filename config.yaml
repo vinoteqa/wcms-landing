@@ -1,5 +1,5 @@
 baseURL: "https://www.vinoteqa.com/"
-theme: "up-business-theme"
+theme: "up-business-theme-vinoteqa"
 languageCode: "en-us"
 
 title: "Vinoteqa"
@@ -10,11 +10,11 @@ summaryLength: 20
 
 params:
   title: "Vinoteqa"
-  description: "We specialize in providing services to desing websites, applications, build and maintain business for customers."
+  description: "Vinoteqa simplifies wine inventory management for high end restaurants and wine bars. Our user-friendly software streamlines operations and automomatizes the generation of your wine list, freeing you to focus on perfecting the dining experience and wine research."
   images: 
-    - "images/hero-image.png"
+    - "images/bg.jpg"
 
-  logo: "arrow-up.png"
+  logo: "logo.png"
 
   favicons:
     themeColor: "#FFFFFF"
@@ -22,10 +22,7 @@ params:
     faviconColor: "#000000"
 
   social:
-    dribbble: "#"
-    instagram: "#"
-    facebook: "#"
-    twitter: "#"
+    # linkedin: "https://www.linkedin.com/company/vinoteqa/"
 
   location:
     - "South Tyrol, Italy"
@@ -36,29 +33,8 @@ params:
   copyright: "© 2023 Vinoteqa All Rights Reserved"
 
 menus:
-  main:
-    - name: "Home"
-      url: "/#hero"
-      weight: 1
-
-    - name: "How we work"
-      url: "/#"
-      weight: 2
-
-    - name: "Our team"
-      url: "/#"
-      weight: 3
-
-    - name: "Pricing"
-      url: "/#"
-      weight: 4
-
-    - name: "Blog"
-      url: "/blog"
-      weight: 5
-
   buttons:
-    - name: "Book a call"
+    - name: "Book a FREE Demo"
       url: "/#"
       weight: 5
       pre: "btn btn-primary text-light"

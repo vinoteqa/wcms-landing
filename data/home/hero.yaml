@@ -1,15 +1,15 @@
-enabled: true
 id: "hero"
 
 content:
-  title: "How to **level up** your business"
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est faucibus tellus leo non pellentesque lorem vel. Arcu magna eros, potenti duis."
+  pretitle: "For Restaurants and Wine Bars with 200+ labels Only"
+  title: "In Less than 7 Days We Import Your Wine List and Boost Your Cellar Efficiency"
+  text: "Wine Cellar Chaos? Ugly Wine List?  \n
+  Enter Vinoteqa - The Ultimate Solution for Simple Wine Inventory Management and Automatic Wine List Generation."
+
+  image:
+    src: "images/hero-image.jpeg"
 
   buttonPrimary:
-    label: "How we work"
+    label: "Book a FREE Demo"
     url: "#"
-
-  buttonSecondary:
-    label: "Let's talk"
-    url: ""
 
