@@ -6,13 +6,13 @@
 
 @font-face {
   font-family: 'Roboto';
-  src: url('{{ site.BaseURL }}/fonts/Roboto-SemiBold.ttf') format('truetype');
+  src: url('{{ site.BaseURL }}/fonts/Roboto-Bold.ttf') format('truetype');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('{{ site.BaseURL }}/fonts/Roboto-Bold.ttf') format('truetype');
+  src: url('{{ site.BaseURL }}/fonts/Roboto-Black.ttf') format('truetype');
   font-weight: bold;
 }
 
