@@ -1,8 +1,9 @@
 baseURL: "https://www.vinoteqa.com/"
-theme: "up-business-theme-vinoteqa"
 languageCode: "en-us"
 
 title: "Vinoteqa"
+themesDir: "themes/"
+theme: "up-business-theme-vinoteqa"
 
 # googleAnalytics: ""
 
