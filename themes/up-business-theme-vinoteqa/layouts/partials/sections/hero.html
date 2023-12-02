@@ -1,5 +1,5 @@
 {{ if .content.background }}
-<section class="section hero py-5" style="background-image: url('{{.content.background}}'); background-size: cover;">
+<section class="section hero py-5" style="background-image: url('{{.content.background}}'); background-size: cover; background-position: center;">
   <div class="container flex">
     <div class="title-ct">
       {{ with .content.pretitle }}<p class="pre-title text-white fw-bold text-center text-lg pb-2">{{ . | markdownify }}
@@ -12,7 +12,7 @@
 
     <div class="cta-ct text-center">
       {{ with .content.buttonPrimary }}
-      <a class="btn btn-outline-white font-bold px-4 my-1" href="{{ .url }}">{{ .label }}</a>
+      <a class="btn btn-white font-bold px-4 my-1" href="{{ .url }}">{{ .label }}</a>
       {{ end }}
     </div>
   </div>
