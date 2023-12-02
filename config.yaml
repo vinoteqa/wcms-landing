@@ -1,7 +1,7 @@
 baseURL: "https://www.vinoteqa.com/"
 languageCode: "en-us"
 
-title: "Vinoteqa"
+title: "Vinoteqa - Your Winecellar Always in Your Pocket"
 themesDir: "themes/"
 theme: "up-business-theme-vinoteqa"
 
@@ -10,12 +10,12 @@ theme: "up-business-theme-vinoteqa"
 summaryLength: 20
 
 params:
-  title: "Vinoteqa"
+  logo: "logo.png"
+  title: "Vinoteqa - Your Winecellar Always in Your Pocket"
   description: "Vinoteqa simplifies wine inventory management for high end restaurants and wine bars. Our user-friendly software streamlines operations and automomatizes the generation of your wine list, freeing you to focus on perfecting the dining experience and wine research."
   images: 
     - "images/bg.jpg"
 
-  logo: "logo.png"
 
   favicons:
     themeColor: "#FFFFFF"
