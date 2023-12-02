@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('{{ site.BaseURL }}/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('{{ site.BaseURL }}/fonts/Roboto-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('{{ site.BaseURL }}/fonts/Roboto-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Bold Kei';
+  src: url('{{ site.BaseURL }}/fonts/BoldKei-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
