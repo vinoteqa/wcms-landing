@@ -1,10 +1,11 @@
 id: "hero"
 
 content:
-  pretitle: "For Restaurants and Wine Bars with 200+ labels Only"
-  title: "In Less than 7 Days We Import Your Wine List and Boost Your Cellar Efficiency"
-  text: "Wine Cellar Chaos? Ugly Wine List?  \n
-  Enter Vinoteqa - The Ultimate Solution for Simple Wine Inventory Management and Automatic Wine List Generation."
+  pretitle: "For Restaurants and Wine Bars with 200+ Labels Only"
+  title: "Revamp Your Wine Experience in Just 7 Days: Simplify Your Cellar, Elevate Your List"
+  text: "Wine Cellar Chaos? Messy Wine List?  \n
+  
+  Streamline Operations, Perfect the Dining Experience, and Simplify Wine Research with Vinoteqa"
 
   image:
     src: "images/hero-image.jpeg"
