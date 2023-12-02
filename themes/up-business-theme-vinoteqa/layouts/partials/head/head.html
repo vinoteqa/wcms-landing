@@ -5,10 +5,12 @@
   <!-- Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{end}}" />
+  <meta name="description"
+    content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{end}}" />
 
   <!-- Favicons and Manifest -->
-  {{ partial "head/_favicons.html" . }}
+  <link rel="shortcut icon" href="{{ `favicon.ico` | absURL }}" type="image/x-icon">
+  <link rel="icon" href="{{ `favicon.ico` | absURL }}" type="image/x-icon">
 
   <!-- SEO: Google Analytics -->
   {{ partial "head/_seo.html" . }}
@@ -18,6 +20,7 @@
 
   <!-- RSS -->
   {{ range .AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ printf `
+  <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
 </head>
