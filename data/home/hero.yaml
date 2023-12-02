@@ -1,14 +1,10 @@
 id: "hero"
 
 content:
-  pretitle: "For Restaurants and Wine Bars with 200+ Labels Only"
-  title: "Revamp Your Wine Experience in Just 7 Days: Simplify Your Cellar, Elevate Your List"
-  text: "Wine Cellar Chaos? Messy Wine List?  \n
-  
-  Streamline Operations, Perfect the Dining Experience, and Simplify Wine Research with Vinoteqa"
+  title: "Your Restaurant's Wine Cellar Always in Your Pocket"
+  text: "Unlock Vinoteqa - The Premier Solution for Effortless Wine Inventory Management and Instant Wine List Enhancement"
 
-  image:
-    src: "images/hero-image.jpeg"
+  background: "images/hero-bg.jpg"
 
   buttonPrimary:
     label: "Book a FREE Demo"

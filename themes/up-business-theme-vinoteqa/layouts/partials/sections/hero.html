@@ -1,7 +1,28 @@
+{{ if .content.background }}
+<section class="section hero py-5" style="background-image: url('{{.content.background}}'); background-size: cover;">
+  <div class="container flex">
+    <div class="title-ct">
+      {{ with .content.pretitle }}<p class="pre-title text-white fw-bold text-center text-lg pb-2">{{ . | markdownify }}
+      </p>{{
+      end }}
+      {{ with .content.title }}<h1 class="hero-title fw-bold display-1 text-white text-center text-xl pb-4">{{ . |
+        markdownify }}</h1>{{ end }}
+      {{ with .content.text }}<h4 class="text-center text-white text-xl pb-4">{{ . | markdownify }}</h4>{{ end }}
+    </div>
+
+    <div class="cta-ct text-center">
+      {{ with .content.buttonPrimary }}
+      <a class="btn btn-outline-white font-bold px-4 my-1" href="{{ .url }}">{{ .label }}</a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ else }}
 <section class="section hero py-5">
   <div class="container flex">
     <div class="title-ct">
-      {{ with .content.pretitle }}<p class="pre-title text-black fw-bold text-center text-lg pb-2">{{ . | markdownify }}</p>{{
+      {{ with .content.pretitle }}<p class="pre-title text-black fw-bold text-center text-lg pb-2">{{ . | markdownify }}
+      </p>{{
       end }}
       {{ with .content.title }}<h1 class="hero-title fw-bold display-1 text-black text-center text-xl pb-4">{{ . |
         markdownify }}</h1>{{ end }}
@@ -25,3 +46,4 @@
     </div>
   </div>
 </section>
+{{ end }}
