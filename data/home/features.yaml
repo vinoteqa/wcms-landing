@@ -2,10 +2,11 @@ enabled: true
 id: "features"
 
 content:
-  - video: "videos/wine-selection.mp4"
-    pretitle: "700'000+ Wines"
-    title: "Add wines to your cellar with just one simple click"
-    text: "Add your wines from a selection of over half a million wines with detailed information on territory, style, denomination, and grapes."
+  - title: "Select Your Wines from 700'000+ Labels"
+    text: "Thanks to our extensive database with detailed information on Territory, Style, Denomination, and Grapes, we are able to automatise and organize both your cellar and your wine list"
+    image:
+      src: "images/wines.png"
+      title: "Millions of wines at your disposal"
 
   - title: "Keep your Inventory under control"
     text: "Insert purchase and sales orders easily in real-time for seamless inventory control and management, and orders tracking;  \n
