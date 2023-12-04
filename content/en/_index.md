@@ -1,3 +1,4 @@
 +++
 author = "Vinoteqa"
+title = "Home"
 +++

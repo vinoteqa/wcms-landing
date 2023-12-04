@@ -5,7 +5,7 @@ content:
   title: "Your Wine Cellar Always in Your Pocket"
   text: "Discover Vinoteqa - The Premier Solution for Effortless Wine Inventory Management and Instant Wine List Enhancement"
 
-  background: "images/hero-bg.jpg"
+  background: "/images/hero-bg.jpg"
 
   buttonPrimary:
     label: "Book a FREE Demo"

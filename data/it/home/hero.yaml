@@ -1,0 +1,13 @@
+id: "hero"
+
+content:
+  pretitle: Esclusivo per Ristoranti ed Enoteche con 200+ Etichette
+  title: "La tua cantina vini a portata di un dito"
+  text: "Scopri Vinoteqa: la miglior soluzione per una gestione semplice dell'inventario cantina e una carta vini impeccabile"
+
+  background: "/images/hero-bg.jpg"
+
+  buttonPrimary:
+    label: "Prenota una dimostrazione gratuita"
+    url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0EXnISWhh5nFfAEy1ajA0T4LPs3C947WLoZLfNsRSSCKpwdHoZBUlmQHUOWzDRXhIA2OGn9n6e"
+

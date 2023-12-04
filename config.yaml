@@ -1,7 +1,6 @@
 # baseURL: "https://www.vinoteqa.com/"
 languageCode: "en-us"
 
-title: "Vinoteqa - Your Winecellar Always in Your Pocket"
 themesDir: "themes/"
 theme: "up-business-theme-vinoteqa"
 
@@ -9,13 +8,48 @@ theme: "up-business-theme-vinoteqa"
 
 summaryLength: 20
 
+defaultContentLanguage: en
+languages:
+  en:
+    languageCode: en-us
+    languageDirection: ltr
+    languageName: English
+    weight: 0
+    contentDir: content/en
+    title: "Vinoteqa - Your Winecellar Always in Your Pocket"
+    params:
+      description: "Vinoteqa simplifies wine inventory management for high end restaurants and wine bars. Our user-friendly software streamlines operations and automomatizes the generation of your wine list, freeing you to focus on perfecting the dining experience and wine research."
+      location:
+        - "South Tyrol, Italy"
+    menus:
+      buttons:
+        - name: "Book a FREE Demo"
+          url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0EXnISWhh5nFfAEy1ajA0T4LPs3C947WLoZLfNsRSSCKpwdHoZBUlmQHUOWzDRXhIA2OGn9n6e"
+          weight: 5
+          pre: "btn btn-primary text-light"
+  it:
+    languageCode: it-it
+    languageDirection: ltr
+    languageName: Italiano
+    weight: 1
+    contentDir: content/it
+    title: "Vinoteqa - La tua cantina alla portata di un dito"
+    params:
+      description: "Vinoteqa semplifica e ottimizza la gestione dell'inventario vino per ristoranti ed enoteche di alta qualità. Il nostro software intuitivo e avanzato semplifica le procedure operative e la creazione della carta vini, consentendoti di concentrarti esclusivamente sull'eccellenza dell'esperienza offerta ai tuoi ospiti e sulla continua ricerca dei vini più prestigiosi e distintivi."
+      location:
+        - "Alto Adige, Italia"
+    menus:
+      buttons:
+        - name: "Prenota una Demo gratuita"
+          url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0EXnISWhh5nFfAEy1ajA0T4LPs3C947WLoZLfNsRSSCKpwdHoZBUlmQHUOWzDRXhIA2OGn9n6e"
+          weight: 5
+          pre: "btn btn-primary text-light"
+
+# default params
 params:
   logo: "logo.png"
-  title: "Vinoteqa - Your Winecellar Always in Your Pocket"
-  description: "Vinoteqa simplifies wine inventory management for high end restaurants and wine bars. Our user-friendly software streamlines operations and automomatizes the generation of your wine list, freeing you to focus on perfecting the dining experience and wine research."
-  images: 
+  images:
     - "images/bg.jpg"
-
 
   favicons:
     themeColor: "#FFFFFF"
@@ -25,20 +59,10 @@ params:
   social:
     # linkedin: "https://www.linkedin.com/company/vinoteqa/"
 
-  location:
-    - "South Tyrol, Italy"
-
   contact:
     - "[vinoteqa@gmail.com](mailto:vinoteqa@gmail.com)"
 
-  copyright: "© 2023 Vinoteqa All Rights Reserved"
-
-menus:
-  buttons:
-    - name: "Book a FREE Demo"
-      url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0EXnISWhh5nFfAEy1ajA0T4LPs3C947WLoZLfNsRSSCKpwdHoZBUlmQHUOWzDRXhIA2OGn9n6e"
-      weight: 5
-      pre: "btn btn-primary text-light"
+  copyright: "© 2023 Vinoteqa - All Rights Reserved"
 
   footer:
     - name: "Home"

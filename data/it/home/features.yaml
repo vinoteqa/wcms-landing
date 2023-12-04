@@ -1,0 +1,32 @@
+enabled: true
+id: "features"
+
+content:
+  - title: "Scegli tra oltre 700'000 Etichette"
+    text: "Grazie al nostro vasto database, ricco di informazioni dettagliate su Territorio, Stile, Denominazione e Vitigni, automatizziamo e organizziamo la tua cantina e il tuo listino vini. Vinoteqa valorizza ogni singola bottiglia nella tua collezione."
+    image:
+      src: "/images/wines.png"
+      title: "Milioni di vini a disposizione"
+
+  - title: "Prendi il controllo: Semplifica la gestione del tuo inventario"
+    text: "
+    - Registra ordini di acquisto e vendita in tempo reale per un monitoraggio continuo dell'inventario;
+    
+    - Archivia automaticamente i vini esauriti per una gestione senza stress;
+    
+    - Rivoluziona la presentazione della tua collezione."
+    image: 
+      src: "/images/inventory.png"
+      title: "Vinoteqa gestisce il tuo inventario vini"
+
+  - title: "Personalizza e aggiorna la tua carta vini senza sforzi"
+    text: "Definisci uno stile unico per la tua carta vini, sia **digitale** che **stampabile**, e lascia che si aggiorni automaticamente in base all'inventario. Risparmia tempo e assicura ai tuoi ospiti un listino sempre aggiornato."
+    image:
+      src: "/images/wine-list.png"
+      title: "Generazione automatica della carta vini"
+
+
+  # - image: "images/portfolio-ecommerce.png"
+  #   pretitle: "Finances"
+  #   title: "Financial reporting made easy"
+  #   text: "Calculate margins and cellar values effortlessly for insightful reports."
