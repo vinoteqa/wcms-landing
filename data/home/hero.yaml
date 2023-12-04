@@ -1,8 +1,9 @@
 id: "hero"
 
 content:
-  title: "Your Restaurant's Wine Cellar Always in Your Pocket"
-  text: "Unlock Vinoteqa - The Premier Solution for Effortless Wine Inventory Management and Instant Wine List Enhancement"
+  pretitle: For Restaurants and Wine Bars with 200+ Labels Only
+  title: "Your Wine Cellar Always in Your Pocket"
+  text: "Discover Vinoteqa - The Premier Solution for Effortless Wine Inventory Management and Instant Wine List Enhancement"
 
   background: "images/hero-bg.jpg"
 

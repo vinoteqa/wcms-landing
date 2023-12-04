@@ -1,7 +1,17 @@
 .section.features {
-  .portfolio-feature:nth-child(even) {
-    @media (min-width: 1200px) {
-      flex-direction: row-reverse;
+  .portfolio-feature {
+    &:nth-child(even) {
+      @media (min-width: 1200px) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    ul > li {
+      margin-bottom: 0.7rem;
+
+      &::marker {
+        content: "> ";
+      }
     }
   }
 
