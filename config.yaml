@@ -39,9 +39,9 @@ languages:
     contentDir: content/de
     title: "Vinoteqa - Dein Weinkeller - Jederzeit & Überall"
     params:
-      description: "Vinoteqa simplifies wine inventory management for high end restaurants and wine bars. Our user-friendly software streamlines operations and automomatizes the generation of your wine list, freeing you to focus on perfecting the dining experience and wine research."
+      description: "Vinoteqa vereinfacht Inventarmanagement für High-End Restaurants, Hotels und Vinotheken. Unsere benutzerfreundliche Software automatisiert zeitaufwändige Prozesse und ermöglicht es Gastronomen so, ihre Zeit dem perfekten Service mit besten Weinen zu widmen."
       location:
-        title: "Location"
+        title: "Standort"
         content: "Südtirol, Italien"
       contact:
         title: "Kontakt"
