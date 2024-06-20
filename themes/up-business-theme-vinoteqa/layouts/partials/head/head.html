@@ -9,8 +9,8 @@
     content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{end}}" />
 
   <!-- Favicons and Manifest -->
-  <link rel="shortcut icon" href="{{ `logo.png` | absURL }}" type="image/x-icon">
-  <link rel="icon" href="{{ `favicon.ico` | absURL }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ absURL `logo.png` }}" type="image/x-icon">
+  <link rel="icon" href="{{ absURL `favicon.ico` }}" type="image/x-icon">
 
   <!-- SEO: Google Analytics -->
   {{ partial "head/_seo.html" . }}
