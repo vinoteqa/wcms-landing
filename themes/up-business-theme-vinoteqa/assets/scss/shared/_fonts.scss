@@ -21,3 +21,14 @@
   src: url('{{ site.BaseURL }}/fonts/BoldKei-Bold.ttf') format('truetype');
   font-weight: bold;
 }
+
+@font-face {
+  font-family: 'CabinetGrotesk';
+  src: url('{{ site.BaseURL }}/fonts/CabinetGrotesk-Variable.ttf') format('truetype');
+}
+
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('{{ site.BaseURL }}/fonts/Satoshi-Variable.ttf') format('truetype');
+}
