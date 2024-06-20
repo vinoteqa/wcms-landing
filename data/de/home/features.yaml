@@ -2,25 +2,25 @@ enabled: true
 id: "features"
 
 content:
-  - title: "Wähle deine Weine in zwischen 700.000+ verfügbaren Etiketten"
-    text: "Unsere umfangreiche Weindatenbank mit detaillierten Informationen zu Herkunftsländern, Stil, Denominationen und Trauben  erlaubt es uns, die Verwaltung deines Weinkellers und deiner Weinkarten zu automatisieren. Vinoteqa drückt den Wert jedes Weins in deinem Weinkeller aus."
+  - title: "Wähle deine Weine zwischen 700.000+ verfügbaren Etiketten"
+    text: "Unsere umfangreiche Weindatenbank mit detaillierten Informationen rund um Herkunftsländern, Stile, Denominationen und Trauben erlaubt es uns, die Verwaltung deines Weinkellers sowie deiner Weinkarten zu automatisieren. Vinoteqa hebt den Wert jeder Weinflasche in deinem Weinkeller hervor."
     image:
       src: "/images/wines.png"
       title: "Millionen von Weine zur Hand"
 
-  - title: "Verwalte dein Inventar mühelos"
+  - title: "Verwalte dein Inventar im Handumdrehen"
     text: "
-    - Erstelle Bestellungen und Verkäufe in Echtzeit für eine lückenlose Inventarkontrolle;
+    - Erstelle deine Bestellungen und Verkäufe in Echtzeit für lückenlose Inventur;
 
-    - Ausverkaufte Weine werden automatisch archiviert, um Verwaltung zu vereinfachen;
+    - Vereinfache die Verwaltung deines Weinkellers, ausverkaufte Weine werden automatisch archiviert;
     
-    - Ein neuer Weg, deine exquisite Weinkollektion zu präsentieren."
+    - Ein frischer Ansatz, deine exquisite Weinkollektion zu präsentieren."
     image: 
       src: "/images/inventory.png"
       title: "Vinoteqa Weininventar"
 
   - title: "Erstelle und Personalisiere deine Weinkarte"
-    text: "Personalisiere den Stil und das Format deiner **digitalen** und **druckbaren** Weinkarte einmalig, damit zukünftig alles automatisch aktualisiert wird - basierend auf deinem Inventar. Spare wertvolle Zeit und garantiere deinen Gästen aktuellste Weinkarten."
+    text: "Personalisiere den Stil und das Format deiner **digitalen** und **druckbaren** Weinkarte ein einziges Mal, damit zukünftig alles automatisch aktualisiert wird - basierend auf deinem Inventar. Spare wertvolle Zeit und garantiere deinen Gästen aktuellste Weinkarten."
     image:
       src: "/images/wine-list.png"
       title: "Automatische Erstellung von Weinkarten"
