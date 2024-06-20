@@ -1,0 +1,32 @@
+enabled: true
+id: "features"
+
+content:
+  - title: "Pick Your Wines between 700,000+ Labels"
+    text: "Thanks to our extensive database with detailed information on Territory, Style, Denomination, and Grapes, we are able to automatise and organize both your cellar and your wine list. Vinoteqa conveys the worth of every bottle in your cellar."
+    image:
+      src: "/images/wines.png"
+      title: "Millions of wines at your disposal"
+
+  - title: "Master Your Inventory with Ease"
+    text: "
+    - Insert purchase and sales orders in real-time for seamless inventory control and tracking;
+
+    - Automatically archive wines that go out of stock for simplified management;
+    
+    - Transform the way you showcase your exquisite collection."
+    image: 
+      src: "/images/inventory.png"
+      title: "Vinoteqa Wine Inventory"
+
+  - title: "Effortlessly Generate and Personalize Your Wine List"
+    text: "Personalize style and structure of your **digital** and **printable** wine list once, and let it update automatically based on your inventory. Save time and ensure an up-to-date menu for your guests."
+    image:
+      src: "/images/wine-list.png"
+      title: "Automatic Wine List generation"
+
+
+  # - image: "images/portfolio-ecommerce.png"
+  #   pretitle: "Finances"
+  #   title: "Financial reporting made easy"
+  #   text: "Calculate margins and cellar values effortlessly for insightful reports."

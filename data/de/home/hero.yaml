@@ -1,0 +1,13 @@
+id: "hero"
+
+content:
+  pretitle: For Restaurants and Wine Bars with 200+ Labels Only
+  title: "Your Wine Cellar Always in Your Pocket"
+  text: "Discover Vinoteqa - The Premier Solution for Effortless Wine Inventory Management and Instant Wine List Enhancement"
+
+  background: "/images/hero-bg.jpg"
+
+  buttonPrimary:
+    label: "Book a FREE Demo"
+    url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0EXnISWhh5nFfAEy1ajA0T4LPs3C947WLoZLfNsRSSCKpwdHoZBUlmQHUOWzDRXhIA2OGn9n6e"
+

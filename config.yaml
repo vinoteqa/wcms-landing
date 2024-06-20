@@ -31,6 +31,27 @@ languages:
           url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0EXnISWhh5nFfAEy1ajA0T4LPs3C947WLoZLfNsRSSCKpwdHoZBUlmQHUOWzDRXhIA2OGn9n6e"
           weight: 5
           pre: "btn btn-primary text-light"
+  de:
+    languageCode: de-de
+    languageDirection: ltr
+    languageName: Deutsch
+    weight: 2
+    contentDir: content/de
+    title: "Vinoteqa - Dein Weinkeller - Jederzeit & Überall"
+    params:
+      description: "Vinoteqa simplifies wine inventory management for high end restaurants and wine bars. Our user-friendly software streamlines operations and automomatizes the generation of your wine list, freeing you to focus on perfecting the dining experience and wine research."
+      location:
+        title: "Location"
+        content: "Südtirol, Italien"
+      contact:
+        title: "Kontakt"
+        content: "[vinoteqa@gmail.com](mailto:vinoteqa@gmail.com)"
+    menus:
+      buttons:
+        - name: "Gratis DEMO"
+          url: "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0EXnISWhh5nFfAEy1ajA0T4LPs3C947WLoZLfNsRSSCKpwdHoZBUlmQHUOWzDRXhIA2OGn9n6e"
+          weight: 5
+          pre: "btn btn-primary text-light"
   it:
     languageCode: it-it
     languageDirection: ltr
