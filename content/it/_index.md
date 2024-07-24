@@ -1,4 +1,0 @@
-+++
-author = "Vinoteqa"
-title = "Home"
-+++
