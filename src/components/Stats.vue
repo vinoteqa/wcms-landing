@@ -1,7 +1,12 @@
 <template>
-    <div class="bg-black py-16 sm:py-32">
+    <div class="bg-black py-24 sm:py-24">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+
+            <div class="mx-auto max-w-4xl text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">{{ title }}</h2>
+            </div>
+
+            <dl class="mt-16 grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3 sm:gap-8">
                 <div v-for="stat in stats" :key="stat.id" class="mx-auto flex max-w-xs flex-col gap-y-4">
                     <dt class="text-base leading-7 text-white">{{ stat.name }}</dt>
                     <dd class="order-first text-3xl font-semibold tracking-tight text-white sm:text-5xl">{{
@@ -12,10 +17,17 @@
     </div>
 </template>
 
-<script setup>
-const stats = [
-    { id: 1, name: 'wines in database', value: '1.5 million' },
-    { id: 2, name: 'Assets under holding', value: '$119 trillion' },
-    { id: 3, name: 'New users annually', value: '46,000' },
-]
+<script>
+export default {
+    data() {
+        return {
+            title: "Gain immediate access to our Database with:",
+            stats: [
+                { id: 1, name: 'Wines', value: '1.5M+' },
+                { id: 2, name: 'Wineries', value: '130k+' },
+                { id: 3, name: 'New users annually', value: '46,000' },
+            ]
+        }
+    }
+}
 </script>

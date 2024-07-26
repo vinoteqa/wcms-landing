@@ -67,7 +67,9 @@
             <Stats />
 
             <!-- Feature section -->
-            <Features />
+            <FeaturesRx />
+            <FeaturesLx />
+            <FeaturesRow />
 
             <!-- Testimonial section -->
             <Testimonial />
@@ -124,7 +126,9 @@ import {
 
 import Hero from './Hero.vue'
 import Stats from './Stats.vue'
-import Features from './Features.vue'
+import FeaturesRx from './features/FeaturesRx.vue'
+import FeaturesLx from './features/FeaturesLx.vue'
+import FeaturesRow from './features/FeaturesRow.vue'
 import Testimonial from './Testimonial.vue'
 import Pricing from './Pricing.vue'
 import NewsletterForm from './NewsletterForm.vue'

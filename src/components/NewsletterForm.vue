@@ -21,13 +21,13 @@
                 </form>
                 <svg viewBox="0 0 1024 1024"
                     class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
-                    <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                    <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03613)"
                         fill-opacity="0.7" />
                     <defs>
-                        <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641" cx="0" cy="0" r="1"
+                        <radialGradient id="759c1415-0410-454c-8f7c-9a820de03613" cx="0" cy="0" r="1"
                             gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
-                            <stop stop-color="#7775D6" />
-                            <stop offset="1" stop-color="#E935C1" stop-opacity="0" />
+                            <stop stop-color="#ff0000" />
+                            <stop offset="1" stop-color="#ff0000" stop-opacity="0" />
                         </radialGradient>
                     </defs>
                 </svg>
