@@ -5,7 +5,7 @@
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">Vinoteqa</span>
-                    <img class="h-7 w-auto" :src="logoUrl" alt="" />
+                    <img class="h-7 w-auto" :src="logoSrc" alt="" />
                 </a>
             </div>
             <div class="flex lg:hidden">
@@ -18,10 +18,10 @@
             </div>
             <div class="hidden lg:flex lg:gap-x-12">
                 <a v-for="item in navigation" :key="item.name" :href="item.href"
-                    class="text-sm font-semibold leading-6 text-gray-900">{{ item.name }}</a>
+                    class="text-sm font-semibold leading-6 text-black/95 hover:text-black">{{ item.name }}</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
+                <a :href="actionButtonLink" class="text-sm font-semibold leading-6 text-black">{{ actionButtonLabel }} <span
                         aria-hidden="true">&rarr;</span></a>
             </div>
         </nav>
@@ -70,14 +70,22 @@ import {
 <script>
 export default {
     props: {
-        logoUrl: {
+        logoSrc: {
             type: String,
             default: "/logo.svg"
         },
         navigation: {
             type: Array,
             default: () => []
-        }
+        },
+        actionButtonLabel: {
+            type: String,
+            required: true
+        },
+        actionButtonLink: {
+            type: String,
+            required: true
+        },
     },
 
     data() {

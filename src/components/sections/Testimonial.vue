@@ -1,5 +1,5 @@
 <template>
-    <div class="relative z-10 mt-32 bg-vinoteqa pb-20 sm:mt-56 sm:pb-24 xl:pb-0">
+    <div class="relative z-10 mt-32 bg-vinoteqa pb-20 sm:mt-32 sm:pb-24 xl:pb-0">
         <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
             <div class="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)] transform-gpu blur-3xl">
                 <div class="aspect-[1097/1023] w-[68.5625rem] bg-gradient-to-r from-[#922952] to-[#732041] opacity-40"

@@ -1,8 +1,6 @@
 <template>
-
-
     <div class="bg-gray-50">
-        <div class="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <div class="mx-auto max-w-2xl px-4 py-10 sm:px-6 sm:py-16 lg:max-w-7xl lg:px-8">
             <!-- Details section -->
             <section aria-labelledby="details-heading">
                 <div class="flex flex-col items-center text-center">

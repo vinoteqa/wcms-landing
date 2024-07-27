@@ -2,7 +2,8 @@
   <div class="page bg-white">
     <main>
       <div class="top-ct">
-        <Header :navigation="navigation" />
+        <Header :logoSrc="logoSrc" :navigation="navigation" :actionButtonLabel="actionButtonLabel"
+          :actionButtonLink="actionButtonLink" />
         <Hero :titleLabel="hero.titleLabel" :title="hero.title" :subtitle="hero.subtitle"
           :primaryButtonLabel="hero.primaryButtonLabel" :primaryButtonLink="hero.primaryButtonLink"
           :secondaryButtonLabel="hero.secondaryButtonLabel" :secondaryButtonLink="hero.secondaryButtonLink"
@@ -11,27 +12,27 @@
       </div>
 
       <div class="content-ct">
-        <div class="features-ct">
+        <div id="features" class="features-ct">
           <FeaturesRx :titleLabel="featOne.titleLabel" :title="featOne.title" :subtitle="featOne.subtitle"
             :features="featOne.features" :imgSrc="featOne.imgSrc" :imgAlt="featOne.imgAlt" />
           <FeaturesLx :titleLabel="featTwo.titleLabel" :title="featTwo.title" :subtitle="featTwo.subtitle"
             :features="featTwo.features" :imgSrc="featTwo.imgSrc" :imgAlt="featTwo.imgAlt" />
-          <FeaturesRow :title="featThree.title" :subtitle="featThree.subtitle" :leftImgSrc="featThree.leftImgSrc"
-            :leftImgAlt="featThree.leftImgAlt" :leftDescription="featThree.leftDescription"
-            :leftButtonLabel="featThree.leftButtonLabel" :leftButtonLink="featThree.leftButtonLink"
-            :rightImgSrc="featThree.rightImgSrc" :rightImgAlt="featThree.rightImgAlt"
-            :rightDescription="featThree.rightDescription" :rightButtonLabel="featThree.rightButtonLabel"
-            :rightButtonLink="featThree.rightButtonLink" />
+          <FeaturesRow id="winelist" :title="featThree.title" :subtitle="featThree.subtitle"
+            :leftImgSrc="featThree.leftImgSrc" :leftImgAlt="featThree.leftImgAlt"
+            :leftDescription="featThree.leftDescription" :leftButtonLabel="featThree.leftButtonLabel"
+            :leftButtonLink="featThree.leftButtonLink" :rightImgSrc="featThree.rightImgSrc"
+            :rightImgAlt="featThree.rightImgAlt" :rightDescription="featThree.rightDescription"
+            :rightButtonLabel="featThree.rightButtonLabel" :rightButtonLink="featThree.rightButtonLink" />
         </div>
         <div class="testimonial-ct">
           <Testimonial :imgSrc="testimonial.imgSrc" :imgAlt="testimonial.imgAlt" :testimonial="testimonial.content"
             :name="testimonial.name" :company="testimonial.company" :companyLink="testimonial.companyLink" />
         </div>
-        <div class="pricing-ct">
+        <div id="pricing" class="pricing-ct">
           <Pricing :titleLabel="pricing.titleLabel" :title="pricing.title" :subtitle="pricing.subtitle"
             :tiers="pricing.tiers" />
         </div>
-        <div class="faq-ct">
+        <div id="faqs" class="faq-ct">
           <Faq :title="faqs.title" :faqs="faqs.faqs" />
         </div>
         <div class="newsletter-ct">
@@ -59,6 +60,8 @@ import { defineComponent, h } from 'vue'
 </script>
 
 <script>
+const demoBookingPage = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0wPJ0XLEJFtlZZ1JYZRIp0AYSBIKsgKhOsTBfHroZbo_H4IfciidS2Cik_RNYndC_Lh-tO8l_7'
+
 export default {
   data() {
     return {
@@ -69,11 +72,13 @@ export default {
       email: 'info@vinoteqa.com',
 
       // navigation
+      actionButtonLabel: 'Book a Demo',
+      actionButtonLink: this.demoBookingPage,
       navigation: [
-        { name: 'Product', href: '#' },
-        { name: 'Features', href: '#' },
-        { name: 'Marketplace', href: '#' },
-        { name: 'Company', href: '#' },
+        { name: 'Platform', href: '#features' },
+        { name: 'Wine Menu', href: '#winelist' },
+        { name: 'Pricing', href: '#pricing' },
+        { name: 'FAQs', href: '#faqs' },
       ],
       footerNavigation: {
         location: [
@@ -135,9 +140,9 @@ export default {
         title: 'Your Wine Cellar Always in Your Pocket',
         subtitle: 'Digitalize Your Wine Cellar and Create Your Wine List with a Single Click. Effortlessly Manage and Showcase Your Collection Anytime, Anywhere. ',
         primaryButtonLabel: 'Book a FREE Demo',
-        primaryButtonLink: '#',
+        primaryButtonLink: this.demoBookingPage,
         secondaryButtonLabel: 'Read more',
-        secondaryButtonLink: '# ',
+        secondaryButtonLink: '#features',
       },
 
       // sections
@@ -229,7 +234,6 @@ export default {
           {
             name: 'Onboarding',
             id: 'onboarding',
-            href: '#',
             price: '€1,000',
             priceFrequency: 'one-time',
             description: "We will set up and help you get started.",
@@ -239,7 +243,7 @@ export default {
           {
             name: 'License',
             id: 'license',
-            href: '#',
+            href: this.demoBookingPage,
             price: '€ 960',
             priceFrequency: '/year',
             description: 'Dedicated support and continuous updates',
@@ -255,7 +259,7 @@ export default {
           {
             name: '',
             id: 'personalizations',
-            href: '#',
+            href: 'mailto:' + this.email,
             price: 'Custom',
             description: 'Tailored to Meet Your Unique Needs',
             features: [
@@ -299,3 +303,9 @@ export default {
   }
 }
 </script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
