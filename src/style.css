@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Bricolage Grotesque';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/BricolageGrotesque.ttf) format('ttf');
+    }
+    @font-face {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/Outfit.ttf) format('ttf');
+    }
+
+    html {
+        font-family: "Roboto", system-ui, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Outfit", system-ui, sans-serif;
+    }
+}

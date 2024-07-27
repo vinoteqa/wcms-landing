@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 export default {
   content: [
     "./index.html",
@@ -11,7 +14,12 @@ export default {
       'vinoteqa': '#8a101e',
       'vinoteqa-hover': '#9c1222',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: ['BricolageGrotesque', ...defaultTheme.fontFamily.sans],
+        body: ['Outfit', ...defaultTheme.fontFamily.sans],
+      },
+    },
   },
   plugins: [],
 }
