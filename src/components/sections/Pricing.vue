@@ -5,7 +5,7 @@
                 style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" />
         </div>
         <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
-            <h2 class="text-base font-semibold leading-7 text-indigo-600">Pricing</h2>
+            <h2 class="text-base font-semibold leading-7 text-indigo-600">{{ titleLabel }}</h2>
             <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">{{ title }}</p>
         </div>
         <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">{{ subtitle }}
@@ -43,66 +43,28 @@
 </template>
 
 <script setup>
-import {
-    ArrowPathIcon,
-    CheckIcon,
-    CloudArrowUpIcon,
-    Cog6ToothIcon,
-    FingerPrintIcon,
-    LockClosedIcon,
-    ServerIcon,
-} from '@heroicons/vue/20/solid'
+import { CheckIcon } from '@heroicons/vue/20/solid'
 </script>
 
 <script>
 export default {
-    name: 'Pricing',
-    data() {
-        return {
-            title: "One Simple Price for All Features",
-            subtitle: "Get Everything You Need to Master Your Wine Inventory and Wine List Management with a Single Plan.",
-            tiers: [
-                {
-                    name: 'Onboarding',
-                    id: 'onboarding',
-                    href: '#',
-                    price: '€1,000',
-                    priceFrequency: 'one-time',
-                    description: "We will set up and help you get started.",
-                    features: ['White gloves onboarding', 'Import of your current inventory', 'Support and Training'],
-                    featured: false,
-                },
-                {
-                    name: 'License',
-                    id: 'license',
-                    href: '#',
-                    price: '€ 960',
-                    priceFrequency: '/year',
-                    description: 'Dedicated support and continuous updates',
-                    features: [
-                        'Access to 1M+ Wine Labels',
-                        'Real-Time Inventory Control',
-                        'Automatic Wine List Generation',
-                        'Advanced Reporting and Analytics'
-                    ],
-                    linkLabel: "Book a demo for Free",
-                    featured: true,
-                },
-                {
-                    name: '',
-                    id: 'personalizations',
-                    href: '#',
-                    price: 'Custom',
-                    description: 'Tailored to Meet Your Unique Needs',
-                    features: [
-                        'POS System Integration',
-                        'Accounting Software Integration',
-                    ],
-                    linkLabel: "Contact Us",
-                    featured: false,
-                },
-            ]
-        }
-    }
+    props: {
+        titleLabel: {
+            type: String,
+            required: true,
+        },
+        title: {
+            type: String,
+            required: true,
+        },
+        subtitle: {
+            type: String,
+            required: true,
+        },
+        tiers: {
+            type: Array,
+            required: true,
+        },
+    },
 }
 </script>

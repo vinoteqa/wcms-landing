@@ -23,11 +23,11 @@
                         <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
                     </svg>
                     <blockquote class="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
-                        <p>{{ testimonial.content }}</p>
+                        <p>{{ testimonial }}</p>
                     </blockquote>
                     <figcaption class="mt-8 text-base">
-                        <div class="font-semibold text-white">{{ testimonial.name }}</div>
-                        <div class="mt-1 text-white/80">{{ testimonial.company }}</div>
+                        <div class="font-semibold text-white">{{ name }}</div>
+                        <a :href="companyLink" target="_blank" class="mt-1 text-white/80">{{ company }}</a>
                     </figcaption>
                 </figure>
             </div>
@@ -37,24 +37,29 @@
 
 <script setup>
 
-import testimonialPP from '../assets/imgs/testimonial.jpg';
+import testimonialPP from '@/assets/imgs/testimonial.jpg';
 </script>
 
 <script>
 
 export default {
-    name: 'Testimonial',
-    data() {
-        return {
-            testimonial: {
-                content:
-                    "Vinoteqa ha rivoluzionato la gestione del nostro inventario e della lista dei vini. Con i dati dei vini già a disposizione e aggiornamenti in tempo reale, le nostre operazioni sono efficienti e la carta è sempre aggiornata. Vinoteqa mantiene davvero la nostra cantina a portata di mano, permettendoci di concentrarci sull'offrire un'esperienza culinaria eccezionale.",
-                name: "Stefano Kratter",
-                company: "Ristorante Mondschein - A Taste of the Dolomites"
-
-            }
-        }
+    props: {
+        testimonial: {
+            type: String,
+            required: true,
+        },
+        name: {
+            type: String,
+            required: true,
+        },
+        company: {
+            type: String,
+            required: true,
+        },
+        companyLink: {
+            type: String,
+            required: true,
+        },
     }
 }
-
 </script>

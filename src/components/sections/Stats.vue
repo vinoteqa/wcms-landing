@@ -19,15 +19,15 @@
 
 <script>
 export default {
-    data() {
-        return {
-            title: "Gain immediate access to our Database with:",
-            stats: [
-                { id: 1, name: 'Wines', value: '1.5M+' },
-                { id: 2, name: 'Wineries', value: '130k+' },
-                { id: 3, name: 'New users annually', value: '46,000' },
-            ]
+    props: {
+        title: {
+            type: String,
+            required: true
+        },
+        stats: {
+            type: Array,
+            required: true
         }
-    }
+    },
 }
 </script>
