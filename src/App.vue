@@ -24,8 +24,8 @@
             :rightButtonLink="featThree.rightButtonLink" />
         </div>
         <div class="testimonial-ct">
-          <Testimonial :testimonial="testimonial.content" :name="testimonial.name" :company="testimonial.company"
-            :companyLink="testimonial.companyLink" />
+          <Testimonial :imgSrc="testimonial.imgSrc" :imgAlt="testimonial.imgAlt" :testimonial="testimonial.content"
+            :name="testimonial.name" :company="testimonial.company" :companyLink="testimonial.companyLink" />
         </div>
         <div class="pricing-ct">
           <Pricing :titleLabel="pricing.titleLabel" :title="pricing.title" :subtitle="pricing.subtitle"
@@ -64,7 +64,7 @@ export default {
     return {
       title: 'Vinoteqa - Your Winecellar Always in Your Pocket',
       mission: "Vinoteqa's mission is to revolutionize wine management for high-end restaurants and wine bars with seamless, efficient, and elegant digital solutions.",
-      logoSrc: '/src/assets/logo.svg',
+      logoSrc: '/logo.svg',
       location: 'South Tyrol, Italy',
       email: 'info@vinoteqa.com',
 
@@ -130,7 +130,7 @@ export default {
 
       // hero
       hero: {
-        imgSrc: "/src/assets/imgs/hero-img.png",
+        imgSrc: "/imgs/hero-img.png",
         titleLabel: 'For restaurants with 300+ wine labels',
         title: 'Your Wine Cellar Always in Your Pocket',
         subtitle: 'Digitalize Your Wine Cellar and Create Your Wine List with a Single Click. Effortlessly Manage and Showcase Your Collection Anytime, Anywhere. ',
@@ -154,7 +154,7 @@ export default {
         titleLabel: "Smart design",
         title: "An integrated workflow",
         subtitle: "Experience the ease of managing your wine cellar with our intuitive platform. Gain control over your collection, simplify inventory management, craft beautiful wine cards and leverage reliable data.",
-        imgSrc: "/src/assets/imgs/screenshot1.png",
+        imgSrc: "/imgs/screenshot1.png",
         imgAlt: "Screenshot",
         features: [
           {
@@ -178,7 +178,7 @@ export default {
         titleLabel: "Smart design",
         title: "An integrated workflow",
         subtitle: "Experience the ease of managing your wine cellar with our intuitive platform. Gain control over your collection, simplify inventory management, craft beautiful wine cards and leverage reliable data.",
-        imgSrc: "/src/assets/imgs/screenshot2.png",
+        imgSrc: "/imgs/screenshot2.png",
         imgAlt: "Screenshot",
         features: [
           {
@@ -201,17 +201,19 @@ export default {
       featThree: {
         title: "An integrated workflow",
         subtitle: "Experience the ease of managing your wine cellar with our intuitive platform. Gain control over your collection, simplify inventory management, craft beautiful wine cards and leverage reliable data.",
-        leftImgSrc: "/src/assets/imgs/winelist.png",
+        leftImgSrc: '/imgs/winelist.png',
         leftImgAlt: "Screenshot",
         leftDescription: "Up your snack organization game with multiple compartment options. The quick-access stash pouch is ready for even the most unexpected snack attacks and sharing needs.",
         leftButtonLabel: "Learn more",
         leftButtonLink: "#",
-        rightImgSrc: "/src/assets/imgs/winelist.png",
+        rightImgSrc: '/imgs/winelist.png',
         rightImgAlt: "Screenshot",
         rightDescription: "Up your snack organization game with multiple compartment options. The quick-access stash pouch is ready for even the most unexpected snack attacks and sharing needs.",
       },
 
       testimonial: {
+        imgSrc: '/imgs/testimonial.jpg',
+        imgALt: 'Stefano Kratter from Ristorante Mondschein talks about Vinoteqa',
         content:
           "Vinoteqa ha rivoluzionato la gestione del nostro inventario e della lista dei vini. Con i dati dei vini già a disposizione e aggiornamenti in tempo reale, le nostre operazioni sono efficienti e la carta è sempre aggiornata. Vinoteqa mantiene davvero la nostra cantina a portata di mano, permettendoci di concentrarci sull'offrire un'esperienza culinaria eccezionale.",
         name: "Stefano Kratter",

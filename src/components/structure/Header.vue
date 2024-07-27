@@ -72,7 +72,7 @@ export default {
     props: {
         logoUrl: {
             type: String,
-            default: "/src/assets/logo.svg"
+            default: "/logo.svg"
         },
         navigation: {
             type: Array,
