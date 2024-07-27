@@ -35,12 +35,12 @@
         <div id="faqs" class="faq-ct">
           <Faq :title="faqs.title" :faqs="faqs.faqs" />
         </div>
-        <div class="newsletter-ct">
+        <!-- <div class="newsletter-ct">
           <NewsletterForm :loading="true" :subscribed="!!newsletter.subscriberEmail" :title="newsletter.title"
             :policyNotice="newsletter.policyNotice" :inputLabel="newsletter.inputLabel"
             :inputPlaceholder="newsletter.inputPlaceholder" :inputButtonLabel="newsletter.inputButtonLabel"
             @subscribe="subscribeVisitor($event)" />
-        </div>
+        </div> -->
       </div>
     </main>
 
