@@ -135,7 +135,7 @@ export default {
 
       // hero
       hero: {
-        imgSrc: "/imgs/hero-img.png",
+        imgSrc: "/imgs/hero-img.jpg",
         titleLabel: 'For restaurants with 300+ wine labels',
         title: 'Your Wine Cellar Always in Your Pocket',
         subtitle: 'Digitalize Your Wine Cellar and Create Your Wine List with a Single Click. Effortlessly Manage and Showcase Your Collection Anytime, Anywhere. ',
@@ -206,12 +206,12 @@ export default {
       featThree: {
         title: "An integrated workflow",
         subtitle: "Experience the ease of managing your wine cellar with our intuitive platform. Gain control over your collection, simplify inventory management, craft beautiful wine cards and leverage reliable data.",
-        leftImgSrc: '/imgs/winelist.png',
+        leftImgSrc: '/imgs/winelist-digital.jpg',
         leftImgAlt: "Screenshot",
         leftDescription: "Up your snack organization game with multiple compartment options. The quick-access stash pouch is ready for even the most unexpected snack attacks and sharing needs.",
         leftButtonLabel: "See example",
         leftButtonLink: "https://app.vinoteqa.com/carte/01h08dydtpvr5yzdztjz8t5pf8",
-        rightImgSrc: '/imgs/winelist.png',
+        rightImgSrc: '/imgs/winelist-print.jpg',
         rightImgAlt: "Screenshot",
         rightDescription: "Up your snack organization game with multiple compartment options. The quick-access stash pouch is ready for even the most unexpected snack attacks and sharing needs.",
       },
