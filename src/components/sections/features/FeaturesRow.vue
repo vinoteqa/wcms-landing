@@ -4,26 +4,30 @@
             <!-- Details section -->
             <section aria-labelledby="details-heading">
                 <div class="flex flex-col items-center text-center">
-                    <h2 id="details-heading" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ title }}</h2>
+                    <h2 id="details-heading" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{
+                        title }}</h2>
                     <p class="mt-3 max-w-3xl text-lg text-gray-600">{{ subtitle }}</p>
                 </div>
 
                 <div class="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">
                     <div>
                         <div class="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
-                            <img :src="leftImgSrc"
-                                :alt="leftImgAlt"
-                                class="h-full w-full object-cover object-center" />
+                            <img :src="leftImgSrc" :alt="leftImgAlt" class="h-full w-full object-cover object-center" />
                         </div>
-                        <p class="mt-8 text-base text-gray-500">{{ leftDescription }}</p>
+                        <p class="mt-8 mb-3 text-base text-black/90">{{ leftDescription }}</p>
+                        <a v-if="leftButtonLabel" :href="leftButtonLink" target="_blank"
+                            class="text-base font-semibold leading-6 text-black/90 hover:text-black">{{
+                        leftButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
                     </div>
                     <div>
                         <div class="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
-                            <img :src="rightImgSrc"
-                                :alt="rightImgAlt"
+                            <img :src="rightImgSrc" :alt="rightImgAlt"
                                 class="h-full w-full object-cover object-center" />
                         </div>
-                        <p class="mt-8 text-base text-gray-500">{{ rightDescription }}</p>
+                        <p class="mt-8 mb-3 text-base text-black/90">{{ rightDescription }}</p>
+                        <a v-if="rightButtonLabel" :href="rightButtonLink" target="_blank"
+                            class="text-base font-semibold leading-6 text-black/90 hover:text-black">{{
+                        rightButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
                     </div>
                 </div>
             </section>

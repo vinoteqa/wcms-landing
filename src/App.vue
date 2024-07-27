@@ -73,7 +73,7 @@ export default {
 
       // navigation
       actionButtonLabel: 'Book a Demo',
-      actionButtonLink: this.demoBookingPage,
+      actionButtonLink: demoBookingPage,
       navigation: [
         { name: 'Platform', href: '#features' },
         { name: 'Wine Menu', href: '#winelist' },
@@ -140,7 +140,7 @@ export default {
         title: 'Your Wine Cellar Always in Your Pocket',
         subtitle: 'Digitalize Your Wine Cellar and Create Your Wine List with a Single Click. Effortlessly Manage and Showcase Your Collection Anytime, Anywhere. ',
         primaryButtonLabel: 'Book a FREE Demo',
-        primaryButtonLink: this.demoBookingPage,
+        primaryButtonLink: demoBookingPage,
         secondaryButtonLabel: 'Read more',
         secondaryButtonLink: '#features',
       },
@@ -209,8 +209,8 @@ export default {
         leftImgSrc: '/imgs/winelist.png',
         leftImgAlt: "Screenshot",
         leftDescription: "Up your snack organization game with multiple compartment options. The quick-access stash pouch is ready for even the most unexpected snack attacks and sharing needs.",
-        leftButtonLabel: "Learn more",
-        leftButtonLink: "#",
+        leftButtonLabel: "See example",
+        leftButtonLink: "https://app.vinoteqa.com/carte/01h08dydtpvr5yzdztjz8t5pf8",
         rightImgSrc: '/imgs/winelist.png',
         rightImgAlt: "Screenshot",
         rightDescription: "Up your snack organization game with multiple compartment options. The quick-access stash pouch is ready for even the most unexpected snack attacks and sharing needs.",
@@ -243,7 +243,7 @@ export default {
           {
             name: 'License',
             id: 'license',
-            href: this.demoBookingPage,
+            href: demoBookingPage,
             price: '€ 960',
             priceFrequency: '/year',
             description: 'Dedicated support and continuous updates',
@@ -259,7 +259,7 @@ export default {
           {
             name: '',
             id: 'personalizations',
-            href: 'mailto:' + this.email,
+            href: 'mailto:info@vinoteqa.com',
             price: 'Custom',
             description: 'Tailored to Meet Your Unique Needs',
             features: [

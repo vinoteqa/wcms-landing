@@ -34,7 +34,7 @@
                         {{ feature }}
                     </li>
                 </ul>
-                <a v-if="tier.linkLabel" :href="tier.href" :aria-describedby="tier.id"
+                <a v-if="tier.linkLabel" :href="tier.href" target="_blank" :aria-describedby="tier.id"
                     :class="[tier.featured ? 'bg-white text-black shadow-sm hover:bg-white/95 focus-visible:outline-vinoteqa' : 'text-vinoteqa ring-1 ring-inset ring-vinoteqa hover:bg-vinoteqa/5 focus-visible:outline-vinoteqa', 'mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10']">
                     {{ tier.linkLabel }}</a>
             </div>
