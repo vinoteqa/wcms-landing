@@ -14,8 +14,15 @@
         font-family: 'Outfit';
         font-style: normal;
         font-weight: 400;
-        font-display: swap;
-        src: url(/fonts/Outfit.ttf) format('ttf');
+        src: url(/fonts/Outfit.ttf) format('ttf'),
+        url(/fonts/Outfit.woff2) format('woff2');
+    }
+    @font-face {
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 600;
+        src: url(/fonts/Outfit.ttf) format('ttf'),
+        url(/fonts/Outfit.woff2) format('woff2');
     }
 
     html {
