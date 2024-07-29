@@ -30,7 +30,7 @@
                     </div>
                     <div class="grid-cols-2 md:grid md:grid-cols-2 md:gap-8 ">
                         <div>
-                            <h3 class="text-sm font-semibold leading-6 text-black/90">{{ 'Location' }}</h3>
+                            <h3 class="text-sm font-semibold leading-6 text-black/90">{{ $t('common.location') }}</h3>
                             <ul role="list" class="mt-6 space-y-4">
                                 <li v-for="item in navigation.location" :key="item.name">
                                     <a v-if="item.href" :href="item.href"
@@ -41,7 +41,7 @@
                             </ul>
                         </div>
                         <div class="mt-10 md:mt-0">
-                            <h3 class="text-sm font-semibold leading-6 text-black/90">{{ 'Contacts' }}</h3>
+                            <h3 class="text-sm font-semibold leading-6 text-black/90">{{ $t('common.contacts') }}</h3>
                             <ul role="list" class="mt-6 space-y-4">
                                 <li v-for="item in navigation.contacts" :key="item.name">
                                     <a v-if="item.href" :href="item.href"

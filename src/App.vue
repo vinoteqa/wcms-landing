@@ -70,24 +70,23 @@ export default {
   data() {
     return {
       title: 'Vinoteqa - Your Winecellar Always in Your Pocket',
-      mission: "Vinoteqa's mission is to revolutionize wine management for high-end restaurants and wine bars with seamless, efficient, and elegant digital solutions.",
+      mission: this.$t('vinoteqa.mission'),
       logoSrc: '/logo.svg',
-      location: 'South Tyrol, Italy',
       email: 'info@vinoteqa.com',
 
       // navigation
-      actionButtonLabel: 'Book a Demo',
+      actionButtonLabel: this.$t('ctas.bookDemo'),
       actionButtonLink: demoBookingPage,
       navigation: [
-        { name: 'Platform', href: '#features' },
-        { name: 'Wine Menu', href: '#winelist' },
-        { name: 'Pricing', href: '#pricing' },
-        { name: 'FAQs', href: '#faqs' },
+        { name: this.$t('navigation.platform'), href: '#features' },
+        { name: this.$t('navigation.winelist'), href: '#winelist' },
+        { name: this.$t('navigation.pricing'), href: '#pricing' },
+        { name: this.$t('navigation.faqs'), href: '#faqs' },
       ],
       footerNavigation: {
         location: [
           {
-            name: 'South Tyrol, Italy',
+            name: this.$t('vinoteqa.location'),
           }
         ],
         contacts: [
@@ -140,183 +139,181 @@ export default {
       // hero
       hero: {
         imgSrc: "/imgs/hero-img.jpg",
-        titleLabel: 'For Establishments with 300+ Wine Labels',
-        title: 'Digitalize Your Wine Cellar Management',
-        subtitle: 'Easily manage and display your wine collection. Generate your wine list with one click. Accessible anytime, anywhere.',
-        primaryButtonLabel: 'Book a FREE Demo',
+        titleLabel: this.$t('hero.titleLabel'),
+        title: this.$t('hero.title'),
+        subtitle: this.$t('hero.subtitle'),
+        primaryButtonLabel: this.$t('ctas.bookDemoBold'),
         primaryButtonLink: demoBookingPage,
-        secondaryButtonLabel: 'Discover more',
+        secondaryButtonLabel: this.$t('common.discoverMore'),
         secondaryButtonLink: '#features',
       },
 
       // sections
       stats: {
-        title: "Gain immediate access to our database:",
+        title: this.$t('sections.statistics.title'),
         stats: [
-          { id: 1, name: 'Wineries', value: '130k+' },
-          { id: 2, name: 'Wines', value: '1.5M+' },
-          { id: 3, name: 'Accuracy Improvement', value: '95%' },
+          { id: 1, name: this.$t('sections.statistics.wines'), value: '130k+' },
+          { id: 2, name: this.$t('sections.statistics.wineries'), value: '1.5M+' },
+          { id: 3, name: this.$t('sections.statistics.accuracyImprovement'), value: '95%' },
         ]
       },
 
       featOne: {
-        titleLabel: "Smart Design",
-        title: "An Integrated Workflow",
-        subtitle: "Effortlessly manage your wine cellar with our intuitive platform. Control inventory, create stunning wine menus, and access reliable data",
-        imgSrc: "/imgs/screenshot1.png",
-        imgAlt: "Screenshot",
+        titleLabel: this.$t('sections.features.integratedWorkflowTitleLabel'),
+        title: this.$t('sections.features.integratedWorkflowTitle'),
+        subtitle: this.$t('sections.features.integratedWorkflowSubtitle'),
+        imgSrc: `/imgs/screenshot1.${this.$i18n.locale}.png`,
+        imgAlt: "Vinoteqa homescreen Screenshot",
         features: [
           {
-            name: 'Extensive Wine Data',
-            description: 'Access over 1 Million wine data points, including territories, grapes, styles, and more.',
+            name: this.$t('sections.features.extensiveWineDataTitle'),
+            description: this.$t('sections.features.extensiveWineDataSubtitle'),
             icon: GlobeEuropeAfricaIcon,
           },
           {
-            name: 'Intuitive Structure',
-            description: 'Navigate with ease through a user-friendly interface designed for clarity and simplicity.',
+            name: this.$t('sections.features.intuitiveUITitle'),
+            description: this.$t('sections.features.intuitiveUISubtitle'),
             icon: CursorArrowRaysIcon,
           },
           {
-            name: 'Automated Inventory Management',
-            description: 'Keep track of your entire cellar effortlessly, reducing the risk of out-of-stock surprises for your guests.',
+            name: this.$t('sections.features.inventoryManagementTitle'),
+            description: this.$t('sections.features.inventoryManagementSubtitle'),
             icon: Cog8ToothIcon,
           },
         ]
       },
       featTwo: {
-        titleLabel: "Decide Smarter",
-        title: "Data at a Glance",
-        subtitle: "Discover a wealth of insights with our detailed wine cellar statistics, designed to help you understand and optimize your inventory and sales performance.",
+        titleLabel: this.$t('sections.features.statisticsTitleLabel'),
+        title: this.$t('sections.features.statisticsTitle'),
+        subtitle: this.$t('sections.features.statisticsSubtitle'),
         imgSrc: "/imgs/screenshot2.png",
-        imgAlt: "Screenshot",
+        imgAlt: "Vinoteqa statistics Screenshot",
         features: [
           {
-            name: 'Real-Time Statistics',
-            description: 'Review your statistics anytime and from anywhere, ensuring you always know what you have in stock.',
+            name: this.$t('sections.features.liveStatisticsTitle'),
+            description: this.$t('sections.features.liveStatisticsSubtitle'),
             icon: CloudIcon,
           },
           {
-            name: 'Inventory Reports',
-            description: 'Generate comprehensive inventory reports with ease, saving time and effort.',
+            name: this.$t('sections.features.reportingTitle'),
+            description: this.$t('sections.features.reportingSubtitle'),
             icon: PresentationChartLineIcon,
           },
           {
-            name: 'Data-Driven Decisions',
-            description: 'Use insights to project profits, review margins, and identify best-sellers and key suppliers.',
+            name: this.$t('sections.features.dataDrivenDecisionsTitle'),
+            description: this.$t('sections.features.dataDrivenDecisionsSubtitle'),
             icon: LightBulbIcon,
           },
         ]
       },
       featThree: {
-        title: "Your Personalized Wine List",
-        subtitle: "Automatically update and organize your wine list with real-time inventory sync. Effortlessly create and print customized wine menus with wines placed in their correct positions.",
+        title: this.$t('sections.features.winelistTitle'),
+        subtitle: this.$t('sections.features.winelistSubtitle'),
         leftImgSrc: '/imgs/winelist-digital.jpg',
-        leftImgAlt: "Vinoteqa's digital wine list on mobile and iPad",
-        leftTitle: "Digital Wine List",
-        leftDescription: "Keep your digital wine list current with automatic updates and synchronization. Once set up, wines will be automatically placed in their designated positions, reflecting your collection accurately.",
-        leftButtonLabel: "View example",
+        leftImgAlt: this.$t('sections.features.digitalWinelistImgAlt'),
+        leftTitle: this.$t('sections.features.digitalWinelistTitle'),
+        leftDescription: this.$t('sections.features.digitalWinelistSubtitle'),
+        leftButtonLabel: this.$t('common.viewExample'),
         leftButtonLink: "https://app.vinoteqa.com/carte/01h08dydtpvr5yzdztjz8t5pf8",
         rightImgSrc: '/imgs/winelist-print.jpg',
-        rightImgAlt: "Restaurant's guests looking through a printed wine list generated by Vinoteqa",
-        rightTitle: "Printed Wine List",
-        rightDescription: "Print your wine list with a single click, achieving high-quality results. Automatically organized and professionally presented, both digitally and in print.",
+        rightImgAlt: this.$t('sections.features.printWinelistImgAlt'),
+        rightTitle: this.$t('sections.features.printWinelistTitle'),
+        rightDescription: this.$t('sections.features.printWinelistSubtitle'),
       },
 
       testimonial: {
         imgSrc: '/imgs/testimonial.jpg',
-        imgALt: 'Stefano Kratter from Ristorante Mondschein talks about Vinoteqa',
-        content:
-          "Vinoteqa ha rivoluzionato la gestione del nostro inventario e della lista dei vini. Con i dati dei vini già a disposizione e aggiornamenti in tempo reale, le nostre operazioni sono efficienti e la carta è sempre aggiornata. Vinoteqa mantiene davvero la nostra cantina a portata di mano, permettendoci di concentrarci sull'offrire un'esperienza culinaria eccezionale.",
+        imgAlt: this.$t('sections.testimonial.imgAlt'),
+        content: this.$t('sections.testimonial.content'),
         name: "Stefano Kratter",
         company: "Ristorante Mondschein - A Taste of the Dolomites",
         companyLink: "https://www.ristorantemondschein.it/"
       },
 
       pricing: {
-        titleLabel: "Pricing",
-        title: "One Simple Price for All Features",
-        subtitle: "Get Everything You Need to Master Your Wine Inventory and Wine List Management with a Single Plan.",
+        titleLabel: this.$t('sections.pricing.titleLabel'),
+        title: this.$t('sections.pricing.title'),
+        subtitle: this.$t('sections.pricing.subtitle'),
         tiers: [
           {
-            name: 'Onboarding',
             id: 'onboarding',
+            name: this.$t('sections.pricing.onboarding.title'),
+            description: this.$t('sections.pricing.onboarding.subtitle'),
             price: '€1,000',
-            priceFrequency: 'one-time',
-            description: "We'll set you up and get you started smoothly.",
+            priceFrequency: this.$t('sections.pricing.oneTimePayment'),
             features: [
-              'White glove onboarding',
-              'Import of your current inventory',
-              'Comprehensive support and training'
-            ],
-            featured: false,
+              this.$t('sections.pricing.onboarding.whiteGlove'),
+              this.$t('sections.pricing.onboarding.inventoryImport'),
+              this.$t('sections.pricing.onboarding.supportAndTraining'),
+            ]
           },
           {
-            name: 'License',
             id: 'license',
-            href: demoBookingPage,
+            name: this.$t('sections.pricing.license.title'),
             price: '€ 960',
-            priceFrequency: '/year',
-            description: 'Access all features with dedicated support and continuous updates.',
+            priceFrequency: this.$t('sections.pricing.perYear'),
+            description: this.$t('sections.pricing.license.subtitle'),
+            href: demoBookingPage,
             features: [
-              'Access to 1M+ Wine Labels',
-              'Real-Time Inventory Control',
-              'Automatic Wine List Generation',
-              'Advanced Reporting and Analytics'
+              this.$t('sections.pricing.license.accessToDatabase'),
+              this.$t('sections.pricing.license.liveInventory'),
+              this.$t('sections.pricing.license.winelistGeneration'),
+              this.$t('sections.pricing.license.statistics'),
             ],
-            linkLabel: "Book a Free Demo",
+            linkLabel: this.$t('ctas.bookDemo'),
             featured: true,
           },
           {
-            name: '',
             id: 'custom',
+            name: '',
+            price: this.$t('sections.pricing.custom.title'),
+            description: this.$t('sections.pricing.custom.subtitle'),
             href: 'mailto:info@vinoteqa.com',
-            price: 'Custom',
-            description: 'Tailored solutions to fit your unique needs.',
             features: [
-              'POS System Integration',
-              'Accounting Software Integration',
-              'Custom Reporting and Analytics'
+              this.$t('sections.pricing.custom.integrationsPos'),
+              this.$t('sections.pricing.custom.integrationsAccounting'),
+              this.$t('sections.pricing.custom.reporting'),
             ],
-            linkLabel: "Contact Us",
+            linkLabel: this.$t('ctas.contactUs'),
             featured: false,
           },
         ]
       },
 
       faqs: {
-        title: "Frequently asked questions (FAQs)",
+        title: this.$t('sections.faqs.title'),
         faqs: [
           {
-            question: "What hardware or software is required to use Vinoteqa?",
-            answer: "Vinoteqa is a cloud-based platform that requires only an internet connection and a modern web browser. No additional hardware or software is needed.",
+            question: this.$t('sections.faqs.questions.hardware.question'),
+            answer: this.$t('sections.faqs.questions.hardware.answer'),
           },
           {
-            question: "Can Vinoteqa integrate with my existing systems?",
-            answer: "Vinoteqa is a standalone inventory manager that handles sales and purchases. We offer personalized integrations with POS and PMS systems to enhance your existing setup."
+            question: this.$t('sections.faqs.questions.integrations.question'),
+            answer: this.$t('sections.faqs.questions.integrations.answer'),
           },
           {
-            question: "Are there any setup fees or hidden support costs?",
-            answer: "Our pricing is transparent with no hidden costs. The onboarding fee covers setup, training, and initial support. Ongoing support is included in the annual license."
+            question: this.$t('sections.faqs.questions.setupFees.question'),
+            answer: this.$t('sections.faqs.questions.setupFees.answer'),
           },
           {
-            question: "Will updates affect my current setup or data and will I pay for new features?",
-            answer: "Updates will not disrupt your current setup or data. All new features and updates are included in the annual license fee.",
+            question: this.$t('sections.faqs.questions.futureFeatures.question'),
+            answer: this.$t('sections.faqs.questions.futureFeatures.answer'),
           },
           {
-            question: "Is Vinoteqa available as a mobile app?",
-            answer: "Vinoteqa is available as a Progressive Web App (PWA), which means it is accessible through modern web browsers on any device and offers an app-like experience without needing a standalone mobile app."
+            question: this.$t('sections.faqs.questions.mobileApp.question'),
+            answer: this.$t('sections.faqs.questions.mobileApp.answer'),
           },
           {
-            question: "What does the onboarding process look like and how long does it take?",
-            answer: "The onboarding process includes initial setup, importing your inventory, and comprehensive training. Most customers are up and running within a week or two."
+            question: this.$t('sections.faqs.questions.onboarding.question'),
+            answer: this.$t('sections.faqs.questions.onboarding.answer'),
           },
           {
-            question: "Who can use Vinoteqa in my restaurant/hotel?",
-            answer: "Vinoteqa is designed for sommeliers, restaurant managers, and wine bar owners. Multiple users can access and manage the system.",
+            question: this.$t('sections.faqs.questions.users.question'),
+            answer: this.$t('sections.faqs.questions.users.answer'),
           },
           {
-            question: "Do I only get an online wine list from the software?",
-            answer: "Vinoteqa provides both digital and printable wine lists, allowing you to choose the best format for your establishment.",
+            question: this.$t('sections.faqs.questions.onlyOnlineWinelist.question'),
+            answer: this.$t('sections.faqs.questions.onlyOnlineWinelist.answer'),
           },
         ],
       },
