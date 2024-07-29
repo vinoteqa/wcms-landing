@@ -48,7 +48,7 @@
                         <div class="py-6">
                             <a :href="actionButtonLink" target="_blank"
                                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{
-                        actionButtonLabel }}</a>
+                                actionButtonLabel }}</a>
                         </div>
                     </div>
                 </div>
@@ -57,16 +57,13 @@
     </header>
 </template>
 
-<script setup>
+<script>
 
 import {
     XMarkIcon,
     Bars3Icon,
 } from '@heroicons/vue/24/outline'
 
-</script>
-
-<script>
 export default {
     props: {
         logoSrc: {
