@@ -25,7 +25,7 @@
                     </div>
                     <div class="flex items-start justify-end lg:order-first">
                         <img :src="imgSrc" :alt="imgAlt"
-                            class="w-[13rem] max-w-none rounded-xl shadow-xl ring-1 ring-vinoteqa/20 sm:w-[57rem]"
+                            class="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-vinoteqa/20 sm:w-[57rem]"
                             width="2432" height="1442" />
                     </div>
                 </div>

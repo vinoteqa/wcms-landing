@@ -13,10 +13,10 @@
                         </a>
                     </div> -->
                 </div>
-                <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                <div class="mt-8 grid grid-cols-1 gap-8 xl:grid-cols-2 xl:col-span-2 xl:mt-0 ">
+                    <div class="grid-cols-2 md:grid md:grid-cols-2 md:gap-8">
                         <div></div>
-                        <div class="mt-10 md:mt-0">
+                        <div v-if="navigation.resources?.length > 0" class="mt-10 md:mt-0">
                             <h3 class="text-sm font-semibold leading-6 text-black/90">{{ '' }}</h3>
                             <ul role="list" class="mt-6 space-y-4">
                                 <li v-for="item in navigation.resources" :key="item.name">
@@ -28,7 +28,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                    <div class="grid-cols-2 md:grid md:grid-cols-2 md:gap-8 ">
                         <div>
                             <h3 class="text-sm font-semibold leading-6 text-black/90">{{ 'Location' }}</h3>
                             <ul role="list" class="mt-6 space-y-4">

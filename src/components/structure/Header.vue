@@ -20,14 +20,14 @@
                     class="text-sm font-semibold leading-6 text-black/95 hover:text-black">{{ item.name }}</a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a :href="actionButtonLink" target="_blank" class="text-sm font-semibold leading-6 text-black">{{ actionButtonLabel }} <span
-                        aria-hidden="true">&rarr;</span></a>
+                <a :href="actionButtonLink" target="_blank" class="text-sm font-semibold leading-6 text-black">{{
+                        actionButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
             </div>
         </nav>
         <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
             <div class="fixed inset-0 z-50" />
             <DialogPanel
-                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-black/30">
                 <div class="flex items-center justify-between">
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">Vinoteqa</span>
@@ -46,9 +46,9 @@
                         item.name }}</a>
                         </div>
                         <div class="py-6">
-                            <a href="#"
-                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log
-                                in</a>
+                            <a :href="actionButtonLink" target="_blank"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{
+                        actionButtonLabel }}</a>
                         </div>
                     </div>
                 </div>

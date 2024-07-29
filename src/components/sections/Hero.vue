@@ -6,7 +6,7 @@
     <div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
       <div
         class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
-        <div class="mt-10 sm:mt-32 lg:mt-16">
+        <div class="mt-10 sm:mt-10 lg:mt-16">
           <span
             class="inline-flex rounded-full bg-vinoteqa/5 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-vinoteqa/30 space-x-6">
             {{ titleLabel }}
