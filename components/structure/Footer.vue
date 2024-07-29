@@ -3,7 +3,7 @@
         <div class="mx-auto max-w-7xl px-6 pb-0 pt-10 sm:pt-10 lg:px-8 lg:pt-10">
             <div class="xl:grid xl:grid-cols-3 xl:gap-8">
                 <div class="space-y-8">
-                    <img class="h-7" :src="logoSrc" :alt="siteTitle" />
+                    <img class="h-7" :src="logoSrc" :alt="pageTitle" />
                     <p class="text-sm leading-6 text-black/60">{{ mission }}</p>
                     <!-- <div class="flex space-x-6">
                         <a v-for="item in navigation" :key="item.name" :href="item.href"

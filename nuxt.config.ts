@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   site: {
     url: 'https://www.vinoteqa.com',
     defaultLocale: 'en',
+    title: 'Vinoteqa',
   },
 
   components: [
@@ -21,7 +22,7 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
-    baseUrl: 'https://www.vinoteqa.com/',
+    baseUrl: 'https://www.vinoteqa.com',
     defaultLocale: 'en',
     locales: [{
       code: 'en',

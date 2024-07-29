@@ -50,30 +50,6 @@
 </template>
 
 <script setup>
-const { t } = useI18n()
-
-definePageMeta({
-  title: t("vinoteqa.title"),
-})
-
-useHead({
-  titleTemplate: '%s',
-  title: t("vinoteqa.title"),
-})
-
-useSeoMeta({
-  title: t("vinoteqa.title"),
-  ogTitle: t("vinoteqa.title"),
-  description: t("vinoteqa.description"),
-  ogDescription: t("vinoteqa.description"),
-  ogImage: 'https://www.vinoteqa.com/imgs/hero-img.png',
-  twitterCard: 'summary_large_image',
-})
-</script>
-
-<script>
-import { defineComponent, h } from 'vue'
-
 import {
   CloudIcon,
   Cog8ToothIcon,
@@ -81,14 +57,18 @@ import {
   GlobeEuropeAfricaIcon,
   LightBulbIcon,
   PresentationChartLineIcon,
-} from '@heroicons/vue/20/solid'
+} from '@heroicons/vue/20/solid';
+</script>
+
+<script>
+import { defineComponent, h } from 'vue'
 
 const demoBookingPage = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0wPJ0XLEJFtlZZ1JYZRIp0AYSBIKsgKhOsTBfHroZbo_H4IfciidS2Cik_RNYndC_Lh-tO8l_7'
 
 export default {
   data() {
     return {
-      title: 'Vinoteqa - Your Winecellar Always in Your Pocket',
+      title: 'Vinoteqa',
       mission: this.$t('vinoteqa.mission'),
       logoSrc: '/logo.svg',
       email: 'info@vinoteqa.com',
