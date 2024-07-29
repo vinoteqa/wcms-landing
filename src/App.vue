@@ -18,11 +18,12 @@
           <FeaturesLx :titleLabel="featTwo.titleLabel" :title="featTwo.title" :subtitle="featTwo.subtitle"
             :features="featTwo.features" :imgSrc="featTwo.imgSrc" :imgAlt="featTwo.imgAlt" />
           <FeaturesRow id="winelist" :title="featThree.title" :subtitle="featThree.subtitle"
-            :leftImgSrc="featThree.leftImgSrc" :leftImgAlt="featThree.leftImgAlt"
+            :leftImgSrc="featThree.leftImgSrc" :leftImgAlt="featThree.leftImgAlt" :leftTitle="featThree.leftTitle"
             :leftDescription="featThree.leftDescription" :leftButtonLabel="featThree.leftButtonLabel"
             :leftButtonLink="featThree.leftButtonLink" :rightImgSrc="featThree.rightImgSrc"
-            :rightImgAlt="featThree.rightImgAlt" :rightDescription="featThree.rightDescription"
-            :rightButtonLabel="featThree.rightButtonLabel" :rightButtonLink="featThree.rightButtonLink" />
+            :rightImgAlt="featThree.rightImgAlt" :rightTitle="featThree.rightTitle"
+            :rightDescription="featThree.rightDescription" :rightButtonLabel="featThree.rightButtonLabel"
+            :rightButtonLink="featThree.rightButtonLink" />
         </div>
         <div class="testimonial-ct">
           <Testimonial :imgSrc="testimonial.imgSrc" :imgAlt="testimonial.imgAlt" :testimonial="testimonial.content"
@@ -51,9 +52,12 @@
 
 <script setup>
 import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  LockClosedIcon,
+  CloudIcon,
+  Cog8ToothIcon,
+  CursorArrowRaysIcon,
+  GlobeEuropeAfricaIcon,
+  LightBulbIcon,
+  PresentationChartLineIcon,
 } from '@heroicons/vue/20/solid'
 
 import { defineComponent, h } from 'vue'
@@ -136,84 +140,86 @@ export default {
       // hero
       hero: {
         imgSrc: "/imgs/hero-img.jpg",
-        titleLabel: 'For restaurants with 300+ wine labels',
-        title: 'Your Wine Cellar Always in Your Pocket',
-        subtitle: 'Digitalize Your Wine Cellar and Create Your Wine List with a Single Click. Effortlessly Manage and Showcase Your Collection Anytime, Anywhere. ',
+        titleLabel: 'For Establishments with 300+ Wine Labels',
+        title: 'Digitalize Your Wine Cellar Management',
+        subtitle: 'Easily manage and display your wine collection. Generate your wine list with one click. Accessible anytime, anywhere.',
         primaryButtonLabel: 'Book a FREE Demo',
         primaryButtonLink: demoBookingPage,
-        secondaryButtonLabel: 'Read more',
+        secondaryButtonLabel: 'Discover more',
         secondaryButtonLink: '#features',
       },
 
       // sections
       stats: {
-        title: "Gain immediate access to our Database with:",
+        title: "Gain immediate access to our database:",
         stats: [
           { id: 1, name: 'Wineries', value: '130k+' },
           { id: 2, name: 'Wines', value: '1.5M+' },
-          { id: 3, name: 'New users annually', value: '46,000' },
+          { id: 3, name: 'Accuracy Improvement', value: '95%' },
         ]
       },
 
       featOne: {
-        titleLabel: "Smart design",
-        title: "An integrated workflow",
-        subtitle: "Experience the ease of managing your wine cellar with our intuitive platform. Gain control over your collection, simplify inventory management, craft beautiful wine cards and leverage reliable data.",
+        titleLabel: "Smart Design",
+        title: "An Integrated Workflow",
+        subtitle: "Effortlessly manage your wine cellar with our intuitive platform. Control inventory, create stunning wine menus, and access reliable data",
         imgSrc: "/imgs/screenshot1.png",
         imgAlt: "Screenshot",
         features: [
           {
-            name: 'Push to deploy.',
-            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
-            icon: CloudArrowUpIcon,
+            name: 'Extensive Wine Data',
+            description: 'Access over 1 Million wine data points, including territories, grapes, styles, and more.',
+            icon: GlobeEuropeAfricaIcon,
           },
           {
-            name: 'SSL certificates.',
-            description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-            icon: LockClosedIcon,
+            name: 'Intuitive Structure',
+            description: 'Navigate with ease through a user-friendly interface designed for clarity and simplicity.',
+            icon: CursorArrowRaysIcon,
           },
           {
-            name: 'Simple queues.',
-            description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.',
-            icon: ArrowPathIcon,
+            name: 'Automated Inventory Management',
+            description: 'Keep track of your entire cellar effortlessly, reducing the risk of out-of-stock surprises for your guests.',
+            icon: Cog8ToothIcon,
           },
         ]
       },
       featTwo: {
-        titleLabel: "Smart design",
-        title: "An integrated workflow",
-        subtitle: "Experience the ease of managing your wine cellar with our intuitive platform. Gain control over your collection, simplify inventory management, craft beautiful wine cards and leverage reliable data.",
+        titleLabel: "Decide Smarter",
+        title: "Data at a Glance",
+        subtitle: "Discover a wealth of insights with our detailed wine cellar statistics, designed to help you understand and optimize your inventory and sales performance.",
         imgSrc: "/imgs/screenshot2.png",
         imgAlt: "Screenshot",
         features: [
           {
-            name: 'Push to deploy.',
-            description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
-            icon: CloudArrowUpIcon,
+            name: 'Real-Time Statistics',
+            description: 'Review your statistics anytime and from anywhere, ensuring you always know what you have in stock.',
+            icon: CloudIcon,
           },
           {
-            name: 'SSL certificates.',
-            description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-            icon: LockClosedIcon,
+            name: 'Inventory Reports',
+            description: 'Generate comprehensive inventory reports with ease, saving time and effort.',
+            icon: PresentationChartLineIcon,
           },
           {
-            name: 'Simple queues.',
-            description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.',
-            icon: ArrowPathIcon,
+            name: 'Data-Driven Decisions',
+            description: 'Use insights to project profits, review margins, and identify best-sellers and key suppliers.',
+            icon: LightBulbIcon,
           },
         ]
       },
       featThree: {
-        title: "An integrated workflow",
-        subtitle: "Experience the ease of managing your wine cellar with our intuitive platform. Gain control over your collection, simplify inventory management, craft beautiful wine cards and leverage reliable data.",
+        title: "Your Personalized Wine List",
+        subtitle: "Automatically update and organize your wine list with real-time inventory sync. Effortlessly create and print customized wine menus with wines placed in their correct positions.",
         leftImgSrc: '/imgs/winelist-digital.jpg',
-        leftImgAlt: "Screenshot",
-        leftDescription: "Up your snack organization game with multiple compartment options. The quick-access stash pouch is ready for even the most unexpected snack attacks and sharing needs.",
-        leftButtonLabel: "See example",
+        leftImgAlt: "Vinoteqa's digital wine list on mobile and iPad",
+        leftTitle: "Digital Wine List",
+        leftDescription: "Keep your digital wine list current with automatic updates and synchronization. Once set up, wines will be automatically placed in their designated positions, reflecting your collection accurately.",
+        leftButtonLabel: "View example",
         leftButtonLink: "https://app.vinoteqa.com/carte/01h08dydtpvr5yzdztjz8t5pf8",
         rightImgSrc: '/imgs/winelist-print.jpg',
-        rightImgAlt: "Screenshot",
-        rightDescription: "Up your snack organization game with multiple compartment options. The quick-access stash pouch is ready for even the most unexpected snack attacks and sharing needs.",
+        rightImgAlt: "Restaurant's guests looking through a printed wine list generated by Vinoteqa",
+        rightTitle: "Printed Wine List",
+        rightDescription: "Print your wine list with a single click, achieving high-quality results. Automatically organized and professionally presented, both digitally and in print.",
       },
 
       testimonial: {
@@ -236,8 +242,12 @@ export default {
             id: 'onboarding',
             price: '€1,000',
             priceFrequency: 'one-time',
-            description: "We will set up and help you get started.",
-            features: ['White gloves onboarding', 'Import of your current inventory', 'Support and Training'],
+            description: "We'll set you up and get you started smoothly.",
+            features: [
+              'White glove onboarding',
+              'Import of your current inventory',
+              'Comprehensive support and training'
+            ],
             featured: false,
           },
           {
@@ -246,25 +256,26 @@ export default {
             href: demoBookingPage,
             price: '€ 960',
             priceFrequency: '/year',
-            description: 'Dedicated support and continuous updates',
+            description: 'Access all features with dedicated support and continuous updates.',
             features: [
               'Access to 1M+ Wine Labels',
               'Real-Time Inventory Control',
               'Automatic Wine List Generation',
               'Advanced Reporting and Analytics'
             ],
-            linkLabel: "Book a demo for Free",
+            linkLabel: "Book a Free Demo",
             featured: true,
           },
           {
             name: '',
-            id: 'personalizations',
+            id: 'custom',
             href: 'mailto:info@vinoteqa.com',
             price: 'Custom',
-            description: 'Tailored to Meet Your Unique Needs',
+            description: 'Tailored solutions to fit your unique needs.',
             features: [
               'POS System Integration',
               'Accounting Software Integration',
+              'Custom Reporting and Analytics'
             ],
             linkLabel: "Contact Us",
             featured: false,
@@ -276,11 +287,37 @@ export default {
         title: "Frequently asked questions (FAQs)",
         faqs: [
           {
-            question: "What's the best thing about Switzerland?",
-            answer:
-              "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+            question: "What hardware or software is required to use Vinoteqa?",
+            answer: "Vinoteqa is a cloud-based platform that requires only an internet connection and a modern web browser. No additional hardware or software is needed.",
           },
-          // More questions...
+          {
+            question: "Can Vinoteqa integrate with my existing systems?",
+            answer: "Vinoteqa is a standalone inventory manager that handles sales and purchases. We offer personalized integrations with POS and PMS systems to enhance your existing setup."
+          },
+          {
+            question: "Are there any setup fees or hidden support costs?",
+            answer: "Our pricing is transparent with no hidden costs. The onboarding fee covers setup, training, and initial support. Ongoing support is included in the annual license."
+          },
+          {
+            question: "Will updates affect my current setup or data and will I pay for new features?",
+            answer: "Updates will not disrupt your current setup or data. All new features and updates are included in the annual license fee.",
+          },
+          {
+            question: "Is Vinoteqa available as a mobile app?",
+            answer: "Vinoteqa is available as a Progressive Web App (PWA), which means it is accessible through modern web browsers on any device and offers an app-like experience without needing a standalone mobile app."
+          },
+          {
+            question: "What does the onboarding process look like and how long does it take?",
+            answer: "The onboarding process includes initial setup, importing your inventory, and comprehensive training. Most customers are up and running within a week or two."
+          },
+          {
+            question: "Who can use Vinoteqa in my restaurant/hotel?",
+            answer: "Vinoteqa is designed for sommeliers, restaurant managers, and wine bar owners. Multiple users can access and manage the system.",
+          },
+          {
+            question: "Do I only get an online wine list from the software?",
+            answer: "Vinoteqa provides both digital and printable wine lists, allowing you to choose the best format for your establishment.",
+          },
         ],
       },
 

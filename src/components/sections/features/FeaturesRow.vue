@@ -14,7 +14,8 @@
                         <div class="aspect-h-2 aspect-w-3 w-full overflow-hidden rounded-lg">
                             <img :src="leftImgSrc" :alt="leftImgAlt" class="h-full w-full object-cover object-center" />
                         </div>
-                        <p class="mt-8 mb-3 text-base text-black/90">{{ leftDescription }}</p>
+                        <p class="mt-8 mb-3 text-base text-black/90">
+                            <span class="font-semibold">{{ leftTitle }}. </span>{{ leftDescription }}</p>
                         <a v-if="leftButtonLabel" :href="leftButtonLink" target="_blank"
                             class="text-base font-semibold leading-6 text-black/90 hover:text-black">{{
                         leftButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
@@ -24,7 +25,9 @@
                             <img :src="rightImgSrc" :alt="rightImgAlt"
                                 class="h-full w-full object-cover object-center" />
                         </div>
-                        <p class="mt-8 mb-3 text-base text-black/90">{{ rightDescription }}</p>
+                        <p class="mt-8 mb-3 text-base text-black/90">
+                            <span class="font-semibold">{{ rightTitle }}. </span>{{ rightDescription }}
+                        </p>
                         <a v-if="rightButtonLabel" :href="rightButtonLink" target="_blank"
                             class="text-base font-semibold leading-6 text-black/90 hover:text-black">{{
                         rightButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
@@ -62,6 +65,10 @@ export default {
             type: String,
             required: true,
         },
+        leftTitle: {
+            type: String,
+            required: true,
+        },
         leftDescription: {
             type: String,
             required: true,
@@ -73,6 +80,10 @@ export default {
         leftButtonLink: {
             type: String,
             default: null,
+        },
+        rightTitle: {
+            type: String,
+            required: true,
         },
         rightDescription: {
             type: String,
