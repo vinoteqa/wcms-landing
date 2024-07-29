@@ -40,7 +40,7 @@
       "integratedWorkflowTitle": "Ein integrierter Workflow",
       "integratedWorkflowSubtitle": "Verwalte deinen Weinkeller mühelos mit unserer benutzerfreundlichen Plattform. Kontrolliere deinen Bestand, erstelle beeindruckende Weinkarten und greife auf zuverlässige Daten zu.",
       "extensiveWineDataTitle": "Umfangreiche Weindaten",
-      "extensiveWineDataSubtitle": "Greife auf über eine Million Weindaten zu, einschließlich Gebiete, Rebsorten, Stile und mehr.",
+      "extensiveWineDataSubtitle": "Zugang zu über eine Million Weindaten zu, einschließlich Gebiete, Rebsorten, Stile und mehr.",
       "intuitiveUITitle": "Intuitive Struktur",
       "intuitiveUISubtitle": "Navigiere mühelos durch eine nutzerfreundliche Oberfläche, die für Klarheit und Einfachheit entwickelt wurde.",
       "inventoryManagementTitle": "Automatisiertes Bestandsmanagement",
@@ -53,19 +53,19 @@
       "reportingTitle": "Bestandsberichte",
       "reportingSubtitle": "Erstelle umfassende Bestandsberichte mit Leichtigkeit und spare Zeit und Mühe.",
       "dataDrivenDecisionsTitle": "Datenbasierte Entscheidungen",
-      "dataDrivenDecisionsSubtitle": "Nutze Einblicke, um Margen zu überprüfen, Gewinne vorherzusagen und Bestseller sowie deine wichtigsten Lieferanten zu identifizieren.",
+      "dataDrivenDecisionsSubtitle": "Nutze Einblicke, um Margen zu überprüfen, Gewinne vorherzusagen, wichtigste Lieferanten und beliebteste Weine zu identifizieren.",
       "winelistTitle": "Deine personalisierte Weinkarte",
-      "winelistSubtitle": "Aktualisiere und organisiere deine Weinkarte automatisch mittels Bestandsynchronisierung in Echtzeit. Erstelle und drucke mühelos individuelle Weinkarten mit korrekt positionierten Weinen.",
+      "winelistSubtitle": "Aktualisiere und gestalte deine Weinkarte automatisch mittels Bestandsynchronisierung in Echtzeit. Erstelle und drucke mühelos individuelle Weinkarten mit korrekt positionierten Weinen.",
       "digitalWinelistTitle": "Digitale Weinkarte",
       "digitalWinelistSubtitle": "Halte deine digitale Weinkarte mit automatischen Updates und Synchronisierungen auf dem neuesten Stand. Nach der Einrichtung werden deine Weine automatisch in ihre vorgesehenen Positionen gebracht, um deine Kollektion bestmöglich widerzuspiegeln.",
       "digitalWinelistImgAlt": "Digitale Weinkarte von Vinoteqa auf Mobiltelefon und iPad",
       "printWinelistTitle": "Gedruckte Weinkarte",
-      "printWinelistSubtitle": "Drucke deine Weinkarte mit einem Klick und erziele hochwertigste Ergebnisse. Automatisch geordnet und professionell präsentiert, sowohl digital als auch in gedruckter Form.",
+      "printWinelistSubtitle": "Drucke deine Weinkarte mit einem Klick und erziele hochwertige Ergebnisse. Automatisch geordnet und professionell präsentiert, sowohl digital als auch in gedruckter Form.",
       "printWinelistImgAlt": "Restaurantgäste betrachten eine von Vinoteqa automatisch erstellte gedruckte Weinkarte"
     },
     "testimonial": {
       "imgAlt": "Stefano Kratter vom Ristorante Mondschein über Vinoteqa",
-      "content": "Vinoteqa hat die Verwaltung unseres Inventars und unserer Weinkarte revolutioniert. Mit den bereits verfügbaren Weindaten und Echtzeit-Updates sind unsere Abläufe effizienter geworden und die Karte automatisch auf dem neuesten Stand. Vinoteqa hat unseren Weinkeller im Griff und ermöglicht es, dass wir uns auf ein außergewöhnliches kulinarisches Erlebnis für unsere Gäste konzentrieren können."
+      "content": "Vinoteqa hat die Verwaltung unseres Inventars und unserer Weinkarte revolutioniert. Mit den bereits verfügbaren Weindaten und Echtzeit-Updates sind unsere Abläufe effizienter geworden und die Weinkarte bleibt automatisch auf dem neuesten Stand. Vinoteqa hilft uns maßgeblich, unseren Weinkeller im Griff zu halten und ermöglicht es, dass wir uns auf ein außergewöhnliches kulinarisches Erlebnis für unsere Gäste konzentrieren können."
     },
     "pricing": {
       "titleLabel": "Preise",
