@@ -8,7 +8,7 @@
             :primaryButtonLabel="hero.primaryButtonLabel" :primaryButtonLink="hero.primaryButtonLink"
             :secondaryButtonLabel="hero.secondaryButtonLabel" :secondaryButtonLink="hero.secondaryButtonLink"
             :imgSrc="hero.imgSrc" />
-          <Stats :title="stats.title" :stats="stats.stats" />
+          <Stats id="start" :title="stats.title" :stats="stats.stats" />
         </div>
   
         <div class="content-ct">
@@ -145,7 +145,7 @@
           primaryButtonLabel: this.$t('ctas.bookDemoBold'),
           primaryButtonLink: demoBookingPage,
           secondaryButtonLabel: this.$t('common.discoverMore'),
-          secondaryButtonLink: '#features',
+          secondaryButtonLink: '#start',
         },
   
         // sections
