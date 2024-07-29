@@ -1,345 +1,364 @@
 <template>
-    <div class="page bg-white">
-      <main>
-        <div class="top-ct">
-          <Header :logoSrc="logoSrc" :navigation="navigation" :actionButtonLabel="actionButtonLabel"
-            :actionButtonLink="actionButtonLink" />
-          <Hero :titleLabel="hero.titleLabel" :title="hero.title" :subtitle="hero.subtitle"
-            :primaryButtonLabel="hero.primaryButtonLabel" :primaryButtonLink="hero.primaryButtonLink"
-            :secondaryButtonLabel="hero.secondaryButtonLabel" :secondaryButtonLink="hero.secondaryButtonLink"
-            :imgSrc="hero.imgSrc" />
-          <Stats id="start" :title="stats.title" :stats="stats.stats" />
+  <div class="page bg-white">
+    <main>
+      <div class="top-ct">
+        <Header :logoSrc="logoSrc" :navigation="navigation" :actionButtonLabel="actionButtonLabel"
+          :actionButtonLink="actionButtonLink" />
+        <Hero :titleLabel="hero.titleLabel" :title="hero.title" :subtitle="hero.subtitle"
+          :primaryButtonLabel="hero.primaryButtonLabel" :primaryButtonLink="hero.primaryButtonLink"
+          :secondaryButtonLabel="hero.secondaryButtonLabel" :secondaryButtonLink="hero.secondaryButtonLink"
+          :imgSrc="hero.imgSrc" />
+        <Stats id="start" :title="stats.title" :stats="stats.stats" />
+      </div>
+
+      <div class="content-ct">
+        <div id="features" class="features-ct">
+          <FeaturesRx :titleLabel="featOne.titleLabel" :title="featOne.title" :subtitle="featOne.subtitle"
+            :features="featOne.features" :imgSrc="featOne.imgSrc" :imgAlt="featOne.imgAlt" />
+          <FeaturesLx :titleLabel="featTwo.titleLabel" :title="featTwo.title" :subtitle="featTwo.subtitle"
+            :features="featTwo.features" :imgSrc="featTwo.imgSrc" :imgAlt="featTwo.imgAlt" />
+          <FeaturesRow id="winelist" :title="featThree.title" :subtitle="featThree.subtitle"
+            :leftImgSrc="featThree.leftImgSrc" :leftImgAlt="featThree.leftImgAlt" :leftTitle="featThree.leftTitle"
+            :leftDescription="featThree.leftDescription" :leftButtonLabel="featThree.leftButtonLabel"
+            :leftButtonLink="featThree.leftButtonLink" :rightImgSrc="featThree.rightImgSrc"
+            :rightImgAlt="featThree.rightImgAlt" :rightTitle="featThree.rightTitle"
+            :rightDescription="featThree.rightDescription" :rightButtonLabel="featThree.rightButtonLabel"
+            :rightButtonLink="featThree.rightButtonLink" />
         </div>
-  
-        <div class="content-ct">
-          <div id="features" class="features-ct">
-            <FeaturesRx :titleLabel="featOne.titleLabel" :title="featOne.title" :subtitle="featOne.subtitle"
-              :features="featOne.features" :imgSrc="featOne.imgSrc" :imgAlt="featOne.imgAlt" />
-            <FeaturesLx :titleLabel="featTwo.titleLabel" :title="featTwo.title" :subtitle="featTwo.subtitle"
-              :features="featTwo.features" :imgSrc="featTwo.imgSrc" :imgAlt="featTwo.imgAlt" />
-            <FeaturesRow id="winelist" :title="featThree.title" :subtitle="featThree.subtitle"
-              :leftImgSrc="featThree.leftImgSrc" :leftImgAlt="featThree.leftImgAlt" :leftTitle="featThree.leftTitle"
-              :leftDescription="featThree.leftDescription" :leftButtonLabel="featThree.leftButtonLabel"
-              :leftButtonLink="featThree.leftButtonLink" :rightImgSrc="featThree.rightImgSrc"
-              :rightImgAlt="featThree.rightImgAlt" :rightTitle="featThree.rightTitle"
-              :rightDescription="featThree.rightDescription" :rightButtonLabel="featThree.rightButtonLabel"
-              :rightButtonLink="featThree.rightButtonLink" />
-          </div>
-          <div class="testimonial-ct">
-            <Testimonial :imgSrc="testimonial.imgSrc" :imgAlt="testimonial.imgAlt" :testimonial="testimonial.content"
-              :name="testimonial.name" :company="testimonial.company" :companyLink="testimonial.companyLink" />
-          </div>
-          <div id="pricing" class="pricing-ct">
-            <Pricing :titleLabel="pricing.titleLabel" :title="pricing.title" :subtitle="pricing.subtitle"
-              :tiers="pricing.tiers" />
-          </div>
-          <div id="faqs" class="faq-ct">
-            <Faq :title="faqs.title" :faqs="faqs.faqs" />
-          </div>
-          <!-- <div class="newsletter-ct">
+        <div class="testimonial-ct">
+          <Testimonial :imgSrc="testimonial.imgSrc" :imgAlt="testimonial.imgAlt" :testimonial="testimonial.content"
+            :name="testimonial.name" :company="testimonial.company" :companyLink="testimonial.companyLink" />
+        </div>
+        <div id="pricing" class="pricing-ct">
+          <Pricing :titleLabel="pricing.titleLabel" :title="pricing.title" :subtitle="pricing.subtitle"
+            :tiers="pricing.tiers" />
+        </div>
+        <div id="faqs" class="faq-ct">
+          <Faq :title="faqs.title" :faqs="faqs.faqs" />
+        </div>
+        <!-- <div class="newsletter-ct">
             <NewsletterForm :loading="true" :subscribed="!!newsletter.subscriberEmail" :title="newsletter.title"
               :policyNotice="newsletter.policyNotice" :inputLabel="newsletter.inputLabel"
               :inputPlaceholder="newsletter.inputPlaceholder" :inputButtonLabel="newsletter.inputButtonLabel"
               @subscribe="subscribeVisitor($event)" />
           </div> -->
-        </div>
-      </main>
-  
-      <Footer :pageTitle="title" :logoSrc="logoSrc" :mission="mission" :location="location" :email="email"
-        :navigation="footerNavigation" />
-    </div>
-  </template>
-  
-  <script setup>
-  import {
-    CloudIcon,
-    Cog8ToothIcon,
-    CursorArrowRaysIcon,
-    GlobeEuropeAfricaIcon,
-    LightBulbIcon,
-    PresentationChartLineIcon,
-  } from '@heroicons/vue/20/solid'
-  
-  import { defineComponent, h } from 'vue'
-  </script>
-  
-  <script>
-  const demoBookingPage = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0wPJ0XLEJFtlZZ1JYZRIp0AYSBIKsgKhOsTBfHroZbo_H4IfciidS2Cik_RNYndC_Lh-tO8l_7'
-  
-  export default {
-    data() {
-      return {
-        title: 'Vinoteqa - Your Winecellar Always in Your Pocket',
-        mission: this.$t('vinoteqa.mission'),
-        logoSrc: '/logo.svg',
-        email: 'info@vinoteqa.com',
-  
-        // navigation
-        actionButtonLabel: this.$t('ctas.bookDemo'),
-        actionButtonLink: demoBookingPage,
-        navigation: [
-          { name: this.$t('navigation.platform'), href: '#features' },
-          { name: this.$t('navigation.winelist'), href: '#winelist' },
-          { name: this.$t('navigation.pricing'), href: '#pricing' },
-          { name: this.$t('navigation.faqs'), href: '#faqs' },
+      </div>
+    </main>
+
+    <Footer :pageTitle="title" :logoSrc="logoSrc" :mission="mission" :navigation="footerNavigation" />
+  </div>
+</template>
+
+<script setup>
+const { t } = useI18n()
+
+definePageMeta({
+  title: t("vinoteqa.title"),
+})
+
+useHead({
+  titleTemplate: '%s',
+  title: t("vinoteqa.title"),
+})
+
+useSeoMeta({
+  title: t("vinoteqa.title"),
+  ogTitle: t("vinoteqa.title"),
+  description: t("vinoteqa.description"),
+  ogDescription: t("vinoteqa.description"),
+  ogImage: 'https://www.vinoteqa.com/imgs/hero-img.png',
+  twitterCard: 'summary_large_image',
+})
+</script>
+
+<script>
+import { defineComponent, h } from 'vue'
+
+import {
+  CloudIcon,
+  Cog8ToothIcon,
+  CursorArrowRaysIcon,
+  GlobeEuropeAfricaIcon,
+  LightBulbIcon,
+  PresentationChartLineIcon,
+} from '@heroicons/vue/20/solid'
+
+const demoBookingPage = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0wPJ0XLEJFtlZZ1JYZRIp0AYSBIKsgKhOsTBfHroZbo_H4IfciidS2Cik_RNYndC_Lh-tO8l_7'
+
+export default {
+  data() {
+    return {
+      title: 'Vinoteqa - Your Winecellar Always in Your Pocket',
+      mission: this.$t('vinoteqa.mission'),
+      logoSrc: '/logo.svg',
+      email: 'info@vinoteqa.com',
+
+      // navigation
+      actionButtonLabel: this.$t('ctas.bookDemo'),
+      actionButtonLink: demoBookingPage,
+      navigation: [
+        { name: this.$t('navigation.platform'), href: '#features' },
+        { name: this.$t('navigation.winelist'), href: '#winelist' },
+        { name: this.$t('navigation.pricing'), href: '#pricing' },
+        { name: this.$t('navigation.faqs'), href: '#faqs' },
+      ],
+      footerNavigation: {
+        location: [
+          {
+            name: this.$t('vinoteqa.location'),
+          }
         ],
-        footerNavigation: {
-          location: [
-            {
-              name: this.$t('vinoteqa.location'),
-            }
-          ],
-          contacts: [
-            { name: 'info@vinoteqa.com', href: 'mailto:info@vinoteqa.com' }
-          ],
-          social: [
-            {
-              name: 'Instagram',
-              href: 'https://www.instagram.com/vinoteqa/',
-              icon: defineComponent({
-                render: () =>
-                  h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
-                    h('path', {
-                      'fill-rule': 'evenodd',
-                      d: 'M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077',
-                      'clip-rule': 'evenodd',
-                    }),
-                  ]),
-              }),
-            },
-            {
-              name: 'LinkedIn',
-              href: 'https://www.linkedin.com/company/vinoteqa/',
-              icon: defineComponent({
-                render: () =>
-                  h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
-                    h('path', {
-                      'fill-rule': 'evenodd',
-                      d: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
-                      'clip-rule': 'evenodd',
-                    }),
-                  ]),
-              }),
-            },
-            {
-              name: 'Spotify',
-              href: 'https://open.spotify.com/user/31eanqwhjwhmofl4wc26ye7r2heu/',
-              icon: defineComponent({
-                render: () =>
-                  h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
-                    h('path', {
-                      d: 'M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z',
-                    }),
-                  ]),
-              }),
-            },
-          ],
-        },
-  
-        // hero
-        hero: {
-          imgSrc: "/imgs/hero-img.jpg",
-          titleLabel: this.$t('hero.titleLabel'),
-          title: this.$t('hero.title'),
-          subtitle: this.$t('hero.subtitle'),
-          primaryButtonLabel: this.$t('ctas.bookDemoBold'),
-          primaryButtonLink: demoBookingPage,
-          secondaryButtonLabel: this.$t('common.discoverMore'),
-          secondaryButtonLink: '#start',
-        },
-  
-        // sections
-        stats: {
-          title: this.$t('sections.statistics.title'),
-          stats: [
-            { id: 1, name: this.$t('sections.statistics.wines'), value: '130k+' },
-            { id: 2, name: this.$t('sections.statistics.wineries'), value: '1.5M+' },
-            { id: 3, name: this.$t('sections.statistics.accuracyImprovement'), value: '95%' },
-          ]
-        },
-  
-        featOne: {
-          titleLabel: this.$t('sections.features.integratedWorkflowTitleLabel'),
-          title: this.$t('sections.features.integratedWorkflowTitle'),
-          subtitle: this.$t('sections.features.integratedWorkflowSubtitle'),
-          imgSrc: `/imgs/screenshot1.${this.$i18n.locale}.png`,
-          imgAlt: "Vinoteqa homescreen Screenshot",
-          features: [
-            {
-              name: this.$t('sections.features.extensiveWineDataTitle'),
-              description: this.$t('sections.features.extensiveWineDataSubtitle'),
-              icon: GlobeEuropeAfricaIcon,
-            },
-            {
-              name: this.$t('sections.features.intuitiveUITitle'),
-              description: this.$t('sections.features.intuitiveUISubtitle'),
-              icon: CursorArrowRaysIcon,
-            },
-            {
-              name: this.$t('sections.features.inventoryManagementTitle'),
-              description: this.$t('sections.features.inventoryManagementSubtitle'),
-              icon: Cog8ToothIcon,
-            },
-          ]
-        },
-        featTwo: {
-          titleLabel: this.$t('sections.features.statisticsTitleLabel'),
-          title: this.$t('sections.features.statisticsTitle'),
-          subtitle: this.$t('sections.features.statisticsSubtitle'),
-          imgSrc: "/imgs/screenshot2.png",
-          imgAlt: "Vinoteqa statistics Screenshot",
-          features: [
-            {
-              name: this.$t('sections.features.liveStatisticsTitle'),
-              description: this.$t('sections.features.liveStatisticsSubtitle'),
-              icon: CloudIcon,
-            },
-            {
-              name: this.$t('sections.features.reportingTitle'),
-              description: this.$t('sections.features.reportingSubtitle'),
-              icon: PresentationChartLineIcon,
-            },
-            {
-              name: this.$t('sections.features.dataDrivenDecisionsTitle'),
-              description: this.$t('sections.features.dataDrivenDecisionsSubtitle'),
-              icon: LightBulbIcon,
-            },
-          ]
-        },
-        featThree: {
-          title: this.$t('sections.features.winelistTitle'),
-          subtitle: this.$t('sections.features.winelistSubtitle'),
-          leftImgSrc: '/imgs/winelist-digital.jpg',
-          leftImgAlt: this.$t('sections.features.digitalWinelistImgAlt'),
-          leftTitle: this.$t('sections.features.digitalWinelistTitle'),
-          leftDescription: this.$t('sections.features.digitalWinelistSubtitle'),
-          leftButtonLabel: this.$t('common.viewExample'),
-          leftButtonLink: "https://app.vinoteqa.com/carte/01h08dydtpvr5yzdztjz8t5pf8",
-          rightImgSrc: '/imgs/winelist-print.jpg',
-          rightImgAlt: this.$t('sections.features.printWinelistImgAlt'),
-          rightTitle: this.$t('sections.features.printWinelistTitle'),
-          rightDescription: this.$t('sections.features.printWinelistSubtitle'),
-        },
-  
-        testimonial: {
-          imgSrc: '/imgs/testimonial.jpg',
-          imgAlt: this.$t('sections.testimonial.imgAlt'),
-          content: this.$t('sections.testimonial.content'),
-          name: "Stefano Kratter",
-          company: "Ristorante Mondschein - A Taste of the Dolomites",
-          companyLink: "https://www.ristorantemondschein.it/"
-        },
-  
-        pricing: {
-          titleLabel: this.$t('sections.pricing.titleLabel'),
-          title: this.$t('sections.pricing.title'),
-          subtitle: this.$t('sections.pricing.subtitle'),
-          tiers: [
-            {
-              id: 'onboarding',
-              name: this.$t('sections.pricing.onboarding.title'),
-              description: this.$t('sections.pricing.onboarding.subtitle'),
-              price: '€1,000',
-              priceFrequency: this.$t('sections.pricing.oneTimePayment'),
-              features: [
-                this.$t('sections.pricing.onboarding.whiteGlove'),
-                this.$t('sections.pricing.onboarding.inventoryImport'),
-                this.$t('sections.pricing.onboarding.supportAndTraining'),
-              ]
-            },
-            {
-              id: 'license',
-              name: this.$t('sections.pricing.license.title'),
-              price: '€ 960',
-              priceFrequency: this.$t('sections.pricing.perYear'),
-              description: this.$t('sections.pricing.license.subtitle'),
-              href: demoBookingPage,
-              features: [
-                this.$t('sections.pricing.license.accessToDatabase'),
-                this.$t('sections.pricing.license.liveInventory'),
-                this.$t('sections.pricing.license.winelistGeneration'),
-                this.$t('sections.pricing.license.statistics'),
-              ],
-              linkLabel: this.$t('ctas.bookDemo'),
-              featured: true,
-            },
-            {
-              id: 'custom',
-              name: '',
-              price: this.$t('sections.pricing.custom.title'),
-              description: this.$t('sections.pricing.custom.subtitle'),
-              href: 'mailto:info@vinoteqa.com',
-              features: [
-                this.$t('sections.pricing.custom.integrationsPos'),
-                this.$t('sections.pricing.custom.integrationsAccounting'),
-                this.$t('sections.pricing.custom.reporting'),
-              ],
-              linkLabel: this.$t('ctas.contactUs'),
-              featured: false,
-            },
-          ]
-        },
-  
-        faqs: {
-          title: this.$t('sections.faqs.title'),
-          faqs: [
-            {
-              question: this.$t('sections.faqs.questions.hardware.question'),
-              answer: this.$t('sections.faqs.questions.hardware.answer'),
-            },
-            {
-              question: this.$t('sections.faqs.questions.integrations.question'),
-              answer: this.$t('sections.faqs.questions.integrations.answer'),
-            },
-            {
-              question: this.$t('sections.faqs.questions.setupFees.question'),
-              answer: this.$t('sections.faqs.questions.setupFees.answer'),
-            },
-            {
-              question: this.$t('sections.faqs.questions.futureFeatures.question'),
-              answer: this.$t('sections.faqs.questions.futureFeatures.answer'),
-            },
-            {
-              question: this.$t('sections.faqs.questions.mobileApp.question'),
-              answer: this.$t('sections.faqs.questions.mobileApp.answer'),
-            },
-            {
-              question: this.$t('sections.faqs.questions.onboarding.question'),
-              answer: this.$t('sections.faqs.questions.onboarding.answer'),
-            },
-            {
-              question: this.$t('sections.faqs.questions.users.question'),
-              answer: this.$t('sections.faqs.questions.users.answer'),
-            },
-            {
-              question: this.$t('sections.faqs.questions.onlyOnlineWinelist.question'),
-              answer: this.$t('sections.faqs.questions.onlyOnlineWinelist.answer'),
-            },
-          ],
-        },
-  
-        newsletter: {
-          subscriberEmail: null,
-          title: "Subscribe to our newsletter",
-          inputLabel: "Enter your email",
-          inputPlaceholder: "Enter your email",
-          inputButtonLabel: "Subscribe",
-          policyNotice: "By subscribing, you agree to receive our newsletter.",
-        },
-      }
-    },
-  
-    methods: {
-      subscribeVisitor(event) {
-        console.log('Subscribing visitor...', event.email)
-        this.newsletter.subscriberEmail = event.email
-      }
+        contacts: [
+          { name: 'info@vinoteqa.com', href: 'mailto:info@vinoteqa.com' }
+        ],
+        social: [
+          {
+            name: 'Instagram',
+            href: 'https://www.instagram.com/vinoteqa/',
+            icon: defineComponent({
+              render: () =>
+                h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
+                  h('path', {
+                    'fill-rule': 'evenodd',
+                    d: 'M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077',
+                    'clip-rule': 'evenodd',
+                  }),
+                ]),
+            }),
+          },
+          {
+            name: 'LinkedIn',
+            href: 'https://www.linkedin.com/company/vinoteqa/',
+            icon: defineComponent({
+              render: () =>
+                h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
+                  h('path', {
+                    'fill-rule': 'evenodd',
+                    d: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
+                    'clip-rule': 'evenodd',
+                  }),
+                ]),
+            }),
+          },
+          {
+            name: 'Spotify',
+            href: 'https://open.spotify.com/user/31eanqwhjwhmofl4wc26ye7r2heu/',
+            icon: defineComponent({
+              render: () =>
+                h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
+                  h('path', {
+                    d: 'M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z',
+                  }),
+                ]),
+            }),
+          },
+        ],
+      },
+
+      // hero
+      hero: {
+        imgSrc: "/imgs/hero-img.jpg",
+        titleLabel: this.$t('hero.titleLabel'),
+        title: this.$t('hero.title'),
+        subtitle: this.$t('hero.subtitle'),
+        primaryButtonLabel: this.$t('ctas.bookDemoBold'),
+        primaryButtonLink: demoBookingPage,
+        secondaryButtonLabel: this.$t('common.discoverMore'),
+        secondaryButtonLink: '#start',
+      },
+
+      // sections
+      stats: {
+        title: this.$t('sections.statistics.title'),
+        stats: [
+          { id: 1, name: this.$t('sections.statistics.wines'), value: '130k+' },
+          { id: 2, name: this.$t('sections.statistics.wineries'), value: '1.5M+' },
+          { id: 3, name: this.$t('sections.statistics.accuracyImprovement'), value: '95%' },
+        ]
+      },
+
+      featOne: {
+        titleLabel: this.$t('sections.features.integratedWorkflowTitleLabel'),
+        title: this.$t('sections.features.integratedWorkflowTitle'),
+        subtitle: this.$t('sections.features.integratedWorkflowSubtitle'),
+        imgSrc: `/imgs/screenshot1.${this.$i18n.locale}.png`,
+        imgAlt: "Vinoteqa homescreen Screenshot",
+        features: [
+          {
+            name: this.$t('sections.features.extensiveWineDataTitle'),
+            description: this.$t('sections.features.extensiveWineDataSubtitle'),
+            icon: GlobeEuropeAfricaIcon,
+          },
+          {
+            name: this.$t('sections.features.intuitiveUITitle'),
+            description: this.$t('sections.features.intuitiveUISubtitle'),
+            icon: CursorArrowRaysIcon,
+          },
+          {
+            name: this.$t('sections.features.inventoryManagementTitle'),
+            description: this.$t('sections.features.inventoryManagementSubtitle'),
+            icon: Cog8ToothIcon,
+          },
+        ]
+      },
+      featTwo: {
+        titleLabel: this.$t('sections.features.statisticsTitleLabel'),
+        title: this.$t('sections.features.statisticsTitle'),
+        subtitle: this.$t('sections.features.statisticsSubtitle'),
+        imgSrc: "/imgs/screenshot2.png",
+        imgAlt: "Vinoteqa statistics Screenshot",
+        features: [
+          {
+            name: this.$t('sections.features.liveStatisticsTitle'),
+            description: this.$t('sections.features.liveStatisticsSubtitle'),
+            icon: CloudIcon,
+          },
+          {
+            name: this.$t('sections.features.reportingTitle'),
+            description: this.$t('sections.features.reportingSubtitle'),
+            icon: PresentationChartLineIcon,
+          },
+          {
+            name: this.$t('sections.features.dataDrivenDecisionsTitle'),
+            description: this.$t('sections.features.dataDrivenDecisionsSubtitle'),
+            icon: LightBulbIcon,
+          },
+        ]
+      },
+      featThree: {
+        title: this.$t('sections.features.winelistTitle'),
+        subtitle: this.$t('sections.features.winelistSubtitle'),
+        leftImgSrc: '/imgs/winelist-digital.jpg',
+        leftImgAlt: this.$t('sections.features.digitalWinelistImgAlt'),
+        leftTitle: this.$t('sections.features.digitalWinelistTitle'),
+        leftDescription: this.$t('sections.features.digitalWinelistSubtitle'),
+        leftButtonLabel: this.$t('common.viewExample'),
+        leftButtonLink: "https://app.vinoteqa.com/carte/01h08dydtpvr5yzdztjz8t5pf8",
+        rightImgSrc: '/imgs/winelist-print.jpg',
+        rightImgAlt: this.$t('sections.features.printWinelistImgAlt'),
+        rightTitle: this.$t('sections.features.printWinelistTitle'),
+        rightDescription: this.$t('sections.features.printWinelistSubtitle'),
+      },
+
+      testimonial: {
+        imgSrc: '/imgs/testimonial.jpg',
+        imgAlt: this.$t('sections.testimonial.imgAlt'),
+        content: this.$t('sections.testimonial.content'),
+        name: "Stefano Kratter",
+        company: "Ristorante Mondschein - A Taste of the Dolomites",
+        companyLink: "https://www.ristorantemondschein.it/"
+      },
+
+      pricing: {
+        titleLabel: this.$t('sections.pricing.titleLabel'),
+        title: this.$t('sections.pricing.title'),
+        subtitle: this.$t('sections.pricing.subtitle'),
+        tiers: [
+          {
+            id: 'onboarding',
+            name: this.$t('sections.pricing.onboarding.title'),
+            description: this.$t('sections.pricing.onboarding.subtitle'),
+            price: '€1,000',
+            priceFrequency: this.$t('sections.pricing.oneTimePayment'),
+            features: [
+              this.$t('sections.pricing.onboarding.whiteGlove'),
+              this.$t('sections.pricing.onboarding.inventoryImport'),
+              this.$t('sections.pricing.onboarding.supportAndTraining'),
+            ]
+          },
+          {
+            id: 'license',
+            name: this.$t('sections.pricing.license.title'),
+            price: '€ 960',
+            priceFrequency: this.$t('sections.pricing.perYear'),
+            description: this.$t('sections.pricing.license.subtitle'),
+            href: demoBookingPage,
+            features: [
+              this.$t('sections.pricing.license.accessToDatabase'),
+              this.$t('sections.pricing.license.liveInventory'),
+              this.$t('sections.pricing.license.winelistGeneration'),
+              this.$t('sections.pricing.license.statistics'),
+            ],
+            linkLabel: this.$t('ctas.bookDemo'),
+            featured: true,
+          },
+          {
+            id: 'custom',
+            name: '',
+            price: this.$t('sections.pricing.custom.title'),
+            description: this.$t('sections.pricing.custom.subtitle'),
+            href: 'mailto:info@vinoteqa.com',
+            features: [
+              this.$t('sections.pricing.custom.integrationsPos'),
+              this.$t('sections.pricing.custom.integrationsAccounting'),
+              this.$t('sections.pricing.custom.reporting'),
+            ],
+            linkLabel: this.$t('ctas.contactUs'),
+            featured: false,
+          },
+        ]
+      },
+
+      faqs: {
+        title: this.$t('sections.faqs.title'),
+        faqs: [
+          {
+            question: this.$t('sections.faqs.questions.hardware.question'),
+            answer: this.$t('sections.faqs.questions.hardware.answer'),
+          },
+          {
+            question: this.$t('sections.faqs.questions.integrations.question'),
+            answer: this.$t('sections.faqs.questions.integrations.answer'),
+          },
+          {
+            question: this.$t('sections.faqs.questions.setupFees.question'),
+            answer: this.$t('sections.faqs.questions.setupFees.answer'),
+          },
+          {
+            question: this.$t('sections.faqs.questions.futureFeatures.question'),
+            answer: this.$t('sections.faqs.questions.futureFeatures.answer'),
+          },
+          {
+            question: this.$t('sections.faqs.questions.mobileApp.question'),
+            answer: this.$t('sections.faqs.questions.mobileApp.answer'),
+          },
+          {
+            question: this.$t('sections.faqs.questions.onboarding.question'),
+            answer: this.$t('sections.faqs.questions.onboarding.answer'),
+          },
+          {
+            question: this.$t('sections.faqs.questions.users.question'),
+            answer: this.$t('sections.faqs.questions.users.answer'),
+          },
+          {
+            question: this.$t('sections.faqs.questions.onlyOnlineWinelist.question'),
+            answer: this.$t('sections.faqs.questions.onlyOnlineWinelist.answer'),
+          },
+        ],
+      },
+
+      newsletter: {
+        subscriberEmail: null,
+        title: "Subscribe to our newsletter",
+        inputLabel: "Enter your email",
+        inputPlaceholder: "Enter your email",
+        inputButtonLabel: "Subscribe",
+        policyNotice: "By subscribing, you agree to receive our newsletter.",
+      },
+    }
+  },
+
+  methods: {
+    subscribeVisitor(event) {
+      console.log('Subscribing visitor...', event.email)
+      this.newsletter.subscriberEmail = event.email
     }
   }
-  </script>
-  
-  <style>
-  html {
-    scroll-behavior: smooth;
-  }
-  </style>
+}
+</script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>

@@ -6,7 +6,12 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ["@nuxtjs/i18n", "@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/tailwindcss", "@nuxtjs/seo"],
+
+  site: {
+    url: 'https://www.vinoteqa.com',
+    defaultLocale: 'en',
+  },
 
   components: [
     {
@@ -16,25 +21,26 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
+    baseUrl: 'https://www.vinoteqa.com/',
+    defaultLocale: 'en',
     locales: [{
       code: 'en',
-      iso: 'en-US',
+      iso: 'en',
       name: 'English',
       file: 'en.json',
     },
     {
       code: 'de',
-      iso: 'de-DE',
+      iso: 'de',
       name: 'Deutsch',
       file: 'de.json',
     },
     {
       code: 'it', 
-      iso: 'it-IT',
+      iso: 'it',
       name: 'Italiano',
       file: 'it.json',
     }],
-    defaultLocale: 'en',
     strategy: 'prefix',
     lazy: true,
     langDir: 'locales/',

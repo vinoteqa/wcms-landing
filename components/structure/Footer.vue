@@ -88,16 +88,8 @@ export default {
             type: String,
             required: true,
         },
-        location: {
-            type: String,
-            required: true,
-        },
-        email: {
-            type: String,
-            required: true,
-        },
         navigation: {
-            type: Array,
+            type: Object,
             required: true,
         },
     },
