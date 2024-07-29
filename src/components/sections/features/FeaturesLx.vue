@@ -15,7 +15,7 @@
                                     <dt class="inline font-semibold text-gray-900">
                                         <component :is="feature.icon"
                                             class="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
-                                        {{ feature.name }}
+                                        {{ feature.name }}.
                                     </dt>
                                     {{ ' ' }}
                                     <dd class="inline">{{ feature.description }}</dd>
