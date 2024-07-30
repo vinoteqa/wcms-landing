@@ -33,7 +33,7 @@
       "title": "Greife von überall auf unsere Datenbank zu",
       "wineries": "Weingüter",
       "wines": "Weine",
-      "accuracyImprovement": "Weniger Fehler"
+      "transactionsTracked": "in verfolgten Transaktionen"
     },
     "features": {
       "integratedWorkflowTitleLabel": "Intelligentes Design",
