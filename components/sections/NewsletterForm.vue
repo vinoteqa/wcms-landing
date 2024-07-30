@@ -23,7 +23,7 @@
                 <div v-else class="flex items-center gap-x-4">
                     <CheckIcon class="h-6 w-6 text-white" aria-hidden="true" />
                     <p class="text-white
-                        font-semibold">{{ 'You are subscribed. Thank You!' }}</p>
+                        font-semibold">{{ $t('sections.newsletter.successMessage') }}</p>
                 </div>
 
                 <svg viewBox="0 0 1024 1024"

@@ -137,7 +137,8 @@
       "title": "Rimani aggiornato sulle novità del prodotto",
       "inputLabel": "Inserisci il tuo indirizzo email",
       "subscribe": "Iscriviti",
-      "policyNotice": "Iscrivendoti, accetti di ricevere la nostra newsletter"
+      "policyNotice": "Iscrivendoti, accetti di ricevere la nostra newsletter",
+      "successMessage": "Grazie per esserti iscritto alla nostra newsletter!"
     }
   }
 }

@@ -137,7 +137,8 @@
       "title": "Erhalte die neuesten Produktnews und Updates",
       "inputLabel": "E-Mail eingeben",
       "subscribe": "Abonnieren",
-      "policyNotice": "Mit der Anmeldung stimmst du dem Erhalt unseres Newsletters zu"
+      "policyNotice": "Mit der Anmeldung stimmst du dem Erhalt unseres Newsletters zu",
+      "successMessage": "Vielen Dank für dein Interesse! Du hast dich angemeldet."
     }
   }
 }

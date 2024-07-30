@@ -137,7 +137,8 @@
       "title": "Stay updated with the latest Product News",
       "inputLabel": "Enter your email",
       "subscribe": "Subscribe",
-      "policyNotice": "By subscribing, you agree to receive our newsletter"
+      "policyNotice": "By subscribing, you agree to receive our newsletter",
+      "successMessage": "Thank you for subscribing to our newsletter!"
     }
   }
 }
