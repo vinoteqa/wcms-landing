@@ -335,20 +335,23 @@ export default {
     },
 
     async subscribe(email) {
-      // Hubspot's base API url
-      let base_url = "https://api.hsforms.com/submissions/v3/integration/submit";
+      // load environment variables
+      const portal_id = process.env.HUBSPOT_PORTAL_ID
+      let form_id = null
+      switch (this.$i18n.locale) {
+        case 'de':
+          form_id = process.env.HUBSPOT_FORM_ID_DE
+          break
+        case 'it':
+          form_id = process.env.HUBSPOT_FORM_ID_IT
+          break
+        default:
+          form_id = process.env.HUBSPOT_FORM_ID_EN
+      }
 
-      // Our portalId
-      let portal_id = "143791886";
-
-      // Our formId
-      let form_id = "23941e80-5fa0-4b91-a168-2d1575845b9e";
-
-      // Construct the request url
-      let request_url = base_url + "/" + portal_id + "/" + form_id;
-
-      // Selecting the email input element and get its value
-      let body = {
+      // prepare request
+      const request_url = `https://api.hsforms.com/submissions/v3/integration/submit/${portal_id}/${form_id}`
+      const body = {
         "submittedAt": (new Date()).getTime(),
         "fields": [
           {
@@ -358,6 +361,8 @@ export default {
           }
         ]
       }
+
+      // send request
       await fetch(request_url, {
         method: 'POST',
         mode: 'cors',
@@ -368,10 +373,8 @@ export default {
         },
         body: JSON.stringify(body)
       }).then(() => {
-        this.newsletter.subscriberEmail = event.email
-        alert("Success!")
-      }
-      )
+        this.newsletter.subscriberEmail = email
+      })
     }
   }
 }
