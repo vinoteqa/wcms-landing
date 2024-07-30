@@ -36,12 +36,12 @@
         <div id="faqs" class="faq-ct">
           <Faq :title="faqs.title" :faqs="faqs.faqs" />
         </div>
-        <!-- <div class="newsletter-ct">
-            <NewsletterForm :loading="true" :subscribed="!!newsletter.subscriberEmail" :title="newsletter.title"
-              :policyNotice="newsletter.policyNotice" :inputLabel="newsletter.inputLabel"
-              :inputPlaceholder="newsletter.inputPlaceholder" :inputButtonLabel="newsletter.inputButtonLabel"
-              @subscribe="subscribeVisitor($event)" />
-          </div> -->
+        <div class="newsletter-ct">
+          <NewsletterForm :loading="true" :subscribed="!!newsletter.subscriberEmail" :title="newsletter.title"
+            :policyNotice="newsletter.policyNotice" :inputLabel="newsletter.inputLabel"
+            :inputPlaceholder="newsletter.inputPlaceholder" :inputButtonLabel="newsletter.inputButtonLabel"
+            @subscribe="subscribeVisitor($event)" />
+        </div>
       </div>
     </main>
 
@@ -58,10 +58,13 @@ import {
   LightBulbIcon,
   PresentationChartLineIcon,
 } from '@heroicons/vue/20/solid';
+
 </script>
 
 <script>
 import { defineComponent, h } from 'vue'
+
+const runtimeConfig = useRuntimeConfig()
 
 const demoBookingPage = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0wPJ0XLEJFtlZZ1JYZRIp0AYSBIKsgKhOsTBfHroZbo_H4IfciidS2Cik_RNYndC_Lh-tO8l_7'
 
@@ -319,11 +322,11 @@ export default {
 
       newsletter: {
         subscriberEmail: null,
-        title: "Subscribe to our newsletter",
-        inputLabel: "Enter your email",
-        inputPlaceholder: "Enter your email",
-        inputButtonLabel: "Subscribe",
-        policyNotice: "By subscribing, you agree to receive our newsletter.",
+        title: this.$t('sections.newsletter.title'),
+        inputLabel: this.$t('sections.newsletter.inputLabel'),
+        inputPlaceholder: this.$t('sections.newsletter.inputLabel'),
+        inputButtonLabel: this.$t('sections.newsletter.subscribe'),
+        policyNotice: this.$t('sections.newsletter.policyNotice'),
       },
     }
   },
@@ -331,7 +334,53 @@ export default {
   methods: {
     subscribeVisitor(event) {
       console.log('Subscribing visitor...', event.email)
-      this.newsletter.subscriberEmail = event.email
+      this.subscribe(event.email)
+    },
+
+    async subscribe(email) {
+      // load environment variables
+      const portal_id = runtimeConfig.public.hubspot.portalId
+      let form_id = null
+      switch (this.$i18n.locale) {
+        case 'de':
+          form_id = runtimeConfig.public.hubspot.formId.de
+          break
+        case 'it':
+          form_id = runtimeConfig.public.hubspot.formId.it
+          break
+        default:
+          form_id = runtimeConfig.public.hubspot.formId.en
+      }
+
+      // prepare request
+      const request_url = `https://api.hsforms.com/submissions/v3/integration/submit/${portal_id}/${form_id}`
+      const body = {
+        "submittedAt": (new Date()).getTime(),
+        "fields": [
+          {
+            "objectTypeId": "0-1",
+            "name": "email",
+            "value": email
+          }
+        ]
+      }
+
+      // send request
+      await fetch(request_url, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: JSON.stringify(body)
+      }).then((res) => {
+        // check if status is 200
+        if (res.status === 200) {
+          this.newsletter.subscriberEmail = email
+        }
+      })
     }
   }
 }
