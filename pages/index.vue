@@ -322,11 +322,11 @@ export default {
 
       newsletter: {
         subscriberEmail: null,
-        title: "Subscribe to our newsletter",
-        inputLabel: "Enter your email",
-        inputPlaceholder: "Enter your email",
-        inputButtonLabel: "Subscribe",
-        policyNotice: "By subscribing, you agree to receive our newsletter.",
+        title: this.$t('sections.newsletter.title'),
+        inputLabel: this.$t('sections.newsletter.inputLabel'),
+        inputPlaceholder: this.$t('sections.newsletter.inputLabel'),
+        inputButtonLabel: this.$t('sections.newsletter.subscribe'),
+        policyNotice: this.$t('sections.newsletter.policyNotice'),
       },
     }
   },

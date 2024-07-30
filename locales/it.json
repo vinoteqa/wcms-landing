@@ -132,6 +132,12 @@
           "answer": "Vinoteqa fornisce sia carte dei vini digitali che stampabili, permettendoti di scegliere il formato migliore per il tuo locale."
         }
       }
+    },
+    "newsletter": {
+      "title": "Rimani aggiornato sulle novità del prodotto",
+      "inputLabel": "Inserisci il tuo indirizzo email",
+      "subscribe": "Iscriviti",
+      "policyNotice": "Iscrivendoti, accetti di ricevere la nostra newsletter"
     }
   }
 }

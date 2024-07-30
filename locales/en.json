@@ -132,6 +132,12 @@
           "answer": "Vinoteqa provides both digital and printable wine lists, allowing you to choose the best format for your establishment."
         }
       }
+    },
+    "newsletter": {
+      "title": "Stay updated with the latest Product News",
+      "inputLabel": "Enter your email",
+      "subscribe": "Subscribe",
+      "policyNotice": "By subscribing, you agree to receive our newsletter"
     }
   }
 }

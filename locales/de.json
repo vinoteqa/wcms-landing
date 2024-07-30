@@ -132,6 +132,12 @@
           "answer": "Vinoteqa bietet sowohl digitale als auch druckbare Weinkarten, sodass jenes Format gewählt werden kann, das am besten zum Betrieb passt."
         }
       }
+    },
+    "newsletter": {
+      "title": "Erhalte die neuesten Produktnews und Updates",
+      "inputLabel": "E-Mail eingeben",
+      "subscribe": "Abonnieren",
+      "policyNotice": "Mit der Anmeldung stimmst du dem Erhalt unseres Newsletters zu"
     }
   }
 }
