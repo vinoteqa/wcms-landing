@@ -58,10 +58,13 @@ import {
   LightBulbIcon,
   PresentationChartLineIcon,
 } from '@heroicons/vue/20/solid';
+
 </script>
 
 <script>
 import { defineComponent, h } from 'vue'
+
+const runtimeConfig = useRuntimeConfig()
 
 const demoBookingPage = 'https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0wPJ0XLEJFtlZZ1JYZRIp0AYSBIKsgKhOsTBfHroZbo_H4IfciidS2Cik_RNYndC_Lh-tO8l_7'
 
@@ -336,17 +339,17 @@ export default {
 
     async subscribe(email) {
       // load environment variables
-      const portal_id = process.env.HUBSPOT_PORTAL_ID
+      const portal_id = runtimeConfig.public.hubspot.portalId
       let form_id = null
       switch (this.$i18n.locale) {
         case 'de':
-          form_id = process.env.HUBSPOT_FORM_ID_DE
+          form_id = runtimeConfig.public.hubspot.formId.de
           break
         case 'it':
-          form_id = process.env.HUBSPOT_FORM_ID_IT
+          form_id = runtimeConfig.public.hubspot.formId.it
           break
         default:
-          form_id = process.env.HUBSPOT_FORM_ID_EN
+          form_id = runtimeConfig.public.hubspot.formId.en
       }
 
       // prepare request
@@ -372,8 +375,11 @@ export default {
           'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify(body)
-      }).then(() => {
-        this.newsletter.subscriberEmail = email
+      }).then((res) => {
+        // check if status is 200
+        if (res.status === 200) {
+          this.newsletter.subscriberEmail = email
+        }
       })
     }
   }

@@ -8,6 +8,19 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/i18n", "@nuxtjs/tailwindcss", "@nuxtjs/seo"],
 
+  runtimeConfig: {
+    public: {
+      hubspot: {
+        portalId: process.env.HUBSPOT_PORTAL_ID,
+        formId: {
+          de: process.env.HUBSPOT_FORM_ID_DE,
+          en: process.env.HUBSPOT_FORM_ID_EN,
+          it: process.env.HUBSPOT_FORM_ID_IT,
+        }
+      }
+    }
+  },
+
   site: {
     url: 'https://www.vinoteqa.com',
     defaultLocale: 'en',
