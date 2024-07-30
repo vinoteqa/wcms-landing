@@ -36,12 +36,12 @@
         <div id="faqs" class="faq-ct">
           <Faq :title="faqs.title" :faqs="faqs.faqs" />
         </div>
-        <!-- <div class="newsletter-ct">
-            <NewsletterForm :loading="true" :subscribed="!!newsletter.subscriberEmail" :title="newsletter.title"
-              :policyNotice="newsletter.policyNotice" :inputLabel="newsletter.inputLabel"
-              :inputPlaceholder="newsletter.inputPlaceholder" :inputButtonLabel="newsletter.inputButtonLabel"
-              @subscribe="subscribeVisitor($event)" />
-          </div> -->
+        <div class="newsletter-ct">
+          <NewsletterForm :loading="true" :subscribed="!!newsletter.subscriberEmail" :title="newsletter.title"
+            :policyNotice="newsletter.policyNotice" :inputLabel="newsletter.inputLabel"
+            :inputPlaceholder="newsletter.inputPlaceholder" :inputButtonLabel="newsletter.inputButtonLabel"
+            @subscribe="subscribeVisitor($event)" />
+        </div>
       </div>
     </main>
 
@@ -331,7 +331,47 @@ export default {
   methods: {
     subscribeVisitor(event) {
       console.log('Subscribing visitor...', event.email)
-      this.newsletter.subscriberEmail = event.email
+      this.subscribe(event.email)
+    },
+
+    async subscribe(email) {
+      // Hubspot's base API url
+      let base_url = "https://api.hsforms.com/submissions/v3/integration/submit";
+
+      // Our portalId
+      let portal_id = "143791886";
+
+      // Our formId
+      let form_id = "23941e80-5fa0-4b91-a168-2d1575845b9e";
+
+      // Construct the request url
+      let request_url = base_url + "/" + portal_id + "/" + form_id;
+
+      // Selecting the email input element and get its value
+      let body = {
+        "submittedAt": (new Date()).getTime(),
+        "fields": [
+          {
+            "objectTypeId": "0-1",
+            "name": "email",
+            "value": email
+          }
+        ]
+      }
+      await fetch(request_url, {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: JSON.stringify(body)
+      }).then(() => {
+        this.newsletter.subscriberEmail = event.email
+        alert("Success!")
+      }
+      )
     }
   }
 }
