@@ -33,7 +33,7 @@
       "title": "Greife von überall auf unsere Datenbank zu",
       "wineries": "Weingüter",
       "wines": "Weine",
-      "transactionsTracked": "in verfolgten Transaktionen"
+      "transactionsTracked": "in erfolgten Transaktionen"
     },
     "features": {
       "integratedWorkflowTitleLabel": "Intelligentes Design",
@@ -60,7 +60,7 @@
       "digitalWinelistSubtitle": "Halte deine digitale Weinkarte mit automatischen Updates und Synchronisierungen auf dem neuesten Stand. Nach der Einrichtung werden deine Weine automatisch in ihre vorgesehenen Positionen gebracht, um deine Kollektion bestmöglich widerzuspiegeln.",
       "digitalWinelistImgAlt": "Digitale Weinkarte von Vinoteqa auf Mobiltelefon und iPad",
       "printWinelistTitle": "Gedruckte Weinkarte",
-      "printWinelistSubtitle": "Drucke deine Weinkarte mit einem Klick und erziele hochwertige Ergebnisse. Automatisch geordnet und professionell präsentiert, sowohl digital als auch in gedruckter Form.",
+      "printWinelistSubtitle": "Drucke deine Weinkarte mit einem Klick und erziele hochwertige Ergebnisse. Automatisch geordnet und professionell präsentiert, personalisierbar nach deinen Wünschen.",
       "printWinelistImgAlt": "Restaurantgäste betrachten eine von Vinoteqa automatisch erstellte gedruckte Weinkarte"
     },
     "testimonial": {
@@ -112,7 +112,7 @@
           "answer": "Unsere Preisgestaltung ist transparent und ohne versteckte Kosten. Die Onboarding-Gebühr beinhaltet Einrichtung, Schulung und anfängliche Unterstützung. Der fortlaufende Support ist in der Jahreslizenz enthalten."
         },
         "futureFeatures": {
-          "question": "Werden Updates meine aktuelle Konfiguration oder Daten beeinträchtigen und muss ich für neue Funktionen bezahlen?",
+          "question": "Werden Updates meine aktuellen Daten beeinträchtigen und muss ich für neue Funktionen bezahlen?",
           "answer": "Updates beeinträchtigen deine aktuelle Konfiguration oder Daten nicht. Alle neuen Funktionen und Updates sind in der Jahreslizenz enthalten."
         },
         "mobileApp": {
