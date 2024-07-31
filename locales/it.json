@@ -150,6 +150,7 @@
     }
   },
   "blog": {
+    "viewAll": "Visualizza tutti",
     "navigation": {
       "wineEducation": "Sul vino",
       "cellarManagement": "Gestione cantina",

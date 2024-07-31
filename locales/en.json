@@ -150,6 +150,7 @@
     }
   },
   "blog": {
+    "viewAll": "View All",
     "navigation": {
       "wineEducation": "Wine Education",
       "cellarManagement": "Cellar Management",
