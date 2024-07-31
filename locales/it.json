@@ -9,7 +9,14 @@
     "discoverMore": "Scopri di più",
     "viewExample": "Vedi Esempio",
     "location": "Posizione",
-    "contacts": "Contatti"
+    "contacts": "Contatti",
+    "errorPageTitle": "Si è verificato un errore",
+    "somethingWentWrong": "Qualcosa è andato storto. Riprova più tardi."
+  },
+  "pageNotFound": {
+    "title": "Pagina non trovata",
+    "subtitle": "La pagina che stai cercando non esiste. Torna alla home page o contattaci per assistenza.",
+    "backToHome": "Torna alla Home"
   },
   "ctas": {
     "bookDemo": "Prenota una Demo Gratuita",

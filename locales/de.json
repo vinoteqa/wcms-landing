@@ -9,7 +9,14 @@
     "discoverMore": "Mehr erfahren",
     "viewExample": "Beispiel ansehen",
     "location": "Standort",
-    "contacts": "Kontakte"
+    "contacts": "Kontakte",
+    "errorPageTitle": "Ein Fehler ist aufgetreten",
+    "somethingWentWrong": "Etwas ist schief gelaufen. Bitte versuche es später erneut."
+  },
+  "pageNotFound": {
+    "title": "Seite nicht gefunden",
+    "subtitle": "Die gesuchte Seite existiert nicht. Kehre zur Startseite zurück oder kontaktiere uns für Unterstützung.",
+    "backToHome": "Zurück zur Startseite"
   },
   "ctas": {
     "bookDemo": "Buche eine kostenlose Demo",

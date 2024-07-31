@@ -9,7 +9,14 @@
     "discoverMore": "Discover More",
     "viewExample": "View Example",
     "location": "Location",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "errorPageTitle": "An Error Occurred",
+    "somethingWentWrong": "Something went wrong. Please try again later."
+  },
+  "pageNotFound": {
+    "title": "Page Not Found",
+    "subtitle": "The page you are looking for does not exist. Return to the home page or contact us for assistance.",
+    "backToHome": "Back to Home"
   },
   "ctas": {
     "bookDemo": "Book a Free Demo",
