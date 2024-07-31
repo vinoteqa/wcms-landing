@@ -1,0 +1,83 @@
+<template>
+    <div class="article-ct max-w-3xl mx-auto mb-14">
+
+        <article class="relative pt-10">
+
+            <h1 class="text-2xl font-extrabold tracking-tight text-black md:text-3xl">{{
+                doc.title }}</h1>
+
+            <h2 class="my-6 text-xl font text-black/60">
+                {{ doc.subtitle }}
+            </h2>
+
+            <!-- <div class="flex items-center space-x-4 text-sm leading-6 text-black/85">
+                <ul class="flex items-center space-x-4 flex-nowrap whitespace-nowrap overflow-x-auto">
+                    <li v-if="date" class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
+                        {{ date }}
+                    </li>
+
+                    <li v-if="readingTime" class="before:content-['•'] before:mr-2 before:opacity-50 my-2">
+                        {{ readingTime }} min read
+                    </li>
+
+                </ul>
+            </div> -->
+
+            <div class="content-ct mt-5 prose ">
+
+                <div
+                    class="relative not-prose [a:not(:first-child)>&]:mt-12 [a:not(:last-child)>&]:mb-12 my-12 first:mt-0 last:mb-0 rounded-2xl overflow-hidden [figure>&]:my-0">
+                    <img :src="doc.media" :alt="doc.title" decoding="async" />
+                    <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-slate-900/10 dark:ring-white/10">
+                    </div>
+                </div>
+
+                <ContentRenderer :value="doc" class="content" />
+
+                <!-- TODO: add taxonomies, tags, etc. -->
+
+            </div>
+        </article>
+
+    </div>
+</template>
+
+<script>
+export default {
+    props: {
+        doc: {
+            type: Object,
+            required: true
+        }
+    },
+    computed: {
+        date() {
+            if (!this.doc.date) return null;
+
+            const dateOtions = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+            };
+            return new Date(this.doc.date).toLocaleDateString(this.$i18n.locale, dateOtions);
+        },
+        readingTime() {
+            // return Math.ceil(this.doc.content.length / 2000);
+            return null
+        }
+    }
+}
+</script>
+
+<style lnag="postcss">
+/* TODO: add styling for content here */
+.article-ct .content {
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-xl text-black font-bold mb-5 mt-10;
+    }
+
+    p {
+        @apply text-black/80 leading-7 mb-2;
+    }
+}
+</style>

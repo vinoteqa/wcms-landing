@@ -4,7 +4,7 @@
             <div class="flex lg:flex-1">
                 <a href="#" class="-m-1.5 p-1.5">
                     <span class="sr-only">Vinoteqa</span>
-                    <img class="h-7 w-auto" :src="logoSrc" alt="Logo Vinoteqa" />
+                    <img class="w-auto" :class="'h-' + logoSize" :src="logoSrc" :alt="logoAlt" />
                 </a>
             </div>
             <div class="flex lg:hidden">
@@ -74,6 +74,14 @@ export default {
         logoSrc: {
             type: String,
             default: "/logo.svg"
+        },
+        logoAlt: {
+            type: String,
+            default: "Logo Vinoteqa"
+        },
+        logoSize: {
+            type: String,
+            default: "7"
         },
         navigation: {
             type: Array,

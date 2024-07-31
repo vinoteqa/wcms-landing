@@ -11,7 +11,8 @@
     "location": "Standort",
     "contacts": "Kontakte",
     "errorPageTitle": "Ein Fehler ist aufgetreten",
-    "somethingWentWrong": "Etwas ist schief gelaufen. Bitte versuche es später erneut."
+    "somethingWentWrong": "Etwas ist schief gelaufen. Bitte versuche es später erneut.",
+    "goBack": "Zurück"
   },
   "pageNotFound": {
     "title": "Seite nicht gefunden",
@@ -146,6 +147,14 @@
       "subscribe": "Abonnieren",
       "policyNotice": "Mit der Anmeldung stimmst du dem Erhalt unseres Newsletters zu",
       "successMessage": "Vielen Dank für dein Interesse! Du hast dich angemeldet."
+    }
+  },
+  "blog": {
+    "navigation": {
+      "wineEducation": "Weinwissen",
+      "cellarManagement": "Weinkeller-Management",
+      "wineLists": "Weinkarten",
+      "discoverVinoteqa": "Entdecke Vinoteqa"
     }
   }
 }

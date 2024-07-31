@@ -11,7 +11,8 @@
     "location": "Location",
     "contacts": "Contacts",
     "errorPageTitle": "An Error Occurred",
-    "somethingWentWrong": "Something went wrong. Please try again later."
+    "somethingWentWrong": "Something went wrong. Please try again later.",
+    "goBack": "Go Back"
   },
   "pageNotFound": {
     "title": "Page Not Found",
@@ -146,6 +147,14 @@
       "subscribe": "Subscribe",
       "policyNotice": "By subscribing, you agree to receive our newsletter",
       "successMessage": "Thank you for subscribing to our newsletter!"
+    }
+  },
+  "blog": {
+    "navigation": {
+      "wineEducation": "Wine Education",
+      "cellarManagement": "Cellar Management",
+      "wineLists": "Wine Lists",
+      "discoverVinoteqa": "Discover Vinoteqa"
     }
   }
 }

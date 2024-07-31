@@ -11,7 +11,8 @@
     "location": "Posizione",
     "contacts": "Contatti",
     "errorPageTitle": "Si è verificato un errore",
-    "somethingWentWrong": "Qualcosa è andato storto. Riprova più tardi."
+    "somethingWentWrong": "Qualcosa è andato storto. Riprova più tardi.",
+    "goBack": "Torna indietro"
   },
   "pageNotFound": {
     "title": "Pagina non trovata",
@@ -28,7 +29,7 @@
     "features": "Funzionalità",
     "winelist": "Carta dei Vini",
     "pricing": "Prezzi",
-    "faqs": "FAQ"
+    "faqs": "FAQ",
   },
   "hero": {
     "titleLabel": "Per Strutture con 300+ Etichette di Vino",
@@ -146,6 +147,14 @@
       "subscribe": "Iscriviti",
       "policyNotice": "Iscrivendoti, accetti di ricevere la nostra newsletter",
       "successMessage": "Grazie per esserti iscritto alla nostra newsletter!"
+    }
+  },
+  "blog": {
+    "navigation": {
+      "wineEducation": "Sul vino",
+      "cellarManagement": "Gestione cantina",
+      "wineLists": "Carte vini",
+      "discoverVinoteqa": "Scopri Vinoteqa"
     }
   }
 }
