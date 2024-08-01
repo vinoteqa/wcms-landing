@@ -53,7 +53,7 @@ export default {
 
     data() {
         return {
-            POST_LIMIT: 2
+            POST_LIMIT: 12
         }
     },
 
