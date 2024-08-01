@@ -1,11 +1,18 @@
 <template>
     <div class="page-ct bg-white">
         <div class="top-ct">
-            <Header :logoSrc="blogLogoSrc" logoAlt="Logo Vinoteqa Blog" logoSize="11" :navigation="navigation"
+            <Header :homeLink="localePath('/blog')" :logoSrc="blogLogoSrc" logoAlt="Logo Vinoteqa Blog" logoSize="11" :navigation="navigation"
                 :actionButtonLabel="actionButtonLabel" :actionButtonLink="actionButtonLink" />
         </div>
         <main class="pt-24">
             <slot />
+
+            <div class="newsletter-ct">
+                <NewsletterForm :loading="true" :subscribed="!!newsletter.subscriberEmail" :title="newsletter.title"
+                    :policyNotice="newsletter.policyNotice" :inputLabel="newsletter.inputLabel"
+                    :inputPlaceholder="newsletter.inputPlaceholder" :inputButtonLabel="newsletter.inputButtonLabel"
+                    @subscribe="subscribeVisitor($event)" />
+            </div>
         </main>
         <Footer :pageTitle="title" :logoSrc="logoSrc" :mission="mission" :navigation="footerNavigation" />
     </div>
@@ -25,9 +32,9 @@ export default {
             actionButtonLabel: this.$t('blog.navigation.discoverVinoteqa'),
             actionButtonLink: this.localePath("/"),
             navigation: [
-                { name: this.$t('blog.navigation.wineEducation'), href: '#' },
-                { name: this.$t('blog.navigation.cellarManagement'), href: '#' },
-                { name: this.$t('blog.navigation.wineLists'), href: '#' },
+                { name: this.$t('blog.navigation.wineEducation'), href: '/blog/wines' },
+                { name: this.$t('blog.navigation.cellarManagement'), href: '/blog/winecellar' },
+                { name: this.$t('blog.navigation.wineLists'), href: '/blog/winelist' },
             ],
             footerNavigation: {
                 location: [
@@ -96,12 +103,65 @@ export default {
 
             newsletter: {
                 subscriberEmail: null,
-                title: this.$t('sections.newsletter.title'),
+                title: this.$t('blog.newsletter.title'),
                 inputLabel: this.$t('sections.newsletter.inputLabel'),
                 inputPlaceholder: this.$t('sections.newsletter.inputLabel'),
                 inputButtonLabel: this.$t('sections.newsletter.subscribe'),
                 policyNotice: this.$t('sections.newsletter.policyNotice'),
             },
+        }
+    },
+
+    methods: {
+        subscribeVisitor(event) {
+            console.log('Subscribing visitor...', event.email)
+            this.subscribe(event.email)
+        },
+
+        async subscribe(email) {
+            // load environment variables
+            const portal_id = runtimeConfig.public.hubspot.portalId
+            let form_id = null
+            switch (this.$i18n.locale) {
+                case 'de':
+                    form_id = runtimeConfig.public.hubspot.formId.de
+                    break
+                case 'it':
+                    form_id = runtimeConfig.public.hubspot.formId.it
+                    break
+                default:
+                    form_id = runtimeConfig.public.hubspot.formId.en
+            }
+
+            // prepare request
+            const request_url = `https://api.hsforms.com/submissions/v3/integration/submit/${portal_id}/${form_id}`
+            const body = {
+                "submittedAt": (new Date()).getTime(),
+                "fields": [
+                    {
+                        "objectTypeId": "0-1",
+                        "name": "email",
+                        "value": email
+                    }
+                ]
+            }
+
+            // send request
+            await fetch(request_url, {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                },
+                body: JSON.stringify(body)
+            }).then((res) => {
+                // check if status is 200
+                if (res.status === 200) {
+                    this.newsletter.subscriberEmail = email
+                }
+            })
         }
     }
 }

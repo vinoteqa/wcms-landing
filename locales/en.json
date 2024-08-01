@@ -156,6 +156,14 @@
       "cellarManagement": "Cellar Management",
       "wineLists": "Wine Lists",
       "discoverVinoteqa": "Discover Vinoteqa"
+    },
+    "categories": {
+      "wineEducation": "Expand Your Wine Knowledge",
+      "cellarManagement": "Master Your Wine Cellar Like a Pro",
+      "wineLists": "Design and Create Memorable Wine Menus"
+    },
+    "newsletter": {
+      "title": "Are you a hotel, restaurant, or wine bar owner? Stay updated with the latest product news."
     }
   }
 }

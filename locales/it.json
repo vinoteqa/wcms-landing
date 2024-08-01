@@ -29,7 +29,7 @@
     "features": "Funzionalità",
     "winelist": "Carta dei Vini",
     "pricing": "Prezzi",
-    "faqs": "FAQ",
+    "faqs": "FAQ"
   },
   "hero": {
     "titleLabel": "Per Strutture con 300+ Etichette di Vino",
@@ -156,6 +156,14 @@
       "cellarManagement": "Gestione cantina",
       "wineLists": "Carte vini",
       "discoverVinoteqa": "Scopri Vinoteqa"
+    },
+    "categories": {
+      "wineEducation": "Approfondisci la tua conoscenza del vino",
+      "cellarManagement": "Gestisci la tua cantina come un professionista",
+      "wineLists": "Progetta una carta vini memorabile"
+    },
+    "newsletter": {
+      "title": "Hai un hotel, ristorante o enoteca? Rimani aggiornato sulle novità del prodotto."
     }
   }
 }

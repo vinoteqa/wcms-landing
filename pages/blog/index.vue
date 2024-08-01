@@ -65,15 +65,15 @@ export default {
             categories: [
                 {
                     key: 'wines',
-                    label: this.$t('blog.navigation.wineEducation'),
+                    label: this.$t('blog.categories.wineEducation'),
                 },
                 {
                     key: 'winecellar',
-                    label: this.$t('blog.navigation.cellarManagement'),
+                    label: this.$t('blog.categories.cellarManagement'),
                 },
                 {
                     key: 'winelist',
-                    label: this.$t('blog.navigation.wineLists'),
+                    label: this.$t('blog.categories.wineLists'),
                 },
             ],
         }

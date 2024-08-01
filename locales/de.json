@@ -156,6 +156,14 @@
       "cellarManagement": "Weinkeller-Management",
       "wineLists": "Weinkarten",
       "discoverVinoteqa": "Entdecke Vinoteqa"
+    },
+    "categories": {
+      "wineEducation": "Erweitere Dein Weinwissen",
+      "cellarManagement":"Verwalte Deinen Weinkeller wie ein Profi",
+      "wineLists": "Gestalte und Erstelle unvergessliche Weinkarten"
+    },
+    "newsletter": {
+      "title": "Hast du ein Hotel, Restaurant oder Weinbar? Bleibe auf dem Laufenden über die neuesten Produktneuheiten."
     }
   }
 }
