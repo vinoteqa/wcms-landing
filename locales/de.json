@@ -151,6 +151,8 @@
   },
   "blog": {
     "viewAll": "Alle anzeigen",
+    "nextPage": "Nächste",
+    "previousPage": "Vorherige",
     "navigation": {
       "wineEducation": "Weinwissen",
       "cellarManagement": "Weinkeller-Management",

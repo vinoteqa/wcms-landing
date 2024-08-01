@@ -151,6 +151,8 @@
   },
   "blog": {
     "viewAll": "Visualizza tutti",
+    "nextPage": "Prossima",
+    "previousPage": "Precedente",
     "navigation": {
       "wineEducation": "Sul vino",
       "cellarManagement": "Gestione cantina",
@@ -158,7 +160,7 @@
       "discoverVinoteqa": "Scopri Vinoteqa"
     },
     "categories": {
-      "wineEducation": "Approfondisci la tua conoscenza del vino",
+      "wineEducation": "Approfondisci la tua conoscenza sul vino",
       "cellarManagement": "Gestisci la tua cantina come un professionista",
       "wineLists": "Progetta una carta vini memorabile"
     },

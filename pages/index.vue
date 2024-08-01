@@ -36,7 +36,7 @@
         <div id="faqs" class="faq-ct">
           <Faq :title="faqs.title" :faqs="faqs.faqs" />
         </div>
-        <div class="newsletter-ct">
+        <div class="newsletter-ct py-16 sm:py-24">
           <NewsletterForm :loading="true" :subscribed="!!newsletter.subscriberEmail" :title="newsletter.title"
             :policyNotice="newsletter.policyNotice" :inputLabel="newsletter.inputLabel"
             :inputPlaceholder="newsletter.inputPlaceholder" :inputButtonLabel="newsletter.inputButtonLabel"

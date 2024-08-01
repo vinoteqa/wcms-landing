@@ -29,8 +29,8 @@
                     <section class="mb-16">
                         <div class="flex items-center mb-6">
                             <h2 class="text-3xl md:text-4xl font-bold mr-auto">{{ category.label }}</h2>
-                            <a class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5"
-                                :href="localePath(`/blog/${category.key}`)">{{ $t('blog.viewAll') }}</a>
+                            <NuxtLink class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5"
+                                :to="localePath(`/blog/${category.key}`)">{{ $t('blog.viewAll') }}</NuxtLink>
                         </div>
 
                         <ContentQuery :path="`${$i18n.locale}/blog/${category.key}`" :where="{ featured: true }"
