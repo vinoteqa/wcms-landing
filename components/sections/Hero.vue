@@ -23,9 +23,9 @@
               <a v-if="primaryButtonLabel" :href="primaryButtonLink" target="_blank"
                 class="rounded-md bg-vinoteqa px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-vinoteqa-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{
                 primaryButtonLabel }}</a>
-              <a v-if="secondaryButtonLabel" :href="secondaryButtonLink"
+              <NuxtLink v-if="secondaryButtonLabel" :to="localePath(secondaryButtonLink)"
                 class="text-sm font-semibold leading-6 text-gray-900">{{ secondaryButtonLabel }}<span
-                  aria-hidden="true">→</span></a>
+                  aria-hidden="true">→</span></NuxtLink>
             </div>
           </div>
         </div>

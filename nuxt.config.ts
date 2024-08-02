@@ -10,6 +10,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
+      demoBookingPageLink: process.env.DEMO_BOOKING_PAGE,
       hubspot: {
         portalId: process.env.HUBSPOT_PORTAL_ID,
         formId: {
