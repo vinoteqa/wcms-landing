@@ -1,10 +1,9 @@
 <template>
     <div class="page-ct bg-white">
-        <div class="top-ct">
-            <Header :homeLink="localePath('/')" :logoSrc="logoSrc" logoAlt="Logo Vinoteqa" :navigation="navigation"
-                :actionButtonLabel="actionButtonLabel" :actionButtonLink="actionButtonLink" />
-        </div>
-        <main class="pt-24">
+        <Header :homeLink="localePath('/')" :logoSrc="logoSrc" logoAlt="Logo Vinoteqa" :navigation="navigation"
+            :actionButtonLabel="actionButtonLabel" :actionButtonLink="actionButtonLink" />
+
+        <main>
             <slot />
 
             <div class="newsletter-ct py-16 sm:py-24">

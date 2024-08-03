@@ -1,13 +1,13 @@
 <template>
-    <header class="absolute inset-x-0 top-0 z-50">
+    <header class="sticky inset-x-0 top-0 z-50 bg-white" :class="{ 'is-sticky': !atTopOfPage }">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex lg:flex-1">
                 <NuxtLink :to="localePath(homeLink)" class="-m-1.5 p-1.5">
                     <span class="sr-only">Vinoteqa</span>
                     <img class="w-auto" :class="{
-                    'h-7': logoSize === '7',
-                    'h-11': logoSize === '11',
-                }" :src="logoSrc" :alt="logoAlt" />
+        'h-7': logoSize === '7',
+        'h-11': logoSize === '11',
+    }" :src="logoSrc" :alt="logoAlt" />
                 </NuxtLink>
             </div>
             <div class="flex lg:hidden">
@@ -24,7 +24,7 @@
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                 <a :href="actionButtonLink" target="_blank" class="text-sm font-semibold leading-6 text-black">{{
-                    actionButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
+        actionButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
             </div>
         </nav>
         <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -47,12 +47,12 @@
                             <NuxtLink v-for="item in navigation" :key="item.name" :to="localePath(item.href)"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                                 {{
-                    item.name }}</NuxtLink>
+        item.name }}</NuxtLink>
                         </div>
                         <div class="py-6">
                             <a :href="actionButtonLink" target="_blank"
                                 class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{
-                    actionButtonLabel }}</a>
+                                actionButtonLabel }}</a>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,31 @@ export default {
     data() {
         return {
             mobileMenuOpen: false,
+            atTopOfPage: true
+        }
+    },
+
+    beforeMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+
+    methods: {
+        handleScroll() {
+            // when the user scrolls, check the pageYOffset
+            if (window.pageYOffset > 0) {
+                // user is scrolled
+                if (this.atTopOfPage) this.atTopOfPage = false
+            } else {
+                // user is at top of page
+                if (!this.atTopOfPage) this.atTopOfPage = true
+            }
         }
     }
 }
 </script>
+
+<style scoped>
+header.is-sticky {
+    @apply border-b-2 border-vinoteqa shadow-md;
+}
+</style>
