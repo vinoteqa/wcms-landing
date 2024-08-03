@@ -32,7 +32,7 @@
                             :to="localePath(`/blog/${category.key}`)">{{ $t('blog.viewAll') }}</NuxtLink>
                     </div>
 
-                    <ContentQuery :path="`${$i18n.locale}/blog/${category.key}`" :where="{ featured: true }"
+                    <ContentQuery :path="localePath(`/blog/${category.key}`)" :where="{ featured: true }"
                         :sort="{ date: -1 }" :limit="3" v-slot="{ data }">
                         <BlogList :data="data" />
                     </ContentQuery>

@@ -34,10 +34,14 @@
 
                 <ContentRenderer :value="doc" class="content" />
 
-                <!-- TODO: add taxonomies, tags, etc. -->
-
             </div>
         </article>
+
+        <hr class="my-10 border-black/10">
+
+        <!-- <div class="tags">{{ doc.tags }}</div> -->
+
+        <RelatedArticles :doc="doc" />
 
     </div>
 </template>
@@ -64,7 +68,7 @@ export default {
         readingTime() {
             // return Math.ceil(this.doc.content.length / 2000);
             return null
-        }
+        },
     }
 }
 </script>
@@ -72,7 +76,13 @@ export default {
 <style lnag="postcss">
 /* TODO: add styling for content here */
 .article-ct .content {
-    h1, h2, h3, h4, h5, h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         @apply text-xl text-black font-bold mb-5 mt-10;
     }
 
