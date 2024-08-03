@@ -16,7 +16,7 @@
         </main>
         <Footer :pageTitle="title" :logoSrc="logoSrc" :mission="mission" :navigation="footerNavigation" />
     </div>
-</template>
+</template> 
 
 <script>
 export default {

@@ -1,64 +1,62 @@
 <template>
-    <NuxtLayout name="blog">
-        <div class="h-full page bg-white">
-            <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-                <!--Latest article as Featured -->
-                <ContentQuery :path="$i18n.locale" :sort="{
-                    date: -1
-                }" :limit="1" v-slot="{ data }">
-                    <section
-                        class="block md:flex relative group p-6 lg:p-10 space-y-6 md:space-x-6 my-14 bg-vinoteqa/5 rounded-3xl hover:bg-vinoteqa/25">
-                        <figure class="basis-1/2 w-full aspect-video overflow-hidden rounded-2xl">
-                            <img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer"
-                                :src="data[0].media" :alt="data[0].title"
-                                style="width: 100%; height: 100%; object-fit: cover;">
+    <div class="h-full page bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <!--Latest article as Featured -->
+            <ContentQuery :path="$i18n.locale" :sort="{
+                date: -1
+            }" :limit="1" v-slot="{ data }">
+                <section
+                    class="block md:flex relative group p-6 lg:p-10 space-y-6 md:space-x-6 my-14 bg-vinoteqa/5 rounded-3xl hover:bg-vinoteqa/25">
+                    <figure class="basis-1/2 w-full aspect-video overflow-hidden rounded-2xl">
+                        <img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer"
+                            :src="data[0].media" :alt="data[0].title"
+                            style="width: 100%; height: 100%; object-fit: cover;">
 
-                        </figure>
-                        <div class="basis-1/2 self-center">
-                            <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-4"><a
-                                    class="before:content-[''] before:z-10 before:top-0 before:right-0 before:left-0 before:bottom-0 before:absolute before:pointer-events-auto"
-                                    href="data">{{ data[0].subtitle }}</a></h2>
-                            <div class="font-bold">{{ printDate(data[0].date) }}</div>
+                    </figure>
+                    <div class="basis-1/2 self-center">
+                        <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-4"><a
+                                class="before:content-[''] before:z-10 before:top-0 before:right-0 before:left-0 before:bottom-0 before:absolute before:pointer-events-auto"
+                                href="data">{{ data[0].subtitle }}</a></h2>
+                        <div class="font-bold">{{ printDate(data[0].date) }}</div>
 
-                        </div>
-                    </section>
-                </ContentQuery>
+                    </div>
+                </section>
+            </ContentQuery>
 
-                <!-- Show last 3 Featured Articles for each Category -->
-                <div v-for="category, idx in categories" :key="category.key">
-                    <section class="mb-16">
-                        <div class="flex items-center mb-6">
-                            <h2 class="text-3xl md:text-4xl font-bold mr-auto">{{ category.label }}</h2>
-                            <NuxtLink class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5"
-                                :to="localePath(`/blog/${category.key}`)">{{ $t('blog.viewAll') }}</NuxtLink>
-                        </div>
+            <!-- Show last 3 Featured Articles for each Category -->
+            <div v-for="category, idx in categories" :key="category.key">
+                <section class="mb-16">
+                    <div class="flex items-center mb-6">
+                        <h2 class="text-3xl md:text-4xl font-bold mr-auto">{{ category.label }}</h2>
+                        <NuxtLink class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5"
+                            :to="localePath(`/blog/${category.key}`)">{{ $t('blog.viewAll') }}</NuxtLink>
+                    </div>
 
-                        <ContentQuery :path="`${$i18n.locale}/blog/${category.key}`" :where="{ featured: true }"
-                            :sort="{ date: -1 }" :limit="3" v-slot="{ data }">
-                            <BlogList :data="data" />
-                        </ContentQuery>
-                    </section>
+                    <ContentQuery :path="`${$i18n.locale}/blog/${category.key}`" :where="{ featured: true }"
+                        :sort="{ date: -1 }" :limit="3" v-slot="{ data }">
+                        <BlogList :data="data" />
+                    </ContentQuery>
+                </section>
 
-                    <hr v-if="idx < categories.length - 1" class="my-8 text-black/10">
-
-                </div>
-
-                <!-- <BlogPagination v-if="data > 1" class="mt-8" :currentPage="1" :totalPages="data" :nextPage="data > 1"
-                baseUrl="/it/blog/" pageUrl="/it/blog/page/" /> -->
+                <hr v-if="idx < categories.length - 1" class="my-8 text-black/10">
 
             </div>
+
+            <!-- <BlogPagination v-if="data > 1" class="mt-8" :currentPage="1" :totalPages="data" :nextPage="data > 1"
+                baseUrl="/it/blog/" pageUrl="/it/blog/page/" /> -->
+
         </div>
-    </NuxtLayout>
+    </div>
 </template>
 
 <script>
-import { defineComponent, h } from 'vue'
-
 const runtimeConfig = useRuntimeConfig()
 
-export default {
-    layout: 'blog',
+definePageMeta({
+    layout: 'blog'
+})
 
+export default {
     data() {
         return {
             // blog

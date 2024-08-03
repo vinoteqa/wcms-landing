@@ -3,7 +3,7 @@
 </template>
 
 <script>
-export default {
-    layout: 'blog',
-}
+definePageMeta({
+    layout: 'blog'
+})
 </script>
