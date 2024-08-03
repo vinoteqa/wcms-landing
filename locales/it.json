@@ -150,6 +150,7 @@
     }
   },
   "blog": {
+    "goToBlog": "Vai al Blog",
     "viewAll": "Visualizza tutti",
     "nextPage": "Prossima",
     "previousPage": "Precedente",

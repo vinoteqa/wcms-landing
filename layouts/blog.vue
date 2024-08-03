@@ -7,7 +7,7 @@
         <main class="pt-24">
             <slot />
 
-            <div class="newsletter-ct">
+            <div class="newsletter-ct py-16 sm:py-24">
                 <NewsletterForm :loading="true" :subscribed="!!newsletter.subscriberEmail" :title="newsletter.title"
                     :policyNotice="newsletter.policyNotice" :inputLabel="newsletter.inputLabel"
                     :inputPlaceholder="newsletter.inputPlaceholder" :inputButtonLabel="newsletter.inputButtonLabel"

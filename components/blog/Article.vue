@@ -1,5 +1,5 @@
 <template>
-    <div class="article-ct max-w-3xl mx-auto mb-14">
+    <div class="article-ct max-w-3xl mx-auto">
 
         <article class="relative pt-10">
 
@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style lnag="postcss">
-/* TODO: add styling for content here */
+/* add styling for content here */
 .article-ct .content {
 
     h1,

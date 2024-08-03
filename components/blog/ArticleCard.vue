@@ -9,7 +9,7 @@
             <div class="p-6 text-black">
                 <div>{{ printDate(date) }}</div>
                 <h3 class="my-4 text-2xl font-bold">{{ title }}</h3>
-                <p class="text-normal leading-normal text-black/80 line-clamp-2">{{ subtitle }}</p>
+                <p class="text-normal leading-normal text-black/80 line-clamp-2">{{ description }}</p>
             </div>
         </article>
     </NuxtLink>
@@ -26,7 +26,7 @@ export default {
             type: String,
             required: true
         },
-        subtitle: {
+        description: {
             type: String,
             required: true
         },
