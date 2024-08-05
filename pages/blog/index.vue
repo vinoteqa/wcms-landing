@@ -5,22 +5,22 @@
             <ContentQuery :path="$i18n.locale" :sort="{
                 date: -1
             }" :limit="1" v-slot="{ data }">
-                <section
+                <NuxtLink :to="localePath(data[0]._path)"
                     class="block md:flex relative group p-6 lg:p-10 space-y-6 md:space-x-6 my-14 bg-vinoteqa/5 rounded-3xl hover:bg-vinoteqa/25">
                     <figure class="basis-1/2 w-full aspect-video overflow-hidden rounded-2xl">
                         <img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer"
                             :src="data[0].media" :alt="data[0].title"
                             style="width: 100%; height: 100%; object-fit: cover;">
-
                     </figure>
                     <div class="basis-1/2 self-center">
-                        <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-4"><a
-                                class="before:content-[''] before:z-10 before:top-0 before:right-0 before:left-0 before:bottom-0 before:absolute before:pointer-events-auto"
-                                href="data">{{ data[0].subtitle }}</a></h2>
+                        <h2 class="text-2xl md:text-3xl lg:text-5xl font-bold mb-4">
+                            <span
+                                class="before:content-[''] before:z-10 before:top-0 before:right-0 before:left-0 before:bottom-0 before:absolute before:pointer-events-auto">{{
+                data[0].subtitle }}</span>
+                        </h2>
                         <div class="font-bold">{{ printDate(data[0].date) }}</div>
-
                     </div>
-                </section>
+                </NuxtLink>
             </ContentQuery>
 
             <!-- Show last 3 Featured Articles for each Category -->
