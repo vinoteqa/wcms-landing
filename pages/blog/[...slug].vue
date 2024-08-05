@@ -1,11 +1,13 @@
 <template>
     <div class="blog-content pt-10 px-8 mx-auto max-w-7xl">
-        <NuxtLink :to="localePath('/blog')" class="text-sm font-semibold leading-6 text-black/95 hover:text-black">←
-            {{ $t('blog.goToBlog') }}</NuxtLink>
         <ContentDoc>
             <template v-slot="{ doc }">
+                <NuxtLink :to="localePath('/blog')"
+                    class="text-sm font-semibold leading-6 text-black/95 hover:text-black">←
+                    {{ $t('blog.goToBlog') }}</NuxtLink>
                 <Article :doc="doc" />
             </template>
+            
             <template #not-found>
                 <NotFoundError :backToLink="localePath('/blog')" />
             </template>
