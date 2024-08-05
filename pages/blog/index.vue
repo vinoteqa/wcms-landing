@@ -28,7 +28,8 @@
                 <section class="mb-16">
                     <div class="flex items-center mb-6">
                         <h2 class="text-3xl md:text-4xl font-bold mr-auto">{{ category.label }}</h2>
-                        <NuxtLink class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5"
+                        <NuxtLink
+                            class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5 invisible lg:visible"
                             :to="localePath(`/blog/${category.key}`)">{{ $t('blog.viewAll') }}</NuxtLink>
                     </div>
 
@@ -36,6 +37,13 @@
                         :sort="{ date: -1 }" :limit="3" v-slot="{ data }">
                         <BlogList :data="data" />
                     </ContentQuery>
+
+                    <div class="flex text-center my-6 visible lg:invisible">
+                        <NuxtLink
+                            class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5 "
+                            :to="localePath(`/blog/${category.key}`)">{{ $t('blog.viewAll') }}</NuxtLink>
+                    </div>
+
                 </section>
 
                 <hr v-if="idx < categories.length - 1" class="my-8 text-black/10">
