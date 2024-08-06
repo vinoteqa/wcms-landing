@@ -2,7 +2,7 @@
     <div class="bg-white">
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div
-                class="relative isolate flex flex-col gap-10 overflow-hidden bg-black px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:flex-row xl:items-center xl:py-32">
+                class="relative isolate flex flex-col gap-10 overflow-hidden bg-[#b3192b] px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:flex-row xl:items-center xl:py-32">
                 <h2
                     class="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl xl:max-w-none xl:flex-auto">
                     {{ title }}</h2>
@@ -26,7 +26,7 @@
                         font-semibold">{{ $t('sections.newsletter.successMessage') }}</p>
                 </div>
 
-                <svg viewBox="0 0 1024 1024"
+                <!-- <svg viewBox="0 0 1024 1024"
                     class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
                     <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03613)"
                         fill-opacity="0.7" />
@@ -37,7 +37,7 @@
                             <stop offset="1" stop-color="#ff0000" stop-opacity="0" />
                         </radialGradient>
                     </defs>
-                </svg>
+                </svg> -->
             </div>
         </div>
     </div>
