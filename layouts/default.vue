@@ -14,7 +14,7 @@
             </div>
         </main>
 
-        <Footer :pageTitle="title" :logoSrc="logoSrc" :mission="mission" :navigation="footerNavigation" />
+        <Footer :pageTitle="title" :logoSrc="whiteLogoSrc" :mission="mission" :navigation="footerNavigation" />
     </div>
 </template>
 
@@ -32,6 +32,7 @@ export default {
             mission: this.$t('vinoteqa.mission'),
             blogLogoSrc: '/logo-blog.svg',
             logoSrc: '/logo.svg',
+            whiteLogoSrc: '/logo-negative.svg',
             email: 'info@vinoteqa.com',
 
             // navigation

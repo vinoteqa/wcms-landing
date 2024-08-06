@@ -13,7 +13,7 @@
                     @subscribe="subscribeVisitor($event)" />
             </div>
         </main>
-        <Footer :pageTitle="title" :logoSrc="logoSrc" :mission="mission" :navigation="footerNavigation" />
+        <Footer :pageTitle="title" :logoSrc="whiteLogoSrc" :mission="mission" :navigation="footerNavigation" />
     </div>
 </template>
 
@@ -22,13 +22,14 @@ import newsletter from '~/mixins/newsletter'
 
 export default {
     mixins: [newsletter],
-    
+
     data() {
         return {
             title: 'Vinoteqa',
             mission: this.$t('vinoteqa.mission'),
             blogLogoSrc: '/logo-blog.svg',
             logoSrc: '/logo.svg',
+            whiteLogoSrc: '/logo-negative.svg',
             email: 'info@vinoteqa.com',
 
             // navigation
