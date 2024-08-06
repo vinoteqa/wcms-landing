@@ -1,3 +1,5 @@
+const runtimeConfig = useRuntimeConfig()
+
 export default {
   data() {
     return {
