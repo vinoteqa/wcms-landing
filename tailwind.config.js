@@ -12,8 +12,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["BricolageGrotesque", ...defaultTheme.fontFamily.sans],
-        body: ["Outfit", ...defaultTheme.fontFamily.sans],
+        display: ["Outfit", ...defaultTheme.fontFamily.sans],
+        body: ["Fira Sans", ...defaultTheme.fontFamily.sans],
       },
     },
   },

@@ -1,4 +1,4 @@
-const runtimeConfig = useRuntimeConfig()
+const runtimeConfig = useRuntimeConfig();
 
 export default {
   data() {
@@ -14,7 +14,7 @@ export default {
       console.log("Subscribing visitor...", event.email);
       this.subscribe(event.email);
     },
-    
+
     async subscribe(email) {
       // load environment variables
       const portal_id = runtimeConfig.public.hubspot.portalId;
