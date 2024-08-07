@@ -13,7 +13,8 @@
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12 ml-20">
                     <NuxtLink v-for="item in navigation" :key="item.name" :to="localePath(item.href)"
-                        class="text-sm font-semibold leading-6 text-black/95 hover:text-black">{{ item.name }}
+                        class="text-sm font-semibold leading-6 text-black/95 hover:text-black"
+                        :class="{ 'is-home': $route.name.includes('index') }">{{ item.name }}
                     </NuxtLink>
                 </div>
             </div>
@@ -148,7 +149,15 @@ export default {
 </script>
 
 <style scoped>
-header.is-sticky {
-    @apply border-b-2 border-vinoteqa shadow-md;
+header {
+    &.is-sticky {
+        @apply border-b-2 border-vinoteqa shadow-md;
+    }
+
+    nav {
+        .router-link-active:not(.is-home) {
+            @apply underline text-black/95;
+        }
+    }
 }
 </style>
