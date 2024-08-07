@@ -19,12 +19,12 @@
             </div>
 
             <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center">
-                <LanguageSwitcherMenu class="mr-5"/>
+                <LanguageSwitcherMenu :homeLink="homeLink" class="mr-5" />
 
                 <!-- primary cta -->
                 <a :href="actionButtonLink" target="_blank"
                     class="rounded-md bg-vinoteqa px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-vinoteqa-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vinoteqa">{{
-                    actionButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
+        actionButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
             </div>
 
             <!-- mobile menu button -->
@@ -60,7 +60,7 @@
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 @click="mobileMenuOpen = false">
                                 {{
-                                item.name }}</NuxtLink>
+        item.name }}</NuxtLink>
                         </div>
                         <div class="py-6">
                             <a :href="actionButtonLink" target="_blank"
@@ -70,7 +70,7 @@
                     </div>
                 </div>
 
-                <LanguageSwitcherMenu class="mt-10 p-1 text-center bg-black/5 rounded-sm" @close="mobileMenuOpen = false" />
+                <LanguageSwitcherMenu :homeLink="homeLink" class="mt-10 p-1 text-center bg-black/5 rounded-sm" />
             </DialogPanel>
         </Dialog>
     </header>

@@ -1,7 +1,6 @@
 <template>
     <Popover class="relative">
-        <PopoverButton
-            class="items-center gap-x-1 text-sm font-semibold leading-6 text-black/95 text-center w-full">
+        <PopoverButton class="items-center gap-x-1 text-sm font-semibold leading-6 text-black/95 text-center w-full">
             <span class="inline-flex">
                 <span>{{ locale.toUpperCase() }}</span>
                 <ChevronDownIcon class="h-5 w-5" aria-hidden="true" />
@@ -15,10 +14,10 @@
                 v-slot="{ close }">
                 <div
                     class="w-56 shrink rounded-xl bg-white p-4 text-sm font-semibold leading-6 text-black/85 shadow-lg ring-1 ring-black/10">
-                    <NuxtLink v-for="l in locales" :key="l.code" :to="switchLocalePath(l.code)"
-                        class="block p-2 hover:text-black/95" :class="{ 'underline text-black/95': l.code === locale }"
-                        @click="close(); $emit('close')">{{ l.name }}
-                    </NuxtLink>
+                    <a v-for="l in locales" :key="l.code" :href="`/${l.code}${homeLink}`"
+                        class="block p-2 hover:text-black/95"
+                        :class="{ 'underline text-black/95': l.code === locale }">{{ homeLink + ' - ' + l.name }}
+                    </a>
                 </div>
             </PopoverPanel>
         </transition>
@@ -30,13 +29,15 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/20/solid'
 
 const { locale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <script>
 export default {
-    computed: {
-        // availableLocales() { return locales.filter
+    props: {
+        homeLink: {
+            type: String,
+            default: "/",
+        },
     },
 }
 </script>
