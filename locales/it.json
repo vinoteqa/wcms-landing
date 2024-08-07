@@ -36,6 +36,18 @@
     "title": "Digitalizza la Gestione della Tua Cantina",
     "subtitle": "Il modo migliore per gestire e mettere in mostra la tua collezione di vini. Genera la tua lista dei vini con un clic. Accessibile sempre e ovunque."
   },
+  "footer": {
+    "vinoteqa": {
+      "platform": "Piattaforma"
+    },
+    "resources": {
+      "title": "Risorse",
+      "blog": "Vinoteqa Blog"
+    },
+    "contacts": {
+      "title": "Contatti"
+    }
+  },
   "sections": {
     "statistics": {
       "title": "Accedi immediatamente al nostro database",

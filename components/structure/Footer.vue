@@ -15,35 +15,54 @@
                 </div>
                 <div class="mt-8 grid grid-cols-1 gap-8 xl:grid-cols-2 xl:col-span-2 xl:mt-0 ">
                     <div class="grid-cols-2 md:grid md:grid-cols-2 md:gap-8">
-                        <div></div>
-                        <div v-if="navigation.resources?.length > 0" class="mt-10 md:mt-0">
-                            <h3 class="text-sm font-semibold leading-6 text-white/90">{{ '' }}</h3>
-                            <ul role="list" class="mt-6 space-y-4">
-                                <li v-for="item in navigation.resources" :key="item.name">
-                                    <a v-if="item.href" :href="item.href"
-                                        class="text-sm leading-6 text-white/70 hover:text-white">{{ item.name }}
-                                    </a>
-                                    <span v-else class="text-sm leading-6 text-white/70">{{ item.name }}</span>
-                                </li>
-                            </ul>
+                        <div class="hidden lg:block">
+                            <div v-if="menu1 && menu1.items.length > 0">
+                                <h3 class="text-sm font-semibold leading-6 text-white/90">{{ menu1.title }}
+                                </h3>
+                                <ul role="list" class="mt-6 space-y-4">
+                                    <li v-for="item in menu1.items" :key="item.name">
+                                        <a v-if="item.href" :href="item.href"
+                                            class="text-sm leading-6 text-white/70 hover:text-white">{{ item.name }}
+                                        </a>
+                                        <span v-else class="text-sm leading-6 text-white/70">{{ item.name }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <div v-if="menu2 && menu2.items.length > 0">
+                                <h3 class="text-sm font-semibold leading-6 text-white/90">{{ menu2.title }}
+                                </h3>
+                                <ul role="list" class="mt-6 space-y-4">
+                                    <li v-for="item in menu2.items" :key="item.name">
+                                        <a v-if="item.href" :href="item.href"
+                                            class="text-sm leading-6 text-white/70 hover:text-white">{{ item.name }}
+                                        </a>
+                                        <span v-else class="text-sm leading-6 text-white/70">{{ item.name }}</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="grid-cols-2 md:grid md:grid-cols-2 md:gap-8 ">
                         <div>
-                            <h3 class="text-sm font-semibold leading-6 text-white/90">{{ $t('common.location') }}</h3>
-                            <ul role="list" class="mt-6 space-y-4">
-                                <li v-for="item in navigation.location" :key="item.name">
-                                    <a v-if="item.href" :href="item.href"
-                                        class="text-sm leading-6 text-white/70 hover:text-white">{{ item.name }}
-                                    </a>
-                                    <span v-else class="text-sm leading-6 text-white/70">{{ item.name }}</span>
-                                </li>
-                            </ul>
+                            <div v-if="menu3 && menu3.items.length > 0" class="mt-10 md:mt-0">
+                                <h3 class="text-sm font-semibold leading-6 text-white/90">{{ menu3.title }}
+                                </h3>
+                                <ul role="list" class="mt-6 space-y-4">
+                                    <li v-for="item in menu3.items" :key="item.name">
+                                        <a v-if="item.href" :href="item.href"
+                                            class="text-sm leading-6 text-white/70 hover:text-white">{{ item.name }}
+                                        </a>
+                                        <span v-else class="text-sm leading-6 text-white/70">{{ item.name }}</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="mt-10 md:mt-0">
-                            <h3 class="text-sm font-semibold leading-6 text-white/90">{{ $t('common.contacts') }}</h3>
+                            <h3 class="text-sm font-semibold leading-6 text-white/90">{{ $t('common.location') }}</h3>
                             <ul role="list" class="mt-6 space-y-4">
-                                <li v-for="item in navigation.contacts" :key="item.name">
+                                <li v-for="item in location" :key="item.name">
                                     <a v-if="item.href" :href="item.href"
                                         class="text-sm leading-6 text-white/70 hover:text-white">{{ item.name }}
                                     </a>
@@ -57,7 +76,7 @@
             <div
                 class="border-t border-black/30 mx-auto max-w-7xl mt-16 px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
                 <div class="flex justify-center space-x-6 md:order-2">
-                    <a v-for="item in navigation.social" :key="item.name" :href="item.href" target="_blank"
+                    <a v-for="item in socials" :key="item.name" :href="item.href" target="_blank"
                         class="text-white/90 hover:text-white">
                         <span class="sr-only">{{ item.name }}</span>
                         <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
@@ -88,7 +107,23 @@ export default {
             type: String,
             required: true,
         },
-        navigation: {
+        menu1: {
+            type: Object,
+            default: null,
+        },
+        menu2: {
+            type: Object,
+            default: null,
+        },
+        menu3: {
+            type: Object,
+            default: null,
+        },
+        location: {
+            type: Object,
+            required: true,
+        },
+        socials: {
             type: Object,
             required: true,
         },

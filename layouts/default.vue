@@ -1,6 +1,6 @@
 <template>
     <div class="page-ct bg-white">
-        <Header :homeLink="localePath('/')" :logoSrc="logoSrc" logoAlt="Logo Vinoteqa" :navigation="navigation"
+        <Header :logoSrc="logoSrc" logoAlt="Logo Vinoteqa" :navigation="navigation"
             :actionButtonLabel="actionButtonLabel" :actionButtonLink="actionButtonLink" />
 
         <main>
@@ -14,7 +14,9 @@
             </div>
         </main>
 
-        <Footer :pageTitle="title" :logoSrc="whiteLogoSrc" :mission="mission" :navigation="footerNavigation" />
+        <Footer :pageTitle="title" :logoSrc="whiteLogoSrc" :mission="mission" :menu2="footerNavigation.resources"
+            :menu3="footerNavigation.contacts" :location="footerNavigation.location"
+            :socials="footerNavigation.social" />
     </div>
 </template>
 
@@ -45,13 +47,23 @@ export default {
                 { name: this.$t('navigation.faqs'), href: '/#faqs' },
             ],
             footerNavigation: {
+                resources: {
+                    title: this.$t('footer.resources.title'),
+                    items: [
+                        { name: this.$t('footer.resources.blog'), href: this.localePath('/blog') },
+                        { name: this.$t('ctas.bookDemo'), href: runtimeConfig.public.demoBookingPageLink },
+                    ],
+                },
+                contacts: {
+                    title: this.$t('footer.contacts.title'),
+                    items: [
+                        { name: 'info@vinoteqa.com', href: 'mailto:info@vinoteqa.com' }
+                    ],
+                },
                 location: [
                     {
                         name: this.$t('vinoteqa.location'),
                     }
-                ],
-                contacts: [
-                    { name: 'info@vinoteqa.com', href: 'mailto:info@vinoteqa.com' }
                 ],
                 social: [
                     {

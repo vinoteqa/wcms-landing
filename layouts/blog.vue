@@ -1,6 +1,6 @@
 <template>
     <div class="page-ct bg-white">
-        <Header :homeLink="localePath('/blog')" :logoSrc="blogLogoSrc" logoAlt="Logo Vinoteqa Blog" logoSize="11"
+        <Header homeLink="/blog" :logoSrc="blogLogoSrc" logoAlt="Logo Vinoteqa Blog" logoSize="11"
             :navigation="navigation" :actionButtonLabel="actionButtonLabel" :actionButtonLink="actionButtonLink" />
 
         <main>
@@ -13,7 +13,10 @@
                     @subscribe="subscribeVisitor($event)" />
             </div>
         </main>
-        <Footer :pageTitle="title" :logoSrc="whiteLogoSrc" :mission="mission" :navigation="footerNavigation" />
+
+        <Footer :pageTitle="title" :logoSrc="whiteLogoSrc" :mission="mission" :menu2="footerNavigation.vinoteqa"
+            :menu3="footerNavigation.contacts" :location="footerNavigation.location"
+            :socials="footerNavigation.social" />
     </div>
 </template>
 
@@ -41,13 +44,22 @@ export default {
                 { name: this.$t('blog.navigation.wineLists'), href: '/blog/winelist' },
             ],
             footerNavigation: {
+                vinoteqa: {
+                    title: "Vinoteqa",
+                    items: [
+                        { name: this.$t('footer.vinoteqa.platform'), href: this.localePath('/') },
+                    ],
+                },
+                contacts: {
+                    title: this.$t('footer.contacts.title'),
+                    items: [
+                        { name: 'info@vinoteqa.com', href: 'mailto:info@vinoteqa.com' }
+                    ],
+                },
                 location: [
                     {
                         name: this.$t('vinoteqa.location'),
                     }
-                ],
-                contacts: [
-                    { name: 'info@vinoteqa.com', href: 'mailto:info@vinoteqa.com' }
                 ],
                 social: [
                     {

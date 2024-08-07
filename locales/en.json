@@ -36,6 +36,18 @@
     "title": "Digitalize Your Wine Cellar Management",
     "subtitle": "The best way to manage and display your wine collection. Generate your wine list with one click. Accessible anytime, anywhere."
   },
+  "footer": {
+    "vinoteqa": {
+      "platform": "Platform"
+    },
+    "resources": {
+      "title": "Resources",
+      "blog": "Vinoteqa Blog"
+    },
+    "contacts": {
+      "title": "Contacts"
+    }
+  },
   "sections": {
     "statistics": {
       "title": "Gain immediate access to our database",
