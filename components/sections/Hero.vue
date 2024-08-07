@@ -3,7 +3,7 @@
     <div
       class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
       aria-hidden="true" />
-    <div class="mx-auto max-w-7xl px-6 py-32 sm:py-40 lg:px-8">
+    <div class="mx-auto max-w-7xl px-6 py-16 sm:py-32 lg:px-8">
       <div
         class="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
         <div class="title-ct max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
@@ -21,7 +21,7 @@
             <p class="text-lg leading-8 text-black">{{ subtitle }}</p>
             <div class="mt-10 flex items-center gap-x-6">
               <a v-if="primaryButtonLabel" :href="primaryButtonLink" target="_blank"
-                class="rounded-md bg-vinoteqa px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-vinoteqa-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">{{
+                class="rounded-md bg-vinoteqa px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-vinoteqa-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vinoteqa">{{
                 primaryButtonLabel }}</a>
               <NuxtLink v-if="secondaryButtonLabel" :to="localePath(secondaryButtonLink)"
                 class="text-sm font-semibold leading-6 text-gray-900">{{ secondaryButtonLabel }}<span
