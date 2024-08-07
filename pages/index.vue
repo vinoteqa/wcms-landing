@@ -7,12 +7,12 @@
     <Stats id="start" :title="stats.title" :stats="stats.stats" />
 
     <div class="content-ct">
-      <div id="features" class="features-ct">
+      <div id="features" class="features-ct pt-[88px]">
         <FeaturesRx :titleLabel="featOne.titleLabel" :title="featOne.title" :subtitle="featOne.subtitle"
           :features="featOne.features" :imgSrc="featOne.imgSrc" :imgAlt="featOne.imgAlt" />
         <FeaturesLx :titleLabel="featTwo.titleLabel" :title="featTwo.title" :subtitle="featTwo.subtitle"
           :features="featTwo.features" :imgSrc="featTwo.imgSrc" :imgAlt="featTwo.imgAlt" />
-        <FeaturesRow id="winelist" :title="featThree.title" :subtitle="featThree.subtitle"
+        <FeaturesRow id="winelist" class="pt-[88px]" :title="featThree.title" :subtitle="featThree.subtitle"
           :leftImgSrc="featThree.leftImgSrc" :leftImgAlt="featThree.leftImgAlt" :leftTitle="featThree.leftTitle"
           :leftDescription="featThree.leftDescription" :leftButtonLabel="featThree.leftButtonLabel"
           :leftButtonLink="featThree.leftButtonLink" :rightImgSrc="featThree.rightImgSrc"
@@ -24,11 +24,11 @@
         <Testimonial :imgSrc="testimonial.imgSrc" :imgAlt="testimonial.imgAlt" :testimonial="testimonial.content"
           :name="testimonial.name" :company="testimonial.company" :companyLink="testimonial.companyLink" />
       </div>
-      <div id="pricing" class="pricing-ct">
+      <div id="pricing" class="pricing-ct pt-[88px]">
         <Pricing :titleLabel="pricing.titleLabel" :title="pricing.title" :subtitle="pricing.subtitle"
           :tiers="pricing.tiers" />
       </div>
-      <div id="faqs" class="faq-ct">
+      <div id="faqs" class="faq-ct pt-[88px]">
         <Faq :title="faqs.title" :faqs="faqs.faqs" />
       </div>
     </div>
