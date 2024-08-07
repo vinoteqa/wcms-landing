@@ -11,14 +11,6 @@
     }" :src="logoSrc" :alt="logoAlt" />
                     </NuxtLink>
                 </div>
-                <div class="flex lg:hidden">
-                    <button type="button"
-                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                        @click="mobileMenuOpen = true">
-                        <span class="sr-only">Open main menu</span>
-                        <Bars3Icon class="h-6 w-6" aria-hidden="true" />
-                    </button>
-                </div>
                 <div class="hidden lg:flex lg:gap-x-12 ml-20">
                     <NuxtLink v-for="item in navigation" :key="item.name" :to="localePath(item.href)"
                         class="text-sm font-semibold leading-6 text-black/95 hover:text-black">{{ item.name }}
@@ -29,6 +21,14 @@
                 <a :href="actionButtonLink" target="_blank"
                     class="rounded-md bg-vinoteqa px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-vinoteqa-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vinoteqa">{{
         actionButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button"
+                    class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black/95"
+                    @click="mobileMenuOpen = true">
+                    <span class="sr-only">Open main menu</span>
+                    <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+                </button>
             </div>
         </nav>
 
@@ -42,7 +42,7 @@
                         <span class="sr-only">Vinoteqa</span>
                         <img class="h-8 w-auto" :src="logoSrc" :alt="logoAlt" />
                     </NuxtLink>
-                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
+                    <button type="button" class="-m-2.5 rounded-md p-2.5 text-black/95" @click="mobileMenuOpen = false">
                         <span class="sr-only">Close menu</span>
                         <XMarkIcon class="h-6 w-6" aria-hidden="true" />
                     </button>
