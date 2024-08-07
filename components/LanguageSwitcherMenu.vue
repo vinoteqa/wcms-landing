@@ -16,7 +16,7 @@
                     class="w-56 shrink rounded-xl bg-white p-4 text-sm font-semibold leading-6 text-black/85 shadow-lg ring-1 ring-black/10">
                     <a v-for="l in locales" :key="l.code" :href="`/${l.code}${homeLink}`"
                         class="block p-2 hover:text-black/95"
-                        :class="{ 'underline text-black/95': l.code === locale }">{{ homeLink + ' - ' + l.name }}
+                        :class="{ 'underline text-black/95': l.code === locale }">{{ l.name }}
                     </a>
                 </div>
             </PopoverPanel>
