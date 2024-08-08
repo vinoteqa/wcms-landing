@@ -87,11 +87,11 @@ export default {
     }
 
     p {
-        @apply text-black/80 leading-7 mb-2;
+        @apply text-black/80 leading-7 mb-4;
     }
 
     ul, menu {
-        @apply text-black/80 leading-7 mb-2 pl-6 list-disc;
+        @apply text-black/80 leading-7 mb-7 pl-6 list-disc;
 
         li {
             @apply mb-2;
