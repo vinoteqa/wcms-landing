@@ -69,5 +69,9 @@ export default defineNuxtConfig({
     },
     config: {},
     viewer: true,
+  },
+
+  ogImage: {
+    enabled: false
   }
 })
