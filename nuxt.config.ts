@@ -1,4 +1,5 @@
-import { fileURLToPath, URL } from "url";
+import getRoutes from "./utils/getRoutes";
+
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -79,6 +80,11 @@ export default defineNuxtConfig({
     },
     config: {},
     viewer: true,
+  },
+  
+  sitemap: {
+    strictNuxtContentPaths: true,
+    autoLastmod: true
   },
 
   content: {
