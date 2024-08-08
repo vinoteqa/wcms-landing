@@ -14,6 +14,13 @@ export default defineNuxtConfig({
     "@nuxthq/studio"
   ],
 
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    }
+  ],
+
   runtimeConfig: {
     public: {
       demoBookingPageLink: process.env.DEMO_BOOKING_PAGE,
@@ -34,12 +41,9 @@ export default defineNuxtConfig({
     title: 'Vinoteqa',
   },
 
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: false,
-    }
-  ],
+  ogImage: {
+    enabled: false
+  },
 
   i18n: {
     baseUrl: 'https://www.vinoteqa.com',
@@ -77,7 +81,9 @@ export default defineNuxtConfig({
     viewer: true,
   },
 
-  ogImage: {
-    enabled: false
+  content: {
+    markdown: {
+      anchorLinks: false,
+    }
   }
 })

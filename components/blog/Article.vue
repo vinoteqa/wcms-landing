@@ -3,10 +3,10 @@
 
         <article class="relative pt-10">
 
-            <h1 class="text-2xl font-extrabold tracking-tight text-black md:text-3xl">{{
+            <h1 class="tracking-tight">{{
                 doc.title }}</h1>
 
-            <h2 class="my-6 text-xl font text-black/60">
+            <h2 class="my-6 font-normal text-2xl text-black/60">
                 {{ doc.subtitle }}
             </h2>
 
@@ -80,11 +80,15 @@ export default {
     h4,
     h5,
     h6 {
-        @apply text-xl text-black font-bold mb-5 mt-10;
+        @apply text-black font-bold mb-5 mt-10;
     }
 
     p {
         @apply text-black/80 leading-7 mb-4;
+
+        a {
+            @apply text-vinoteqa/85 hover:text-vinoteqa/95 font-semibold   underline;
+        }
     }
 
     ul,
