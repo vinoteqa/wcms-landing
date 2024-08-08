@@ -27,7 +27,7 @@
 
                 <div
                     class="relative not-prose [a:not(:first-child)>&]:mt-12 [a:not(:last-child)>&]:mb-12 my-12 first:mt-0 last:mb-0 rounded-2xl overflow-hidden [figure>&]:my-0">
-                    <img :src="doc.media" :alt="doc.title" decoding="async" />
+                    <img :src="getArticleImageSrc(doc)" :alt="doc.title" decoding="async" />
                     <div class="absolute inset-0 rounded-2xl ring-0 ring-inset">
                     </div>
                 </div>
@@ -47,7 +47,11 @@
 </template>
 
 <script>
+import utils from '~/mixins/utils'
+
 export default {
+    mixins: [utils],
+
     props: {
         doc: {
             type: Object,
@@ -56,14 +60,7 @@ export default {
     },
     computed: {
         date() {
-            if (!this.doc.date) return null;
-
-            const dateOtions = {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-            };
-            return new Date(this.doc.date).toLocaleDateString(this.$i18n.locale, dateOtions);
+            return this.getLocaleDate(this.doc.date)
         },
         readingTime() {
             // return Math.ceil(this.doc.content.length / 2000);

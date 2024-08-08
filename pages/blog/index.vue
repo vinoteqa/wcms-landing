@@ -9,7 +9,7 @@
                     class="block md:flex relative group p-6 lg:p-10 space-y-6 md:space-x-6 my-14 bg-vinoteqa/5 rounded-3xl hover:bg-vinoteqa/25">
                     <figure class="basis-1/2 w-full aspect-video overflow-hidden rounded-2xl">
                         <img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer"
-                            :src="data[0].media" :alt="data[0].title"
+                            :src="getArticleImageSrc(data[0])" :alt="data[0].title"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </figure>
                     <div class="basis-1/2 self-center">
@@ -75,8 +75,11 @@ useSeoMeta({
 </script>
 
 <script>
+import utils from '~/mixins/utils'
 
 export default {
+    mixins: [utils],
+
     data() {
         return {
             // blog

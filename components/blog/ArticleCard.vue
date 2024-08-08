@@ -7,7 +7,7 @@
             </figure>
 
             <div class="p-6 text-black">
-                <div>{{ printDate(date) }}</div>
+                <div>{{ getLocaleDate(date) }}</div>
                 <h3 class="my-4 text-2xl font-bold">{{ title }}</h3>
                 <p class="text-normal leading-normal text-black/80 line-clamp-2">{{ description }}</p>
             </div>
@@ -16,7 +16,11 @@
 </template>
 
 <script>
+import utils from '~/mixins/utils'
+
 export default {
+    mixins: [utils],
+
     props: {
         link: {
             type: String,
@@ -42,16 +46,6 @@ export default {
             type: String,
             required: true
         }
-    },
-    methods: {
-        printDate(date) {
-            const dateOtions = {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-            };
-            return new Date(date).toLocaleDateString(this.$i18n.locale, dateOtions);
-        },
     }
 }
 </script>
