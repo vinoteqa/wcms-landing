@@ -37,12 +37,12 @@ useSeoMeta({
 </script>
 
 <script>
-import newsletter from '~/mixins/newsletter.js'
+import newsletterMixin from '~/mixins/newsletter.js'
 
 const runtimeConfig = useRuntimeConfig()
 
 export default {
-    mixins: [newsletter],
+    mixins: [newsletterMixin],
 
     data() {
         return {

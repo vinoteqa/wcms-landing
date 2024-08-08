@@ -27,10 +27,10 @@ useHead({
 </script>
 
 <script>
-import newsletter from '~/mixins/newsletter'
+import newsletterMixin from '~/mixins/newsletter'
 
 export default {
-    mixins: [newsletter],
+    mixins: [newsletterMixin],
 
     data() {
         return {
