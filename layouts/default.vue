@@ -20,6 +20,22 @@
     </div>
 </template>
 
+<script setup>
+const { t } = useI18n()
+
+useHead({
+    titleTemplate: '%s',
+    title: t("vinoteqa.title"),
+})
+
+useSeoMeta({
+    title: t('vinoteqa.title'),
+    description: t('vinoteqa.description')
+}, {
+    tagPriority: 'critical'
+})
+</script>
+
 <script>
 import newsletter from '~/mixins/newsletter.js'
 

@@ -39,8 +39,7 @@
                     </ContentQuery>
 
                     <div class="flex text-center my-6 visible lg:invisible">
-                        <NuxtLink
-                            class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5 "
+                        <NuxtLink class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5 "
                             :to="localePath(`/blog/${category.key}`)">{{ $t('blog.viewAll') }}</NuxtLink>
                     </div>
 
@@ -50,19 +49,32 @@
 
             </div>
 
-            <!-- <BlogPagination v-if="data > 1" class="mt-8" :currentPage="1" :totalPages="data" :nextPage="data > 1"
-                baseUrl="/it/blog/" pageUrl="/it/blog/page/" /> -->
-
         </div>
     </div>
 </template>
 
-<script>
-const runtimeConfig = useRuntimeConfig()
+<script setup>
+const { t } = useI18n()
 
 definePageMeta({
-    layout: 'blog'
+    layout: 'blog',
 })
+
+useHead({
+    title: t('blog.title')
+}, {
+    tagPriority: 'critical'
+})
+
+useSeoMeta({
+    title: t('blog.title'),
+    description: t('blog.description')
+}, {
+    tagPriority: 'critical'
+})
+</script>
+
+<script>
 
 export default {
     data() {
@@ -94,57 +106,6 @@ export default {
             };
             return new Date(date).toLocaleDateString(this.$i18n.locale, dateOtions);
         },
-
-        subscribeVisitor(event) {
-            console.log('Subscribing visitor...', event.email)
-            this.subscribe(event.email)
-        },
-
-        async subscribe(email) {
-            // load environment variables
-            const portal_id = runtimeConfig.public.hubspot.portalId
-            let form_id = null
-            switch (this.$i18n.locale) {
-                case 'de':
-                    form_id = runtimeConfig.public.hubspot.formId.de
-                    break
-                case 'it':
-                    form_id = runtimeConfig.public.hubspot.formId.it
-                    break
-                default:
-                    form_id = runtimeConfig.public.hubspot.formId.en
-            }
-
-            // prepare request
-            const request_url = `https://api.hsforms.com/submissions/v3/integration/submit/${portal_id}/${form_id}`
-            const body = {
-                "submittedAt": (new Date()).getTime(),
-                "fields": [
-                    {
-                        "objectTypeId": "0-1",
-                        "name": "email",
-                        "value": email
-                    }
-                ]
-            }
-
-            // send request
-            await fetch(request_url, {
-                method: 'POST',
-                mode: 'cors',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
-                },
-                body: JSON.stringify(body)
-            }).then((res) => {
-                // check if status is 200
-                if (res.status === 200) {
-                    this.newsletter.subscriberEmail = email
-                }
-            })
-        }
     }
 }
 </script>

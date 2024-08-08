@@ -2,8 +2,23 @@
     <BlogCategory categoryKey="wines" :categoryTitle="$t('blog.categories.wineEducation')" />
 </template>
 
-<script>
+<script setup>
+const { t } = useI18n()
+
 definePageMeta({
-    layout: 'blog'
+    layout: 'blog',
+})
+
+useHead({
+    title: t('blog.categories.wineEducation')
+}, {
+    tagPriority: 'critical'
+})
+
+useSeoMeta({
+    title: t('blog.categories.wineEducation'),
+    description: t('blog.categories.wineEducationDescription')
+}, {
+    tagPriority: 'critical'
 })
 </script>

@@ -162,6 +162,8 @@
     }
   },
   "blog": {
+    "title": "Vinoteqa Blog - Risorse per la gestione della cantina",
+    "description": "Il blog di Vinoteqa offre consigli esperti su educazione al vino, gestione della cantina e creazione di carte dei vini per ristoranti, professionisti e appassionati privati.",
     "goToBlog": "Vai al Blog",
     "viewAll": "Visualizza tutti",
     "nextPage": "Prossima",
@@ -175,8 +177,11 @@
     },
     "categories": {
       "wineEducation": "Approfondisci la tua conoscenza sul vino",
+      "wineEducationDescription": "Esplora il mondo del vino, dalle varietà di uva alle tecniche di degustazione. Approfondisci la tua conoscenza del vino con gli esperti di Vinoteqa.",
       "cellarManagement": "Gestisci la tua cantina come un professionista",
-      "wineLists": "Progetta una carta vini memorabile"
+      "cellarManagementDescription": "Scopri consigli e strategie per gestire la tua cantina. Ottimizza lo stoccaggio, l'inventario e la manutenzione con i consigli professionali di Vinoteqa.",
+      "wineLists": "Progetta una carta vini memorabile",
+      "wineListsDescription": "Diventa un maestro nella creazione e organizzazione di carte vini. Scopri le migliori pratiche per curare selezioni di vini diverse e accattivanti."
     },
     "newsletter": {
       "title": "Hai un hotel, ristorante o enoteca? Rimani aggiornato sulle novità del prodotto."

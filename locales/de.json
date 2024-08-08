@@ -162,6 +162,8 @@
     }
   },
   "blog": {
+    "title": "Vinoteqa Blog - Ressourcen für die Weinkeller-Verwaltung",
+    "description": "Der Blog von Vinoteqa bietet Experten-Tipps zu Weinerziehung, Kellerverwaltung und Weinkartenerstellung für Restaurants, Profis und private Weinliebhaber.",
     "goToBlog": "Zum Blog",
     "viewAll": "Alle anzeigen",
     "nextPage": "Nächste",
@@ -175,8 +177,11 @@
     },
     "categories": {
       "wineEducation": "Erweitere Dein Weinwissen",
-      "cellarManagement":"Verwalte Deinen Weinkeller wie ein Profi",
-      "wineLists": "Gestalte und Erstelle unvergessliche Weinkarten"
+      "wineEducationDescription": "Entdecke die Welt des Weins, von Rebsorten bis zu Verkostungstechniken. Erweitere dein Weinwissen mit den Experten von Vinoteqa",
+      "cellarManagement": "Verwalte Deinen Weinkeller wie ein Profi",
+      "cellarManagementDescription": "Tipps und Strategien zur Verwaltung deines Weinkellers. Optimiere Lagerung, Inventar und Pflege mit professionellen Ratschlägen von Vinoteqa.",
+      "wineLists": "Gestalte und Erstelle unvergessliche Weinkarten",
+      "wineListsDescription": "Meistere die Kunst der Erstellung und Organisation von Weinkarten. Entdecke Best Practices für die Kuratierung vielfältiger und ansprechender Weinauswahlen."
     },
     "newsletter": {
       "title": "Hast du ein Hotel, Restaurant oder Weinbar? Bleibe auf dem Laufenden über die neuesten Produktneuheiten."

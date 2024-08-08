@@ -20,6 +20,12 @@
     </div>
 </template>
 
+<script setup>
+useHead({
+    titleTemplate: `%s | Vinoteqa Blog`,
+})
+</script>
+
 <script>
 import newsletter from '~/mixins/newsletter'
 

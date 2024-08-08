@@ -162,6 +162,8 @@
     }
   },
   "blog": {
+    "title": "Vinoteqa Blog - Resources for Wine Cellar Management",
+    "description": "Vinoteqa's blog offers expert tips on wine education, cellar management, and wine list creation for restaurants, professionals, and private enthusiasts.",
     "goToBlog": "Go to Blog",
     "viewAll": "View All",
     "nextPage": "Next",
@@ -175,8 +177,11 @@
     },
     "categories": {
       "wineEducation": "Expand Your Wine Knowledge",
+      "wineEducationDescription": "Explore the world of wine, from grape varieties to tasting techniques. Enhance your wine knowledge with Vinoteqa's expert insights.",
       "cellarManagement": "Master Your Wine Cellar Like a Pro",
-      "wineLists": "Design and Create Memorable Wine Menus"
+      "cellarManagementDescription": "Learn how to manage your wine cellar efficiently and effectively. Discover the best practices for inventory control, organization, and more.",
+      "wineLists": "Design and Create Memorable Wine Menus",
+      "wineListsDescription": "Master the art of creating and organizing wine lists. Discover best practices for curating diverse and appealing wine selections."
     },
     "newsletter": {
       "title": "Are you a hotel, restaurant, or wine bar owner? Stay updated with the latest product news."
