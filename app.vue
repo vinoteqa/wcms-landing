@@ -49,6 +49,11 @@ watch(
             &:first-child {
                 @apply bg-white text-black rounded-md text-sm hover:bg-[#eee] hover:text-black;
             }
+
+            /* second child */
+            &:nth-child(2) {
+                @apply hidden;
+            }
         }
     }
 
