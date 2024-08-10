@@ -2,7 +2,7 @@
     <div class="h-full page bg-white">
         <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
             <!--Latest article as Featured -->
-            <ContentQuery :path="$i18n.locale" :sort="{
+            <ContentQuery :path="localePath(`/blog`)" :sort="{
                 date: -1
             }" :limit="1" v-slot="{ data }">
                 <NuxtLink :to="localePath(data[0]._path)"

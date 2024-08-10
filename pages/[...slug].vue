@@ -10,6 +10,12 @@
     </ContentDoc>
 </template>
 
+<script>
+useHead({
+    titleTemplate: '%s | Vinoteqa',
+})
+</script>
+
 <style>
 h1 {
     font-size: 2.25rem;

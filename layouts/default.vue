@@ -24,12 +24,12 @@
 const { t } = useI18n()
 
 useHead({
-    titleTemplate: '%s',
-    title: t("vinoteqa.title"),
+    titleTemplate: `%s | ${t('vinoteqa.title')}`,
+    title: "Home",
 })
 
 useSeoMeta({
-    title: t('vinoteqa.title'),
+    title: "Home",
     description: t('vinoteqa.description')
 }, {
     tagPriority: 'critical'
