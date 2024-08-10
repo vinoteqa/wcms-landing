@@ -47,6 +47,16 @@ export default defineNuxtConfig({
     enabled: false
   },
 
+  app: {
+    head: {
+      script: [
+        {
+          src: "https://cmp.osano.com/16CGXvUL2t5Ov9r9D/64fdf563-a29e-4259-a02a-8ab24f8c7347/osano.js",
+        },
+      ],
+    },
+  },
+
   i18n: {
     baseUrl: 'https://www.vinoteqa.com',
     defaultLocale: 'en',
