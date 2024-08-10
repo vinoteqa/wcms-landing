@@ -45,12 +45,6 @@ import {
   PresentationChartLineIcon,
 } from '@heroicons/vue/20/solid';
 
-const { t } = useI18n()
-
-definePageMeta({
-  layout: 'blog',
-})
-
 useHead({
   title: "Home"
 }, {

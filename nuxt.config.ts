@@ -13,7 +13,8 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxt/content",
     "@nuxthq/studio",
-    "nuxt-gtag"
+    "nuxt-gtag",
+    "@dargmuesli/nuxt-cookie-control"
   ],
 
   components: [
@@ -45,16 +46,6 @@ export default defineNuxtConfig({
 
   ogImage: {
     enabled: false
-  },
-
-  app: {
-    head: {
-      script: [
-        {
-          src: "https://cmp.osano.com/16CGXvUL2t5Ov9r9D/64fdf563-a29e-4259-a02a-8ab24f8c7347/osano.js",
-        },
-      ],
-    },
   },
 
   i18n: {
@@ -101,6 +92,36 @@ export default defineNuxtConfig({
   content: {
     markdown: {
       anchorLinks: false,
+    }
+  },
+
+  gtag: {
+    enabled: false,
+  },
+  cookieControl: {
+    locales: ['de', 'en', 'it'],
+
+    cookies: {
+      necessary: [],
+      optional: [
+        {
+          id: 'google-analytics',
+          name: 'google-analytics',
+          targetCookieIds: ['_ga', '_ga_', '_gcl_au'],
+        },
+      ],
+    },
+
+    localeTexts: {
+      de: {
+        manageCookies: "Anpassen"
+      },
+      en: {
+        manageCookies: "Manage"
+      },
+      it: {
+        manageCookies: "Gestisci"
+      }
     }
   }
 })

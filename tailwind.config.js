@@ -5,6 +5,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 export default {
   theme: {
     colors: {
+      transparent: "transparent",
       black: "#0b1215",
       white: "#fdfff7",
       vinoteqa: "#8a101e",

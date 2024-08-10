@@ -19,6 +19,10 @@
     "subtitle": "Die gesuchte Seite existiert nicht. Kehre zur Startseite zurück oder kontaktiere uns für Unterstützung.",
     "backToHome": "Zurück zur Startseite"
   },
+  "cookies": {
+    "notice": "Wir verwenden Cookies, um Ihr Erlebnis auf unserer Website zu verbessern. Wie wir sie verwenden, finden Sie auf unsere Datenschutzrichtlinie.",
+    "privacyPolicy": "Privacy Policy"
+  },
   "ctas": {
     "bookDemo": "Buche eine kostenlose Demo",
     "bookDemoBold": "Buche eine kostenlose Demo",

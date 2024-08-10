@@ -19,6 +19,10 @@
     "subtitle": "La pagina che stai cercando non esiste. Torna alla home page o contattaci per assistenza.",
     "backToHome": "Torna alla Home"
   },
+  "cookies": {
+    "notice": "Utilizziamo i cookie per migliorare la tua esperienza sul nostro sito web. Per scoprire come li utilizziamo, leggi la nostra informativa sulla privacy.",
+    "privacyPolicy": "Privacy Policy"
+  },
   "ctas": {
     "bookDemo": "Prenota una Demo Gratuita",
     "bookDemoBold": "Prenota una Demo GRATUITA",

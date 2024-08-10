@@ -19,6 +19,10 @@
     "subtitle": "The page you are looking for does not exist. Return to the home page or contact us for assistance.",
     "backToHome": "Back to Home"
   },
+  "cookies": {
+    "notice": "We use cookies to improve your experience on our website. To find out how we use them, please read our privacy policy.",
+    "privacyPolicy": "Privacy Policy"
+  },
   "ctas": {
     "bookDemo": "Book a Free Demo",
     "bookDemoBold": "Book a FREE Demo",

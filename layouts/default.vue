@@ -48,7 +48,6 @@ export default {
         return {
             title: 'Vinoteqa',
             mission: this.$t('vinoteqa.mission'),
-            blogLogoSrc: '/logo-blog.svg',
             logoSrc: '/logo.svg',
             whiteLogoSrc: '/logo-negative.svg',
             email: 'info@vinoteqa.com',
