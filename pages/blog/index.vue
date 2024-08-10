@@ -5,7 +5,7 @@
             <ContentQuery :path="localePath(`/blog`)" :sort="{
                 date: -1
             }" :limit="1" v-slot="{ data }">
-                <NuxtLink :to="localePath(data[0]._path)"
+                <NuxtLink :to="data[0]._path"
                     class="block md:flex relative group p-6 lg:p-10 space-y-6 md:space-x-6 my-14 bg-vinoteqa/5 rounded-3xl hover:bg-vinoteqa/25">
                     <figure class="basis-1/2 w-full aspect-video overflow-hidden rounded-2xl">
                         <img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer"
