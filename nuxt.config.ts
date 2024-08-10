@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/seo",
     "@nuxt/content",
-    "@nuxthq/studio"
+    "@nuxthq/studio",
+    "nuxt-gtag"
   ],
 
   components: [
