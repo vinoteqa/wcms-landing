@@ -10,6 +10,7 @@ export default {
       white: "#fdfff7",
       vinoteqa: "#8a101e",
       "vinoteqa-hover": "#9c1222",
+      accent: "#b3192b",
     },
     extend: {
       fontFamily: {

@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="link" class="relative group bg-vinoteqa/5 hover:bg-vinoteqa/25 rounded-3xl">
+    <NuxtLink :to="link" class="relative group bg-vinoteqa/5 hover:bg-vinoteqa/10 rounded-3xl">
         <article>
             <figure class="w-full aspect-video overflow-hidden rounded-3xl">
                 <img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" :src="imgSrc"
