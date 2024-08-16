@@ -1,7 +1,7 @@
 <template>
   <div class="relative isolate overflow-hidden bg-gradient-to-b from-white/20 pt-14">
     <div
-      class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-accent/10 ring-1 ring-indigo-50 sm:-mr-80 lg:-mr-96"
+      class="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-accent/10 ring-1 ring-accent/40 sm:-mr-80 lg:-mr-96"
       aria-hidden="true" />
     <div class="mx-auto max-w-7xl px-6 py-16 sm:py-32 lg:px-8">
       <div
