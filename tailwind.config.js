@@ -11,6 +11,7 @@ export default {
       vinoteqa: "#8a101e",
       "vinoteqa-hover": "#9c1222",
       accent: "#b3192b",
+      "accent-hover": "#d51e33",
     },
     extend: {
       fontFamily: {
