@@ -1,6 +1,3 @@
-import getRoutes from "./utils/getRoutes";
-
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
@@ -70,7 +67,7 @@ export default defineNuxtConfig({
       file: 'it.json',
     }],
     strategy: 'prefix',
-    lazy: true,
+    lazy: false,
     langDir: 'locales/',
   },
 
@@ -98,6 +95,7 @@ export default defineNuxtConfig({
   gtag: {
     enabled: false,
   },
+
   cookieControl: {
     locales: ['de', 'en', 'it'],
 
