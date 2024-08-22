@@ -13,18 +13,10 @@
 </template>
 
 <script setup lang="ts">
-const {
-    cookiesEnabled,
-    cookiesEnabledIds,
-    isConsentGiven,
-    isModalActive,
-    moduleOptions,
-} = useCookieControl()
+const { cookiesEnabledIds } = useCookieControl()
+const { initialize } = useGtag()
 
-const { gtag, initialize } = useGtag()
-
-
-// example: react to a cookie being accepted
+// react to a cookie being accepted
 watch(
     () => cookiesEnabledIds.value,
     (current, previous) => {

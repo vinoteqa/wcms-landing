@@ -1,6 +1,3 @@
-import getRoutes from "./utils/getRoutes";
-
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: false,
@@ -14,7 +11,8 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxthq/studio",
     "nuxt-gtag",
-    "@dargmuesli/nuxt-cookie-control"
+    "@dargmuesli/nuxt-cookie-control",
+    "@nuxt/image"
   ],
 
   components: [
@@ -48,6 +46,24 @@ export default defineNuxtConfig({
     enabled: false
   },
 
+  app: {
+    head: {
+      meta: [
+        // Open Graph
+        { property: 'og:title', content: 'Vinoteqa' },
+        { property: 'og:image', content: 'https://www.vinoteqa.com/screenshot.png' },
+        { property: 'og:url', content: 'https://www.vinoteqa.com/' },
+        { property: 'og:type', content: 'website' },
+        // Twitter Card
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Vinoteqa' },
+        { property: 'twitter:domain', content: 'vinoteqa.com' },
+        { property: 'twitter:url', content: 'vinoteqa.com' },
+        { name: 'twitter:image', content: 'https://www.vinoteqa.com/screenshot.png' }
+      ]
+    }
+  },
+
   i18n: {
     baseUrl: 'https://www.vinoteqa.com',
     defaultLocale: 'en',
@@ -70,7 +86,7 @@ export default defineNuxtConfig({
       file: 'it.json',
     }],
     strategy: 'prefix',
-    lazy: true,
+    lazy: false,
     langDir: 'locales/',
   },
 
@@ -98,6 +114,7 @@ export default defineNuxtConfig({
   gtag: {
     enabled: false,
   },
+
   cookieControl: {
     locales: ['de', 'en', 'it'],
 
