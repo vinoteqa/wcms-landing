@@ -97,6 +97,10 @@ export default {
 
         li {
             @apply mb-2;
+
+            a {
+                @apply text-accent hover:text-accent-hover font-semibold underline;
+            }
         }
     }
 }
