@@ -98,7 +98,7 @@ export default {
                     },
                     {
                         name: 'Spotify',
-                        href: 'https://open.spotify.com/user/31eanqwhjwhmofl4wc26ye7r2heu/',
+                        href: 'https://open.spotify.com/user/31unzukvvuoenwl6weumqvv4h6p4/playlists',
                         icon: defineComponent({
                             render: () =>
                                 h('svg', { fill: 'currentColor', viewBox: '0 0 24 24' }, [
