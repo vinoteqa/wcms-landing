@@ -54,7 +54,7 @@ export default {
 
             // navigation
             actionButtonLabel: this.$t('ctas.bookDemo'),
-            actionButtonLink: runtimeConfig.public.demoBookingPageLink,
+            actionButtonLink: runtimeConfig.public.demoBookingPageLink[this.$i18n.locale],
             navigation: [
                 { name: this.$t('navigation.platform'), href: '/#features' },
                 { name: this.$t('navigation.winelist'), href: '/#winelist' },
@@ -66,7 +66,7 @@ export default {
                     title: this.$t('footer.resources.title'),
                     items: [
                         { name: this.$t('footer.resources.blog'), href: this.localePath('/blog') },
-                        { name: this.$t('ctas.bookDemo'), href: runtimeConfig.public.demoBookingPageLink },
+                        { name: this.$t('ctas.bookDemo'), href: runtimeConfig.public.demoBookingPageLink[this.$i18n.locale] },
                     ],
                 },
                 contacts: {

@@ -24,7 +24,11 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      demoBookingPageLink: process.env.DEMO_BOOKING_PAGE,
+      demoBookingPageLink: {
+        de: process.env.DEMO_BOOKING_PAGE_DE || process.env.DEMO_BOOKING_PAGE,
+        en: process.env.DEMO_BOOKING_PAGE_EN || process.env.DEMO_BOOKING_PAGE,
+        it: process.env.DEMO_BOOKING_PAGE_IT || process.env.DEMO_BOOKING_PAGE,
+      },
       hubspot: {
         portalId: process.env.HUBSPOT_PORTAL_ID,
         formId: {

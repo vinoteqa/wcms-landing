@@ -76,7 +76,7 @@ export default {
         title: this.$t('hero.title'),
         subtitle: this.$t('hero.subtitle'),
         primaryButtonLabel: this.$t('ctas.bookDemoBold'),
-        primaryButtonLink: runtimeConfig.public.demoBookingPageLink,
+        primaryButtonLink: runtimeConfig.public.demoBookingPageLink[this.$i18n.locale],
         secondaryButtonLabel: this.$t('common.discoverMore'),
         secondaryButtonLink: '/#start',
       },
@@ -186,7 +186,7 @@ export default {
             price: '€ 960',
             priceFrequency: this.$t('sections.pricing.perYear'),
             description: this.$t('sections.pricing.license.subtitle'),
-            href: runtimeConfig.public.demoBookingPageLink,
+            href: runtimeConfig.public.demoBookingPageLink[this.$i18n.locale],
             features: [
               this.$t('sections.pricing.license.accessToDatabase'),
               this.$t('sections.pricing.license.liveInventory'),
