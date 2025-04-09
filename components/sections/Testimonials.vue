@@ -15,9 +15,9 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-base/7 font-semibold text-vinoteqa">{{ $t('sections.testimonial.title') }}</h2>
-        <p class="mt-2 text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">
+        <h3 class="mt-2 text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl">
           {{ $t('sections.testimonial.subtitle') }}
-        </p>
+        </h3>
       </div>
 
       <div
