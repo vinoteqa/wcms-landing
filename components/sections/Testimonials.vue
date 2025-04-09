@@ -99,12 +99,12 @@ const testimonials = [
           en: "Now, I use exclusively Vinoteqa for managing my wine cellar – including the wine list. The platform is very user-friendly, saves me a lot of time, and allows me to offer excellent service to my guests. ",
           it: "Utilizzo esclusivamente Vinoteqa per la mia cantina, anche per la carta dei vini. La piattaforma è molto intuitiva, risparmio tanto tempo e posso offrire un servizio eccellente ai miei ospiti."
         },
-        author: {
-          name: 'Gisela Schneider',
-          company: 'Terra - The Magic Place',
-          link: 'https://terra.place',
-          profileUrl: '/imgs/testimonials/terra-profile.png',
-        },
+        // author: {
+        //   name: 'Gisela Schneider',
+        //   company: 'Terra - The Magic Place',
+        //   link: 'https://terra.place',
+        //   profileUrl: '/imgs/testimonials/terra-profile.png',
+        // },
       },
       {
         key: 'anonymous-1',
