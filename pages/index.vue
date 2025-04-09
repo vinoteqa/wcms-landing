@@ -4,7 +4,7 @@
       :primaryButtonLabel="hero.primaryButtonLabel" :primaryButtonLink="hero.primaryButtonLink"
       :secondaryButtonLabel="hero.secondaryButtonLabel" :secondaryButtonLink="hero.secondaryButtonLink"
       :imgSrc="hero.imgSrc" />
-    <Stats id="start" :title="stats.title" :stats="stats.stats" />
+    <LogoCloud id="start" />
 
     <div class="content-ct">
       <div id="features" class="features-ct pt-[88px]">
@@ -20,14 +20,20 @@
           :rightDescription="featThree.rightDescription" :rightButtonLabel="featThree.rightButtonLabel"
           :rightButtonLink="featThree.rightButtonLink" />
       </div>
+
       <div class="testimonial-ct pt-[88px]">
-          <Testimonials />
+        <Testimonials />
       </div>
+
+
       <div id="pricing" class="pricing-ct pt-[88px]">
         <Pricing :titleLabel="pricing.titleLabel" :title="pricing.title" :subtitle="pricing.subtitle"
           :tiers="pricing.tiers" />
       </div>
-      <div id="faqs" class="faq-ct pt-[88px]">
+
+      <Stats :title="stats.title" :stats="stats.stats" class="mt-[88px]" />
+
+      <div id="faqs" class="faq-ct">
         <Faq :title="faqs.title" :faqs="faqs.faqs" />
       </div>
     </div>
