@@ -1,5 +1,5 @@
 <template>
-    <div class="relative isolate mt-10 pt-24 bg-white px-6 sm:mt-24 sm:pt-24 lg:px-8">
+    <div class="relative isolate mt-10 bg-white px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
             <h2 class="text-base font-semibold leading-7 text-vinoteqa">{{ titleLabel }}</h2>
             <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">{{ title }}</p>

@@ -20,9 +20,8 @@
           :rightDescription="featThree.rightDescription" :rightButtonLabel="featThree.rightButtonLabel"
           :rightButtonLink="featThree.rightButtonLink" />
       </div>
-      <div class="testimonial-ct">
-        <Testimonial :imgSrc="testimonial.imgSrc" :imgAlt="testimonial.imgAlt" :testimonial="testimonial.content"
-          :name="testimonial.name" :company="testimonial.company" :companyLink="testimonial.companyLink" />
+      <div class="testimonial-ct pt-[88px]">
+          <Testimonials />
       </div>
       <div id="pricing" class="pricing-ct pt-[88px]">
         <Pricing :titleLabel="pricing.titleLabel" :title="pricing.title" :subtitle="pricing.subtitle"
@@ -152,15 +151,6 @@ export default {
         rightImgAlt: this.$t('sections.features.printWinelistImgAlt'),
         rightTitle: this.$t('sections.features.printWinelistTitle'),
         rightDescription: this.$t('sections.features.printWinelistSubtitle'),
-      },
-
-      testimonial: {
-        imgSrc: '/imgs/testimonial.jpg',
-        imgAlt: this.$t('sections.testimonial.imgAlt'),
-        content: this.$t('sections.testimonial.content'),
-        name: "Stefano Kratter",
-        company: "Ristorante Mondschein - A Taste of the Dolomites",
-        companyLink: "https://www.ristorantemondschein.it/"
       },
 
       pricing: {

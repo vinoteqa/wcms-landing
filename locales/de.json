@@ -88,8 +88,9 @@
       "printWinelistImgAlt": "Restaurantgäste betrachten eine von Vinoteqa automatisch erstellte gedruckte Weinkarte"
     },
     "testimonial": {
-      "imgAlt": "Stefano Kratter vom Ristorante Mondschein über Vinoteqa",
-      "content": "Vinoteqa hat die Verwaltung unseres Inventars und unserer Weinkarte revolutioniert. Mit den bereits verfügbaren Weindaten und Echtzeit-Updates sind unsere Abläufe effizienter geworden und die Weinkarte bleibt automatisch auf dem neuesten Stand. Vinoteqa hilft uns maßgeblich, unseren Weinkeller im Griff zu halten und ermöglicht es, dass wir uns auf ein außergewöhnliches kulinarisches Erlebnis für unsere Gäste konzentrieren können."
+      "title": "Testimonials",
+      "subtitle": "Das sagen unsere Kunden",
+      "aboutVinoteqa": "über Vinoteqa"
     },
     "pricing": {
       "titleLabel": "Preise",
