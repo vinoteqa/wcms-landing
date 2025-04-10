@@ -104,6 +104,7 @@
       "onboarding": {
         "title": "Onboarding",
         "subtitle": "We'll set you up and get you started smoothly.",
+        "startingAt": "starting at",
         "whiteGlove": "White-Glove Onboarding",
         "inventoryImport": "Import of your current inventory",
         "supportAndTraining": "Comprehensive support and training"

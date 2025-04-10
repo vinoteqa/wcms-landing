@@ -168,7 +168,8 @@ export default {
             id: 'onboarding',
             name: this.$t('sections.pricing.onboarding.title'),
             description: this.$t('sections.pricing.onboarding.subtitle'),
-            price: '€1,000',
+            startingAt: true,
+            price: `€1,000`,
             priceFrequency: this.$t('sections.pricing.oneTimePayment'),
             features: [
               this.$t('sections.pricing.onboarding.whiteGlove'),

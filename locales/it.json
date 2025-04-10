@@ -104,6 +104,7 @@
       "onboarding": {
         "title": "Onboarding",
         "subtitle": "Ti facciamo partire senza intoppi.",
+        "startingAt": "a partire da",
         "whiteGlove": "Servizio di configurazione personalizzato",
         "inventoryImport": "importazione del tuo inventario attuale",
         "supportAndTraining": "Supporto completo e formazione"
