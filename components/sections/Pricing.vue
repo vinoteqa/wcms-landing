@@ -1,8 +1,8 @@
 <template>
-    <div class="relative isolate mt-10 pt-24 bg-white px-6 sm:mt-24 sm:pt-24 lg:px-8">
+    <div class="relative isolate mt-10 bg-white px-6 lg:px-8">
         <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
             <h2 class="text-base font-semibold leading-7 text-vinoteqa">{{ titleLabel }}</h2>
-            <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">{{ title }}</p>
+            <h3 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">{{ title }}</h3>
         </div>
         <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">{{ subtitle }}
         </p>
@@ -13,15 +13,21 @@
                 <h3 :id="tier.id"
                     :class="[tier.featured ? 'text-white' : 'text-vinoteqa', 'text-base font-semibold leading-7']">
                     {{ tier.name }}</h3>
+                <div class="text-gray-500 mt-3">
+                    <span v-if="tier.startingAt" :class="[tier.featured ? 'text-white' : 'text-black', 'text-base']">
+                        {{ tier.priceFrequency }}
+                    </span>
+                    <span v-if="tier.startingAt" class="ml-1 text-gray-500">
+                        {{ $t('sections.pricing.onboarding.startingAt') }}
+                    </span>
+                </div>
                 <p class="mt-4 flex items-baseline gap-x-2">
                     <span
                         :class="[tier.featured ? 'text-white' : 'text-gray-900', 'text-5xl font-bold tracking-tight']">{{
-                tier.price }}</span>
-                    <span :class="[tier.featured ? 'text-white' : 'text-black', 'text-base']">{{
-                tier.priceFrequency }}</span>
+                            tier.price }}</span>
                 </p>
                 <p :class="[tier.featured ? 'text-white/70' : 'text-black/70', 'mt-6 text-base leading-7']">{{
-                tier.description }}</p>
+                    tier.description }}</p>
                 <ul role="list"
                     :class="[tier.featured ? 'text-white/90' : 'text-black/90', 'mt-8 space-y-3 text-sm leading-6 sm:mt-10']">
                     <li v-for="feature in tier.features" :key="feature" class="flex gap-x-3">

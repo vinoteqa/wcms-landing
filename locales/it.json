@@ -53,6 +53,9 @@
     }
   },
   "sections": {
+    "logos": {
+      "title": "Dalle stelle Michelin alle gemme nascoste, la scelta è Vinoteqa"
+    },
     "statistics": {
       "title": "Accedi immediatamente al nostro database",
       "wineries": "Cantine",
@@ -88,8 +91,9 @@
       "printWinelistImgAlt": "Ospiti del ristorante che guardano una carta dei vini stampata generata automaticamente da Vinoteqa"
     },
     "testimonial": {
-      "imgAlt": "Stefano Kratter del Ristorante Mondschein parla di Vinoteqa",
-      "content": "Vinoteqa ha rivoluzionato la gestione del nostro inventario e della lista dei vini. Con i dati dei vini già a disposizione e aggiornamenti in tempo reale, le nostre operazioni sono efficienti e la carta è sempre aggiornata. Inoltre grazie ai dati statistici sappiamo sempre come migliorare la ricerca dei prodotti che risultano più apprezzati dalla nostra clientela. Vinoteqa mantiene davvero la nostra cantina a portata di mano, permettendoci di concentrarci sull'offrire un'esperienza culinaria eccezionale."
+      "title": "Testimonianze",
+      "subtitle": "Cosa dicono i nostri clienti",
+      "aboutVinoteqa": "riguardo Vinoteqa"
     },
     "pricing": {
       "titleLabel": "Pricing",
@@ -100,6 +104,7 @@
       "onboarding": {
         "title": "Onboarding",
         "subtitle": "Ti facciamo partire senza intoppi.",
+        "startingAt": "a partire da",
         "whiteGlove": "Servizio di configurazione personalizzato",
         "inventoryImport": "importazione del tuo inventario attuale",
         "supportAndTraining": "Supporto completo e formazione"

@@ -4,7 +4,7 @@
       :primaryButtonLabel="hero.primaryButtonLabel" :primaryButtonLink="hero.primaryButtonLink"
       :secondaryButtonLabel="hero.secondaryButtonLabel" :secondaryButtonLink="hero.secondaryButtonLink"
       :imgSrc="hero.imgSrc" />
-    <Stats id="start" :title="stats.title" :stats="stats.stats" />
+    <LogoCloud id="start" />
 
     <div class="content-ct">
       <div id="features" class="features-ct pt-[88px]">
@@ -20,15 +20,20 @@
           :rightDescription="featThree.rightDescription" :rightButtonLabel="featThree.rightButtonLabel"
           :rightButtonLink="featThree.rightButtonLink" />
       </div>
-      <div class="testimonial-ct">
-        <Testimonial :imgSrc="testimonial.imgSrc" :imgAlt="testimonial.imgAlt" :testimonial="testimonial.content"
-          :name="testimonial.name" :company="testimonial.company" :companyLink="testimonial.companyLink" />
+
+      <div class="testimonial-ct pt-[88px]">
+        <Testimonials />
       </div>
+
+
       <div id="pricing" class="pricing-ct pt-[88px]">
         <Pricing :titleLabel="pricing.titleLabel" :title="pricing.title" :subtitle="pricing.subtitle"
           :tiers="pricing.tiers" />
       </div>
-      <div id="faqs" class="faq-ct pt-[88px]">
+
+      <Stats :title="stats.title" :stats="stats.stats" class="mt-[88px]" />
+
+      <div id="faqs" class="faq-ct">
         <Faq :title="faqs.title" :faqs="faqs.faqs" />
       </div>
     </div>
@@ -87,7 +92,7 @@ export default {
         stats: [
           { id: 1, name: this.$t('sections.statistics.wineries'), value: '120k+' },
           { id: 2, name: this.$t('sections.statistics.wines'), value: '1.3M+' },
-          { id: 3, name: this.$t('sections.statistics.transactionsTracked'), value: '1.2M€' },
+          { id: 3, name: this.$t('sections.statistics.transactionsTracked'), value: '2.7M€' },
         ]
       },
 
@@ -154,15 +159,6 @@ export default {
         rightDescription: this.$t('sections.features.printWinelistSubtitle'),
       },
 
-      testimonial: {
-        imgSrc: '/imgs/testimonial.jpg',
-        imgAlt: this.$t('sections.testimonial.imgAlt'),
-        content: this.$t('sections.testimonial.content'),
-        name: "Stefano Kratter",
-        company: "Ristorante Mondschein - A Taste of the Dolomites",
-        companyLink: "https://www.ristorantemondschein.it/"
-      },
-
       pricing: {
         titleLabel: this.$t('sections.pricing.titleLabel'),
         title: this.$t('sections.pricing.title'),
@@ -172,7 +168,8 @@ export default {
             id: 'onboarding',
             name: this.$t('sections.pricing.onboarding.title'),
             description: this.$t('sections.pricing.onboarding.subtitle'),
-            price: '€1,000',
+            startingAt: true,
+            price: `€1,000`,
             priceFrequency: this.$t('sections.pricing.oneTimePayment'),
             features: [
               this.$t('sections.pricing.onboarding.whiteGlove'),

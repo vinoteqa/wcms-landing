@@ -6,7 +6,7 @@
                 <div class="flex flex-col items-center text-center">
                     <h2 id="details-heading" class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{
                         title }}</h2>
-                    <p class="mt-3 max-w-3xl text-lg text-gray-600">{{ subtitle }}</p>
+                    <h3 class="mt-3 max-w-3xl text-lg text-gray-600">{{ subtitle }}</h3>
                 </div>
 
                 <div class="mt-16 grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:gap-x-8">

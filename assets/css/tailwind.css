@@ -4,51 +4,44 @@
 
 @layer base {
     @font-face {
-        font-family: 'Bricolage Grotesque';
+        font-family: 'Marcellus';
         font-style: normal;
         font-weight: 400;
-        font-display: swap;
-        src: url(/fonts/BricolageGrotesque.ttf) format('ttf');
+        src: url(/fonts/Marcellus-Regular.ttf) format('ttf'),
+        url(/fonts/Marcellus-Regular.woff2) format('woff2');
     }
-    @font-face {
-        font-family: 'Outfit';
-        font-style: normal;
-        font-weight: 400;
-        src: url(/fonts/Outfit.ttf) format('ttf'),
-        url(/fonts/Outfit.woff2) format('woff2');
-    }
-    @font-face {
-        font-family: 'Outfit';
+    /* @font-face {
+        font-family: 'Marcellus';
         font-style: normal;
         font-weight: 600;
-        src: url(/fonts/Outfit.ttf) format('ttf'),
-        url(/fonts/Outfit.woff2) format('woff2');
-    }
+        src: url(/fonts/Marcellus.ttf) format('ttf'),
+        url(/fonts/Marcellus.woff2) format('woff2');
+    } */
     @font-face {
-        font-family: 'Fira Sans';
+        font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
         /* font-display: swap; */
-        src: url(/fonts/FiraSans-Regular.ttf) format('ttf'),
-        url(/fonts/FiraSans-Regular.woff2) format('woff2');
+        src: url(/fonts/Poppins-Regular.ttf) format('ttf'),
+        url(/fonts/Poppins-Regular.woff2) format('woff2');
     }
     @font-face {
-        font-family: 'Fira Sans';
+        font-family: 'Poppins';
         font-style: normal;
         font-weight: 800;
         /* font-display: swap; */
-        src: url(/fonts/FiraSans-Bold.ttf) format('ttf'),
-        url(/fonts/FiraSans-Bold.woff2) format('woff2');
+        src: url(/fonts/Poppins-Bold.ttf) format('ttf'),
+        url(/fonts/Poppins-Bold.woff2) format('woff2');
     }
 
     html {
-        font-family: "Fira Sans", system-ui, sans-serif;
+        font-family: "Poppins", system-ui, sans-serif;
     }
 
     h1, h2, h3, h4, h5, h6 {
         @apply text-black font-bold;
 
-    font-family: "Outfit", system-ui, sans-serif;
+    font-family: "Marcellus", system-ui, sans-serif;
     }
 
     h1 {

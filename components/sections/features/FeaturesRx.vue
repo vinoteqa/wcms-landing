@@ -7,8 +7,8 @@
                     <div class="lg:pr-4 lg:pt-4">
                         <div class="lg:max-w-lg">
                             <h2 class="text-base font-semibold leading-7 text-vinoteqa">{{ titleLabel }}</h2>
-                            <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ title }}
-                            </p>
+                            <h3 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ title }}
+                            </h3>
                             <p class="mt-6 text-lg leading-8 text-gray-600">{{ subtitle }}</p>
                             <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                                 <div v-for="feature in features" :key="feature.name" class="relative pl-9">
