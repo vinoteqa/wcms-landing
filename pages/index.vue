@@ -183,7 +183,7 @@ export default {
           {
             id: 'license',
             name: this.$t('sections.pricing.license.title'),
-            price: '€ 960',
+            price: '€ 1200',
             priceFrequency: this.$t('sections.pricing.perYear'),
             description: this.$t('sections.pricing.license.subtitle'),
             href: runtimeConfig.public.demoBookingPageLink[this.$i18n.locale],
