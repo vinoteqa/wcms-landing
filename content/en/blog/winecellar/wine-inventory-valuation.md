@@ -18,7 +18,7 @@ Managing a wine cellar isn’t just about knowing what’s on the shelves — it
 
 In times of inflation, price changes, and shifting vintages, the way you calculate the value of your wine stock can dramatically affect how you set prices, track margins, and plan purchases.
 
-So how *should* you calculate it? Let’s break it down, using **Vinoteqa** - a wine management platform designed for restaurants, hotels and wine bars - as a practical example.
+So how *should* you calculate it? Let’s break it down.
 
 ### **Why Wine Inventory Valuation Matters in Hospitality 🍷**
 
