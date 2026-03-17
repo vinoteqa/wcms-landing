@@ -1,7 +1,7 @@
 {
   "vinoteqa": {
     "title": "Vinoteqa - Wine Cellar Management for Restaurants",
-    "description": "Vinoteqa is a digital platform for wine cellar management designed for high-end restaurants and wine bars. Digitalize your wine menu, manage inventory, and access detailed data to make informed decisions.",
+    "description": "Vinoteqa helps restaurants with 300+ labels digitalize wine cellar management. Generate wine lists, track inventory & access analytics. Book a free demo.",
     "mission": "Vinoteqa's mission is to revolutionize wine management for high-end restaurants and wine bars with seamless, efficient, and elegant digital solutions.",
     "location": "South Tyrol, Italy"
   },
@@ -111,7 +111,7 @@
       },
       "license": {
         "title": "License",
-        "subtitle": "Access All Deatures with Dedicated Support and continuous Updates.",
+        "subtitle": "Access All Features with Dedicated Support and continuous Updates.",
         "accessToDatabase": "Access to 1M+ Wine Labels",
         "liveInventory": "Real-Time Inventory Control",
         "winelistGeneration": "Automatic Wine List Generation",
