@@ -170,6 +170,16 @@
       "successMessage": "Thank you for subscribing to our newsletter!"
     }
   },
+  "demo": {
+    "title": "Book a Free Demo",
+    "subtitle": "See how Vinoteqa can transform your wine cellar management. Our team will walk you through the platform in a personalized 30-minute session.",
+    "bookButton": "Schedule Your Demo",
+    "whatToExpect": "What to Expect",
+    "benefit1": "Personalized walkthrough of the platform",
+    "benefit2": "See how inventory management and wine list generation work",
+    "benefit3": "Learn about analytics and reporting features",
+    "benefit4": "Get answers to all your questions — no commitment required"
+  },
   "blog": {
     "title": "Vinoteqa Blog - Resources for Wine Cellar Management",
     "description": "Vinoteqa's blog offers expert tips on wine education, cellar management, and wine list creation for restaurants, professionals, and private enthusiasts.",
@@ -177,6 +187,7 @@
     "viewAll": "View All",
     "nextPage": "Next",
     "previousPage": "Previous",
+    "featuredPosts": "From Our Blog",
     "suggestedArticles": "You may also like",
     "navigation": {
       "wineEducation": "Wine Education",
@@ -192,6 +203,8 @@
       "wineLists": "Design and Create Memorable Wine Menus",
       "wineListsDescription": "Master the art of creating and organizing wine lists. Discover best practices for curating diverse and appealing wine selections."
     },
+    "ctaTitle": "Ready to streamline your wine management?",
+    "ctaSubtitle": "See how Vinoteqa can help your restaurant manage 200+ wine labels effortlessly.",
     "newsletter": {
       "title": "Are you a hotel, restaurant, or wine bar owner? Stay updated with the latest product news."
     }

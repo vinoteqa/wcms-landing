@@ -23,9 +23,9 @@
                 <LanguageSwitcherMenu :homeLink="homeLink" class="mr-5" />
 
                 <!-- primary cta -->
-                <a :href="actionButtonLink" target="_blank"
+                <NuxtLinkLocale :to="actionButtonLink"
                     class="rounded-md bg-vinoteqa px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-vinoteqa-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vinoteqa">{{
-        actionButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
+        actionButtonLabel }} <span aria-hidden="true">&rarr;</span></NuxtLinkLocale>
             </div>
 
             <!-- mobile menu button -->
@@ -64,9 +64,10 @@
         item.name }}</NuxtLink>
                         </div>
                         <div class="py-6">
-                            <a :href="actionButtonLink" target="_blank"
-                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{
-                                actionButtonLabel }} <span aria-hidden="true">&rarr;</span></a>
+                            <NuxtLinkLocale :to="actionButtonLink"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                @click="mobileMenuOpen = false">{{
+                                actionButtonLabel }} <span aria-hidden="true">&rarr;</span></NuxtLinkLocale>
                         </div>
                     </div>
                 </div>
@@ -129,8 +130,12 @@ export default {
         }
     },
 
-    beforeMount() {
+    mounted() {
         window.addEventListener('scroll', this.handleScroll);
+    },
+
+    beforeUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
     },
 
     methods: {

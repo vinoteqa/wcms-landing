@@ -20,9 +20,9 @@
           <div class="mt-6">
             <p class="text-lg leading-8 text-black">{{ subtitle }}</p>
             <div class="mt-10 flex items-center gap-x-6">
-              <a v-if="primaryButtonLabel" :href="primaryButtonLink" target="_blank"
+              <NuxtLinkLocale v-if="primaryButtonLabel" :to="primaryButtonLink"
                 class="rounded-md bg-vinoteqa px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-vinoteqa-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vinoteqa">{{
-                primaryButtonLabel }}</a>
+                primaryButtonLabel }}</NuxtLinkLocale>
               <NuxtLink v-if="secondaryButtonLabel" :to="localePath(secondaryButtonLink)"
                 class="text-sm font-semibold leading-6 text-gray-900">{{ secondaryButtonLabel }}<span
                   aria-hidden="true">→</span></NuxtLink>

@@ -170,6 +170,16 @@
       "successMessage": "Vielen Dank für dein Interesse! Du hast dich angemeldet."
     }
   },
+  "demo": {
+    "title": "Kostenlose Demo buchen",
+    "subtitle": "Erfahren Sie, wie Vinoteqa Ihre Weinkellerverwaltung transformieren kann. Unser Team führt Sie in einer personalisierten 30-minütigen Session durch die Plattform.",
+    "bookButton": "Demo vereinbaren",
+    "whatToExpect": "Was Sie erwartet",
+    "benefit1": "Personalisierte Führung durch die Plattform",
+    "benefit2": "Inventarverwaltung und Weinkartenerstellung live erleben",
+    "benefit3": "Analytik- und Reporting-Funktionen kennenlernen",
+    "benefit4": "Antworten auf all Ihre Fragen — unverbindlich"
+  },
   "blog": {
     "title": "Vinoteqa Blog - Ressourcen für die Weinkeller-Verwaltung",
     "description": "Der Blog von Vinoteqa bietet Experten-Tipps zu Weinerziehung, Kellerverwaltung und Weinkartenerstellung für Restaurants, Profis und private Weinliebhaber.",
@@ -177,6 +187,7 @@
     "viewAll": "Alle anzeigen",
     "nextPage": "Nächste",
     "previousPage": "Vorherige",
+    "featuredPosts": "Aus unserem Blog",
     "suggestedArticles": "Das könnte dich auch interessieren",
     "navigation": {
       "wineEducation": "Weinwissen",
@@ -192,6 +203,8 @@
       "wineLists": "Gestalte und Erstelle unvergessliche Weinkarten",
       "wineListsDescription": "Meistere die Kunst der Erstellung und Organisation von Weinkarten. Entdecke Best Practices für die Kuratierung vielfältiger und ansprechender Weinauswahlen."
     },
+    "ctaTitle": "Bereit, Ihre Weinverwaltung zu optimieren?",
+    "ctaSubtitle": "Erfahren Sie, wie Vinoteqa Ihrem Restaurant helfen kann, 200+ Weinetiketten mühelos zu verwalten.",
     "newsletter": {
       "title": "Hast du ein Hotel, Restaurant oder Weinbar? Bleibe auf dem Laufenden über die neuesten Produktneuheiten."
     }
