@@ -1,7 +1,7 @@
 {
   "vinoteqa": {
     "title": "Vinoteqa - Gestionale cantina per ristoranti",
-    "description": "Vinoteqa aiuta i ristoranti con 300+ etichette a digitalizzare la gestione della cantina. Crea carte dei vini, gestisci l'inventario e accedi alle analisi.",
+    "description": "Vinoteqa aiuta i ristoranti con 200+ etichette a digitalizzare la gestione della cantina. Crea carte dei vini, gestisci l'inventario e accedi alle analisi.",
     "mission": "La missione di Vinoteqa è rivoluzionare la gestione del vino per ristoranti ed enoteche di alto livello con soluzioni digitali facili da usare, efficienti ed eleganti.",
     "location": "Alto Adige, Italia"
   },
@@ -36,7 +36,7 @@
     "faqs": "FAQ"
   },
   "hero": {
-    "titleLabel": "Per Strutture con 300+ Etichette di Vino",
+    "titleLabel": "Per Strutture con 200+ Etichette di Vino",
     "title": "Digitalizza la Gestione della Tua Cantina",
     "subtitle": "Il modo migliore per gestire e mettere in mostra la tua collezione di vini. Genera la tua lista dei vini con un clic. Accessibile sempre e ovunque."
   },
