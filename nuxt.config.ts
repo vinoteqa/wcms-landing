@@ -54,13 +54,15 @@ export default defineNuxtConfig({
     head: {
       meta: [
         // Open Graph
-        { property: 'og:title', content: 'Vinoteqa' },
+        { property: 'og:title', content: 'Vinoteqa — Wine Cellar Management for Restaurants' },
+        { property: 'og:description', content: 'Vinoteqa helps restaurants with 200+ labels digitalize wine cellar management. Generate wine lists, track inventory & access analytics. Book a free demo.' },
         { property: 'og:image', content: 'https://www.vinoteqa.com/screenshot.png' },
         { property: 'og:url', content: 'https://www.vinoteqa.com/' },
         { property: 'og:type', content: 'website' },
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Vinoteqa' },
+        { name: 'twitter:title', content: 'Vinoteqa — Wine Cellar Management for Restaurants' },
+        { name: 'twitter:description', content: 'Vinoteqa helps restaurants with 200+ labels digitalize wine cellar management. Generate wine lists, track inventory & access analytics. Book a free demo.' },
         { property: 'twitter:domain', content: 'vinoteqa.com' },
         { property: 'twitter:url', content: 'vinoteqa.com' },
         { name: 'twitter:image', content: 'https://www.vinoteqa.com/screenshot.png' }
@@ -92,6 +94,7 @@ export default defineNuxtConfig({
     strategy: 'prefix',
     lazy: false,
     langDir: 'locales/',
+    detectBrowserLanguage: false,
   },
 
   tailwindcss: {

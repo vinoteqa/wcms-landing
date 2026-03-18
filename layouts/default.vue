@@ -30,7 +30,11 @@ useHead({
 
 useSeoMeta({
     title: "Home",
-    description: t('vinoteqa.description')
+    description: t('vinoteqa.description'),
+    ogTitle: t('vinoteqa.title'),
+    ogDescription: t('vinoteqa.description'),
+    twitterTitle: t('vinoteqa.title'),
+    twitterDescription: t('vinoteqa.description'),
 }, {
     tagPriority: 'critical'
 })
