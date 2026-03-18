@@ -37,6 +37,15 @@
             </div>
         </article>
 
+        <div class="mt-12 rounded-lg bg-amber-50 p-8 text-center">
+            <h3 class="text-lg font-semibold text-gray-900">{{ $t('blog.ctaTitle') }}</h3>
+            <p class="mt-2 text-gray-600">{{ $t('blog.ctaSubtitle') }}</p>
+            <NuxtLinkLocale to="/demo"
+                class="mt-4 inline-block rounded-md bg-vinoteqa px-4 py-2 text-sm font-semibold text-white hover:bg-vinoteqa-hover">
+                {{ $t('ctas.bookDemo') }}
+            </NuxtLinkLocale>
+        </div>
+
         <hr class="my-10 border-black/10">
 
         <!-- <div class="tags">{{ doc.tags }}</div> -->

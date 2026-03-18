@@ -33,6 +33,8 @@
 
       <Stats :title="stats.title" :stats="stats.stats" class="mt-[88px]" />
 
+      <FeaturedPosts />
+
       <div id="faqs" class="faq-ct">
         <Faq :title="faqs.title" :faqs="faqs.faqs" />
       </div>
@@ -61,6 +63,26 @@ useSeoMeta({
 }, {
   tagPriority: 'critical'
 })
+
+const { t } = useI18n()
+
+useSchemaOrg([
+  defineFAQPage(
+    [
+      { question: t('sections.faqs.questions.hardware.question'), answer: t('sections.faqs.questions.hardware.answer') },
+      { question: t('sections.faqs.questions.integrations.question'), answer: t('sections.faqs.questions.integrations.answer') },
+      { question: t('sections.faqs.questions.setupFees.question'), answer: t('sections.faqs.questions.setupFees.answer') },
+      { question: t('sections.faqs.questions.futureFeatures.question'), answer: t('sections.faqs.questions.futureFeatures.answer') },
+      { question: t('sections.faqs.questions.mobileApp.question'), answer: t('sections.faqs.questions.mobileApp.answer') },
+      { question: t('sections.faqs.questions.onboarding.question'), answer: t('sections.faqs.questions.onboarding.answer') },
+      { question: t('sections.faqs.questions.users.question'), answer: t('sections.faqs.questions.users.answer') },
+      { question: t('sections.faqs.questions.onlyOnlineWinelist.question'), answer: t('sections.faqs.questions.onlyOnlineWinelist.answer') },
+    ].map(faq => defineQuestion({
+      name: faq.question,
+      acceptedAnswer: faq.answer,
+    }))
+  )
+])
 </script>
 
 <script>
@@ -81,7 +103,7 @@ export default {
         title: this.$t('hero.title'),
         subtitle: this.$t('hero.subtitle'),
         primaryButtonLabel: this.$t('ctas.bookDemoBold'),
-        primaryButtonLink: runtimeConfig.public.demoBookingPageLink[this.$i18n.locale],
+        primaryButtonLink: '/demo',
         secondaryButtonLabel: this.$t('common.discoverMore'),
         secondaryButtonLink: '/#start',
       },
@@ -183,7 +205,7 @@ export default {
             price: '€ 1200',
             priceFrequency: this.$t('sections.pricing.perYear'),
             description: this.$t('sections.pricing.license.subtitle'),
-            href: runtimeConfig.public.demoBookingPageLink[this.$i18n.locale],
+            href: '/demo',
             features: [
               this.$t('sections.pricing.license.accessToDatabase'),
               this.$t('sections.pricing.license.liveInventory'),
