@@ -1,25 +1,47 @@
 {
-  description = "A Nix-flake-based Node.js development environment";
+  description = "WCMS Landing";
 
-  inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.*.tar.gz";
+  inputs = {
+    nixpkgs = {
+      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    };
 
-  outputs = { self, nixpkgs }:
-    let
-      supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
-      forEachSupportedSystem = f: nixpkgs.lib.genAttrs supportedSystems (system: f {
-        pkgs = import nixpkgs { inherit system; overlays = [ self.overlays.default ]; };
-      });
-    in
-    {
-      overlays.default = final: prev: rec {
-        nodejs = prev.nodejs;
-        yarn = (prev.yarn.override { inherit nodejs; });
+    std = {
+      url = "github:divnix/std/v0.33.4";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        devshell.url = "github:numtide/devshell";
+        nixago.url = "github:nix-community/nixago";
       };
+    };
 
-      devShells = forEachSupportedSystem ({ pkgs }: {
-        default = pkgs.mkShell {
-          packages = with pkgs; [ node2nix nodejs nodePackages.pnpm yarn ];
-        };
-      });
+    haumea = {
+      url = "github:nix-community/haumea";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    flake-compat = {
+      url = "github:edolstra/flake-compat";
+      flake = false;
+    };
+  };
+
+  outputs = {
+    std,
+    self,
+    ...
+  } @ inputs:
+    std.growOn {
+      inherit inputs;
+      cellsFrom = ./nix;
+      cellBlocks = with std.blockTypes; [
+        (devshells "devshells")
+        (nixago "pebbles")
+        (runnables "packages")
+      ];
+    }
+    {
+      devShells = std.harvest self ["local" "devshells"];
+      packages = std.harvest self ["wcms" "packages"];
     };
 }
