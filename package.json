@@ -2,6 +2,9 @@
   "name": "wcms-landing",
   "private": true,
   "type": "module",
+  "bin": {
+    "wcms-landing": "server/index.mjs"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
