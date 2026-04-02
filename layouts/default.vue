@@ -38,6 +38,31 @@ useSeoMeta({
 }, {
     tagPriority: 'critical'
 })
+
+useSchemaOrg([
+    defineOrganization({
+        name: 'Vinoteqa',
+        url: 'https://www.vinoteqa.com',
+        logo: 'https://www.vinoteqa.com/logo.svg',
+        description: 'Wine cellar management software for restaurants',
+        email: 'info@vinoteqa.com',
+        address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'South Tyrol',
+            addressCountry: 'IT',
+        },
+        sameAs: [
+            'https://www.instagram.com/vinoteqa/',
+            'https://www.linkedin.com/company/vinoteqa/',
+        ],
+    }),
+    defineWebSite({
+        name: 'Vinoteqa',
+        url: 'https://www.vinoteqa.com',
+        description: 'Wine cellar management for restaurants',
+        inLanguage: ['en', 'de', 'it'],
+    }),
+])
 </script>
 
 <script>
@@ -58,7 +83,7 @@ export default {
 
             // navigation
             actionButtonLabel: this.$t('ctas.bookDemo'),
-            actionButtonLink: runtimeConfig.public.demoBookingPageLink[this.$i18n.locale],
+            actionButtonLink: '/demo',
             navigation: [
                 { name: this.$t('navigation.platform'), href: '/#features' },
                 { name: this.$t('navigation.winelist'), href: '/#winelist' },
@@ -70,7 +95,7 @@ export default {
                     title: this.$t('footer.resources.title'),
                     items: [
                         { name: this.$t('footer.resources.blog'), href: this.localePath('/blog') },
-                        { name: this.$t('ctas.bookDemo'), href: runtimeConfig.public.demoBookingPageLink[this.$i18n.locale] },
+                        { name: this.$t('ctas.bookDemo'), href: this.localePath('/demo') },
                     ],
                 },
                 contacts: {

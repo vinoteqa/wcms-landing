@@ -1,0 +1,52 @@
+{
+  inputs,
+  cell,
+}: let
+  inherit (inputs) std;
+in
+  std.lib.cfg.editorconfig
+  // {hook.mode = "copy";}
+  // {
+    data = {
+      root = true;
+
+      "*" = {
+        charset = "utf-8";
+        end_of_line = "lf";
+
+        indent_size = 2;
+        indent_style = "space";
+
+        insert_final_newline = true;
+        trim_trailing_whitespace = true;
+      };
+
+      "{*.go,go.mod}" = {
+        indent_size = 4;
+        indent_stye = "tab";
+      };
+
+      "*.{diff,patch}" = {
+        end_of_line = "unset";
+        indent_size = "unset";
+        insert_final_newline = "unset";
+        trim_trailing_whitespace = "unset";
+      };
+
+      "*.md" = {
+        max_line_length = "off";
+        trim_trailing_whitespace = false;
+      };
+
+      "{LICENSES/**,LICENSE}" = {
+        charset = "unset";
+        end_of_line = "unset";
+
+        indent_size = "unset";
+        indent_style = "unset";
+
+        insert_final_newline = "unset";
+        trim_trailing_whitespace = "unset";
+      };
+    };
+  }
