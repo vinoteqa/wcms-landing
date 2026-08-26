@@ -1,6 +1,6 @@
 <template>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-4">
-        <ArticleCard v-for="article in data" :key="article._path" :link="article._path" :title="article.title"
+        <ArticleCard v-for="article in data" :key="article.path" :link="article.path" :title="article.title"
             :description="article.description" :imgSrc="getArticleImageSrc(article)" :imgAlt="article.title" :date="article.date" />
 
     </div>

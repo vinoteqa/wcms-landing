@@ -33,6 +33,8 @@ export default {
     mixins: [newsletterMixin],
 
     data() {
+        const localePath = useLocalePath()
+
         return {
             title: 'Vinoteqa',
             mission: this.$t('vinoteqa.mission'),
@@ -43,7 +45,7 @@ export default {
 
             // navigation
             actionButtonLabel: this.$t('blog.navigation.discoverVinoteqa'),
-            actionButtonLink: this.localePath("/"),
+            actionButtonLink: localePath("/"),
             navigation: [
                 { name: this.$t('blog.navigation.wineEducation'), href: '/blog/wines' },
                 { name: this.$t('blog.navigation.cellarManagement'), href: '/blog/winecellar' },
@@ -53,7 +55,7 @@ export default {
                 vinoteqa: {
                     title: "Vinoteqa",
                     items: [
-                        { name: this.$t('footer.vinoteqa.platform'), href: this.localePath('/') },
+                        { name: this.$t('footer.vinoteqa.platform'), href: localePath('/') },
                     ],
                 },
                 contacts: {

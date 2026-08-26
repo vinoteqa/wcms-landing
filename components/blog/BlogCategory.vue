@@ -6,59 +6,59 @@
                     <h2 class="text-3xl md:text-4xl font-bold mr-auto">{{ categoryTitle }}</h2>
                 </div>
 
-                <ContentQuery :path="localePath(`/blog/${categoryKey}`)" :sort="{ date: -1 }" :limit="POST_LIMIT + 1"
-                    :skip="(currentPage - 1) * POST_LIMIT">
-                    <template #default="{ data }">
-                        <BlogList :data="data.slice(0, POST_LIMIT)" />
+                <template v-if="posts && posts.length">
+                    <BlogList :data="posts.slice(0, POST_LIMIT)" />
 
-                        <div class="flex items-center mt-8">
-                            <div class="mr-auto">
-                                <NuxtLink v-if="currentPage > 1"
-                                    :to="localePath(`/blog/${categoryKey}?page=${parseInt(currentPage) - 1}`)"
-                                    class="border border-black/40 rounded-full py-2 px-4 mr-4 md:px-6 hover:bg-vinoteqa/5">
-                                    {{ $t('blog.previousPage') }}</NuxtLink>
-                            </div>
-                            <NuxtLink v-if="data.length > POST_LIMIT"
-                                :to="localePath(`/blog/${categoryKey}?page=${parseInt(currentPage) + 1}`)"
-                                class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5">
-                                {{ $t('blog.nextPage') }}</NuxtLink>
+                    <div class="flex items-center mt-8">
+                        <div class="mr-auto">
+                            <NuxtLink v-if="currentPage > 1"
+                                :to="$localePath(`/blog/${categoryKey}?page=${parseInt(currentPage) - 1}`)"
+                                class="border border-black/40 rounded-full py-2 px-4 mr-4 md:px-6 hover:bg-vinoteqa/5">
+                                {{ $t('blog.previousPage') }}</NuxtLink>
                         </div>
-                    </template>
-                    <template #empty>
-                        <div class="text-center">
-                            <p class="text-lg">{{ $t('blog.noPosts') }}</p>
-                        </div>
-                    </template>
-                </ContentQuery>
+                        <NuxtLink v-if="hasNextPage"
+                            :to="$localePath(`/blog/${categoryKey}?page=${parseInt(currentPage) + 1}`)"
+                            class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5">
+                            {{ $t('blog.nextPage') }}</NuxtLink>
+                    </div>
+                </template>
+                <div v-else class="text-center">
+                    <p class="text-lg">{{ $t('blog.noPosts') }}</p>
+                </div>
             </section>
 
         </div>
     </div>
 </template>
 
-<script>
-export default {
-    props: {
-        categoryKey: {
-            type: String,
-            required: true
-        },
-        categoryTitle: {
-            type: String,
-            required: true
-        },
+<script setup>
+const props = defineProps({
+    categoryKey: {
+        type: String,
+        required: true
     },
-
-    data() {
-        return {
-            POST_LIMIT: 12
-        }
+    categoryTitle: {
+        type: String,
+        required: true
     },
+})
 
-    computed: {
-        currentPage() {
-            return this.$route.query.page || 1
-        }
-    }
-}
+const POST_LIMIT = 12
+const route = useRoute()
+const { locale } = useI18n()
+
+const currentPage = computed(() => parseInt(route.query.page) || 1)
+
+const { data: posts } = await useAsyncData(
+    () => `blog-category-${props.categoryKey}-${locale.value}-${currentPage.value}`,
+    () => queryCollection('blog')
+        .where('path', 'LIKE', `/${locale.value}/blog/${props.categoryKey}/%`)
+        .order('date', 'DESC')
+        .skip((currentPage.value - 1) * POST_LIMIT)
+        .limit(POST_LIMIT + 1)
+        .all(),
+    { watch: [currentPage, locale] },
+)
+
+const hasNextPage = computed(() => (posts.value?.length || 0) > POST_LIMIT)
 </script>

@@ -7,17 +7,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 Make sure to install the dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
 yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
@@ -25,51 +15,36 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
 yarn dev
-
-# bun
-bun run dev
 ```
+
+In development, open the floating Studio button (bottom-left) or visit `/_studio` to edit content against the local filesystem.
 
 ## Production
 
-Build the application for production:
+Build and preview:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
 yarn build
-
-# bun
-bun run build
+yarn preview
 ```
 
-Locally preview production build:
+Production hosting runs as a **Node SSR server** via the Nix package (`wcms-landing`). Static Netlify deploy is not used for Studio.
+
+### Nuxt Studio (GitHub OAuth)
+
+Studio needs a GitHub OAuth App so editors can publish from production:
+
+1. Create an app at https://github.com/settings/developers
+2. Homepage URL: `https://www.vinoteqa.com` (or `http://localhost:3000` for local)
+3. Authorization callback URL (note the **double** underscore `__nuxt_studio`):
+   - Local: `http://localhost:3000/__nuxt_studio/auth/github`
+   - Prod: `https://www.vinoteqa.com/__nuxt_studio/auth/github`
+4. Copy Client ID and Client Secret into the host environment:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+STUDIO_GITHUB_CLIENT_ID=...
+STUDIO_GITHUB_CLIENT_SECRET=...
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+See `.env.example` for the full list of env vars.

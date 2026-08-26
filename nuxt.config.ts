@@ -1,7 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
-
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   modules: [
@@ -9,7 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/seo",
     "@nuxt/content",
-    "@nuxthq/studio",
+    "nuxt-studio",
     "nuxt-gtag",
     "@dargmuesli/nuxt-cookie-control",
     "@nuxt/image"
@@ -73,21 +71,22 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: 'https://www.vinoteqa.com',
     defaultLocale: 'en',
+    restructureDir: false,
     locales: [{
       code: 'en',
-      iso: 'en',
+      language: 'en',
       name: 'English',
       file: 'en.json',
     },
     {
       code: 'de',
-      iso: 'de',
+      language: 'de',
       name: 'Deutsch',
       file: 'de.json',
     },
     {
-      code: 'it', 
-      iso: 'it',
+      code: 'it',
+      language: 'it',
       name: 'Italiano',
       file: 'it.json',
     }],
@@ -95,6 +94,9 @@ export default defineNuxtConfig({
     lazy: false,
     langDir: 'locales/',
     detectBrowserLanguage: false,
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
   },
 
   tailwindcss: {
@@ -106,16 +108,19 @@ export default defineNuxtConfig({
     config: {},
     viewer: true,
   },
-  
+
   sitemap: {
-    strictNuxtContentPaths: true,
     autoLastmod: true
   },
 
-  content: {
-    markdown: {
-      anchorLinks: false,
-    }
+  studio: {
+    route: '/_studio',
+    repository: {
+      provider: 'github',
+      owner: 'vinoteqa',
+      repo: 'wcms-landing',
+      branch: 'main',
+    },
   },
 
   gtag: {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Nuxt dev/build outputs
 .output
 .data
@@ -13,39 +12,25 @@ node_modules
 # Logs
 logs
 *.log
-
-# Misc
-.DS_Store
-.fleet
-.idea
-
-# Local env files
-.env
-.env.*
-!.env.example
-=======
-# Logs
-logs
-*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# Misc
+.DS_Store
+.fleet
+.idea
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
->>>>>>> 999703a (feat: setup base layout)
+
+# Local env files
+.env
+.env.*
+!.env.example

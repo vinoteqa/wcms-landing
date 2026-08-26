@@ -1,18 +1,18 @@
 <template>
     <div class="px-8 mx-auto max-w-7xl">
-        <ContentDoc>
-            <template v-slot="{ doc }">
-                <Content :doc="doc" />
-            </template>
-
-            <template #not-found>
-                <NotFoundError />
-            </template>
-        </ContentDoc>
+        <Content v-if="doc" :doc="doc" />
+        <NotFoundError v-else />
     </div>
 </template>
 
-<script>
+<script setup>
+const route = useRoute()
+
+const { data: doc } = await useAsyncData(
+    `page-${route.path}`,
+    () => queryCollection('pages').path(route.path).first(),
+)
+
 useHead({
     titleTemplate: '%s | Vinoteqa',
 })

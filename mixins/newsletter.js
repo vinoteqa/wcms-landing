@@ -1,5 +1,3 @@
-const runtimeConfig = useRuntimeConfig();
-
 export default {
   data() {
     return {
@@ -16,7 +14,7 @@ export default {
     },
 
     async subscribe(email) {
-      // load environment variables
+      const runtimeConfig = useRuntimeConfig();
       const portal_id = runtimeConfig.public.hubspot.portalId;
       let form_id = null;
       switch (this.$i18n.locale) {
@@ -30,7 +28,6 @@ export default {
           form_id = runtimeConfig.public.hubspot.formId.en;
       }
 
-      // prepare request
       const request_url = `https://api.hsforms.com/submissions/v3/integration/submit/${portal_id}/${form_id}`;
       const body = {
         submittedAt: new Date().getTime(),
@@ -43,7 +40,6 @@ export default {
         ],
       };
 
-      // send request
       await fetch(request_url, {
         method: "POST",
         mode: "cors",
@@ -54,7 +50,6 @@ export default {
         },
         body: JSON.stringify(body),
       }).then((res) => {
-        // check if status is 200
         if (res.status === 200) {
           this.newsletter.subscriberEmail = email;
         }

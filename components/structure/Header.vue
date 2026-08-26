@@ -3,7 +3,7 @@
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
             <div class="flex items-center">
                 <div class="flex lg:flex-1">
-                    <NuxtLink :to="localePath(homeLink)" class="-m-1.5 p-1.5">
+                    <NuxtLink :to="$localePath(homeLink)" class="-m-1.5 p-1.5">
                         <span class="sr-only">Vinoteqa</span>
                         <img class="w-auto" :class="{
         'h-7': logoSize === '7',
@@ -12,7 +12,7 @@
                     </NuxtLink>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12 ml-20">
-                    <NuxtLink v-for="item in navigation" :key="item.name" :to="localePath(item.href)"
+                    <NuxtLink v-for="item in navigation" :key="item.name" :to="$localePath(item.href)"
                         class="text-sm font-semibold leading-6 text-black/95 hover:text-black"
                         :class="{ 'is-home': $route.name.includes('index') }">{{ item.name }}
                     </NuxtLink>
@@ -45,7 +45,7 @@
             <DialogPanel
                 class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-black/30">
                 <div class="flex items-center justify-between">
-                    <NuxtLink :to="localePath(homeLink)" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
+                    <NuxtLink :to="$localePath(homeLink)" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
                         <span class="sr-only">Vinoteqa</span>
                         <img class="h-8 w-auto" :src="logoSrc" :alt="logoAlt" />
                     </NuxtLink>
@@ -57,7 +57,7 @@
                 <div class="mt-6 flow-root">
                     <div class="-my-6 divide-y divide-gray-500/10">
                         <div class="space-y-2 py-6">
-                            <NuxtLink v-for="item in navigation" :key="item.name" :to="localePath(item.href)"
+                            <NuxtLink v-for="item in navigation" :key="item.name" :to="$localePath(item.href)"
                                 class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 @click="mobileMenuOpen = false">
                                 {{
@@ -129,8 +129,12 @@ export default {
         }
     },
 
-    beforeMount() {
+    mounted() {
         window.addEventListener('scroll', this.handleScroll);
+    },
+
+    beforeUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
     },
 
     methods: {

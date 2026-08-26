@@ -64,10 +64,10 @@ useSeoMeta({
 </script>
 
 <script>
-const runtimeConfig = useRuntimeConfig()
-
 export default {
   data() {
+    const runtimeConfig = useRuntimeConfig()
+
     return {
       title: 'Vinoteqa',
       mission: this.$t('vinoteqa.mission'),

@@ -43,12 +43,13 @@ useSeoMeta({
 <script>
 import newsletterMixin from '~/mixins/newsletter.js'
 
-const runtimeConfig = useRuntimeConfig()
-
 export default {
     mixins: [newsletterMixin],
 
     data() {
+        const runtimeConfig = useRuntimeConfig()
+        const localePath = useLocalePath()
+
         return {
             title: 'Vinoteqa',
             mission: this.$t('vinoteqa.mission'),
@@ -69,7 +70,7 @@ export default {
                 resources: {
                     title: this.$t('footer.resources.title'),
                     items: [
-                        { name: this.$t('footer.resources.blog'), href: this.localePath('/blog') },
+                        { name: this.$t('footer.resources.blog'), href: localePath('/blog') },
                         { name: this.$t('ctas.bookDemo'), href: runtimeConfig.public.demoBookingPageLink[this.$i18n.locale] },
                     ],
                 },
