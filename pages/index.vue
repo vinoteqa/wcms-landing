@@ -1,5 +1,5 @@
 <template>
-  <NuxtContent>
+  <div>
     <Hero :titleLabel="hero.titleLabel" :title="hero.title" :subtitle="hero.subtitle"
       :primaryButtonLabel="hero.primaryButtonLabel" :primaryButtonLink="hero.primaryButtonLink"
       :secondaryButtonLabel="hero.secondaryButtonLabel" :secondaryButtonLink="hero.secondaryButtonLink"
@@ -37,7 +37,7 @@
         <Faq :title="faqs.title" :faqs="faqs.faqs" />
       </div>
     </div>
-  </NuxtContent>
+  </div>
 </template>
 
 <script setup>
