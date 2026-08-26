@@ -92,7 +92,7 @@ export default {
         stats: [
           { id: 1, name: this.$t('sections.statistics.wineries'), value: '129k+' },
           { id: 2, name: this.$t('sections.statistics.wines'), value: '1.3M+' },
-          { id: 3, name: this.$t('sections.statistics.transactionsTracked'), value: '4.4M€' },
+          { id: 3, name: this.$t('sections.statistics.transactionsTracked'), value: '11M€' },
         ]
       },
 
