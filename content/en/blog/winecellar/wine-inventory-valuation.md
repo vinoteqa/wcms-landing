@@ -1,15 +1,14 @@
 ---
 title: How You Should Calculate the Value of Your Wine Inventory
+date: 2025-11-17
+description: Managing a wine cellar isn’t just about knowing what’s on the shelves — it’s also about understanding what your inventory is really worth.
+featured: true
 subtitle: Why Wine Inventory Valuation Matters in Hospitality
-description: Managing a wine cellar isn’t just about knowing what’s on the
-  shelves — it’s also about understanding what your inventory is really worth.
 tags:
   - wine-cellar
   - inventory
   - cellar-management
   - FIFO
-date: 2025-11-17T07:03:07.000Z
-featured: true
 ---
 
 ## **How You Should Calculate the Value of Your Wine Inventory (and Why FIFO Is the Right Choice)**
