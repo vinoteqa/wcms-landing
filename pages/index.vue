@@ -124,7 +124,7 @@ export default {
         titleLabel: this.$t('sections.features.statisticsTitleLabel'),
         title: this.$t('sections.features.statisticsTitle'),
         subtitle: this.$t('sections.features.statisticsSubtitle'),
-        imgSrc: "/imgs/screenshot2.png",
+        imgSrc: `/imgs/screenshot2.${this.$i18n.locale}.png`,
         imgAlt: "Vinoteqa statistics Screenshot",
         features: [
           {
