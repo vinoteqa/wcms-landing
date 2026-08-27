@@ -32,19 +32,19 @@ export default {
         },
         description: {
             type: String,
-            required: true
+            default: '',
         },
         imgSrc: {
             type: String,
-            required: true
+            default: '',
         },
         imgAlt: {
             type: String,
-            required: true
+            default: '',
         },
         date: {
             type: [String, Date],
-            required: true
+            default: null,
         }
     }
 }

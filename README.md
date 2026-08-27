@@ -31,6 +31,8 @@ yarn preview
 
 Production hosting runs as a **Node SSR server** via the Nix package (`wcms-landing`). Static Netlify deploy is not used for Studio.
 
+Content uses an in-memory SQLite DB by default (`content.database.filename: ':memory:'`) so the read-only Nix store does not break blog queries. To persist the DB on a writable path instead, set `CONTENT_DATABASE_PATH` at **build** time (e.g. `/tmp/wcms-landing-contents.sqlite`).
+
 ### Nuxt Studio (GitHub OAuth)
 
 Studio needs a GitHub OAuth App so editors can publish from production:

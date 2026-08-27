@@ -113,6 +113,16 @@ export default defineNuxtConfig({
     autoLastmod: true
   },
 
+  // Nix/store and many hosts ship a read-only filesystem. Content restores the
+  // SQLite dump into this DB on boot — file paths under the store fail with
+  // SQLITE_CANTOPEN. Override at build time via CONTENT_DATABASE_PATH if needed.
+  content: {
+    database: {
+      type: 'sqlite',
+      filename: process.env.CONTENT_DATABASE_PATH || ':memory:',
+    },
+  },
+
   studio: {
     route: '/_studio',
     repository: {

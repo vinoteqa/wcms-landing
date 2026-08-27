@@ -50,6 +50,7 @@
 import { getArticleImageSrc } from '~/mixins/utils'
 
 const { t, locale } = useI18n()
+const route = useRoute()
 
 definePageMeta({
     layout: 'blog',
@@ -68,6 +69,8 @@ useSeoMeta({
     tagPriority: 'critical'
 })
 
+const categoryKeys = ['wines', 'winecellar', 'winelist']
+
 const categories = [
     {
         key: 'wines',
@@ -83,37 +86,50 @@ const categories = [
     },
 ]
 
+const emptyFeatured = () => Object.fromEntries(categoryKeys.map(key => [key, []]))
+
+// Prefer i18n locale; fall back to first path segment for SSR edge cases
+const contentLocale = computed(() => {
+    const fromI18n = locale.value
+    if (fromI18n) return fromI18n
+    const segment = route.path.split('/').filter(Boolean)[0]
+    return categoryKeys.includes(segment) ? 'en' : (segment || 'en')
+})
+
 const { data: latest } = await useAsyncData(
-    `blog-latest-${locale.value}`,
+    () => `blog-latest-${contentLocale.value}`,
     () => queryCollection('blog')
-        .where('path', 'LIKE', `/${locale.value}/blog/%`)
+        .where('path', 'LIKE', `/${contentLocale.value}/blog/%`)
         .order('date', 'DESC')
         .first(),
+    { watch: [contentLocale] },
 )
 
 const { data: featuredByCategory } = await useAsyncData(
-    `blog-featured-${locale.value}`,
+    () => `blog-featured-${contentLocale.value}`,
     async () => {
-        const result = {
-            wines: [],
-            winecellar: [],
-            winelist: [],
-        }
-        try {
-            for (const category of categories) {
-                result[category.key] = await queryCollection('blog')
-                    .where('path', 'LIKE', `/${locale.value}/blog/${category.key}/%`)
-                    .where('featured', '=', true)
-                    .order('date', 'DESC')
-                    .limit(3)
-                    .all()
+        const loc = contentLocale.value
+        // Use 1 not true — SQLite stores booleans as integers
+        const featured = await queryCollection('blog')
+            .where('path', 'LIKE', `/${loc}/blog/%`)
+            .where('featured', '=', 1)
+            .order('date', 'DESC')
+            .all()
+
+        const result = emptyFeatured()
+        for (const article of featured) {
+            for (const key of categoryKeys) {
+                if (article.path?.includes(`/blog/${key}/`) && result[key].length < 3) {
+                    result[key].push(article)
+                }
             }
-        } catch (error) {
-            console.error('Failed to load featured blog posts', error)
         }
         return result
     },
-    { default: () => ({ wines: [], winecellar: [], winelist: [] }) },
+    {
+        default: emptyFeatured,
+        watch: [contentLocale],
+    },
 )
 
 function printDate(date) {
@@ -122,6 +138,6 @@ function printDate(date) {
         month: 'long',
         day: 'numeric',
     }
-    return new Date(date).toLocaleDateString(locale.value, dateOptions)
+    return new Date(date).toLocaleDateString(contentLocale.value, dateOptions)
 }
 </script>

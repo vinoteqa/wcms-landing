@@ -57,7 +57,10 @@ const { data: posts } = await useAsyncData(
         .skip((currentPage.value - 1) * POST_LIMIT)
         .limit(POST_LIMIT + 1)
         .all(),
-    { watch: [currentPage, locale] },
+    {
+        watch: [currentPage, locale],
+        default: () => [],
+    },
 )
 
 const hasNextPage = computed(() => (posts.value?.length || 0) > POST_LIMIT)
