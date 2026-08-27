@@ -60,16 +60,23 @@ in
       # make the node_modules directory writable (required by nuxt build)
       chmod -R u+w ${cwd}/node_modules
 
-      # rebuild native modules (better-sqlite3) against the Nix toolchain
-      yarn --offline --cwd ${cwd} rebuild better-sqlite3 || true
-      (cd ${cwd}/node_modules/better-sqlite3 && npm run build-release) || true
+      # rebuild native modules against the Nix toolchain (yarn classic has no `yarn rebuild`)
+      if [ -d ${cwd}/node_modules/better-sqlite3 ]; then
+        (cd ${cwd} && ${nodejs}/bin/npm rebuild better-sqlite3)
+      fi
 
-      # build the project
-      yarn --offline --cwd ${cwd} build
+      # build from the package dir so yarn resolves node_modules/.bin/nuxt
+      pushd ${cwd}
+      yarn --offline build
+      popd
 
-      # copy the vue server renderer to the .output directory
+      # copy runtime deps Nuxt/Content expect next to the server bundle
       rm -rf ${cwd}/.output/server/node_modules/vue
       cp -r ${cwd}/node_modules/vue/ ${cwd}/.output/server/node_modules/
+      if [ -d ${cwd}/node_modules/better-sqlite3 ]; then
+        rm -rf ${cwd}/.output/server/node_modules/better-sqlite3
+        cp -r ${cwd}/node_modules/better-sqlite3/ ${cwd}/.output/server/node_modules/
+      fi
     '';
 
     installPhase = ''

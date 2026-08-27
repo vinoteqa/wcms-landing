@@ -29,7 +29,7 @@
                             :to="$localePath(`/blog/${category.key}`)">{{ $t('blog.viewAll') }}</NuxtLink>
                     </div>
 
-                    <BlogList :data="featuredByCategory[category.key] || []" />
+                    <BlogList :data="featuredByCategory?.[category.key] || []" />
 
                     <div class="flex text-center my-6 visible lg:invisible">
                         <NuxtLink class="border border-black/40 rounded-full py-2 px-4 md:px-6 hover:bg-vinoteqa/5 "
@@ -94,17 +94,26 @@ const { data: latest } = await useAsyncData(
 const { data: featuredByCategory } = await useAsyncData(
     `blog-featured-${locale.value}`,
     async () => {
-        const result = {}
-        for (const category of categories) {
-            result[category.key] = await queryCollection('blog')
-                .where('path', 'LIKE', `/${locale.value}/blog/${category.key}/%`)
-                .where('featured', '=', true)
-                .order('date', 'DESC')
-                .limit(3)
-                .all()
+        const result = {
+            wines: [],
+            winecellar: [],
+            winelist: [],
+        }
+        try {
+            for (const category of categories) {
+                result[category.key] = await queryCollection('blog')
+                    .where('path', 'LIKE', `/${locale.value}/blog/${category.key}/%`)
+                    .where('featured', '=', true)
+                    .order('date', 'DESC')
+                    .limit(3)
+                    .all()
+            }
+        } catch (error) {
+            console.error('Failed to load featured blog posts', error)
         }
         return result
     },
+    { default: () => ({ wines: [], winecellar: [], winelist: [] }) },
 )
 
 function printDate(date) {
